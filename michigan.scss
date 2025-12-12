@@ -1,0 +1,132 @@
+/*-- scss:defaults --*/
+// importing fonts
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap);
+
+
+
+// fonts
+$font-family-sans-serif: 'Nunito Sans', sans-serif !default;
+
+// headings
+$presentation-heading-font: 'Nunito Sans', sans-serif  !default;
+$presentation-heading-color: #001B35 !default;
+$h1-font-size: 1.6em !default;
+$h2-font-size: 1.3em !default;
+$h3-font-size: 1.15em !default;
+
+//code
+$code-color: #001B35 !default;
+$font-family-monospace: 'Nunito Sans', monospace  !default;
+
+// general
+$body-bg: #FFFFFF;
+$body-color: #001B35;
+$navbar-bg: #001B35;
+$link-color: #42affa;
+$link_color: #006EB2;
+$text-muted: #4c6782;
+$code_highlight_color: #FFCB05;
+$background_color: #FFFFFF;
+$text_font_size: 1rem;
+$code_font_size: 1rem;
+$header_h1_font_size: 1.75rem;
+$header_h2_font_size: 1.5rem;
+$header_h3_font_size: 1.25rem;
+$code_inline_background_color: #42affa;
+$code-bg: #42affa;
+$table_row_even_background_color:#E6F0FA;
+$presentation-font-size-root: 35px !default;
+$base_font_size: 35px !default;
+$callout-color-note: #2F65A7;
+$callout-color-tip: #A5A508;
+$callout-color-caution: #FFCB05;
+$callout-color-warning: #D86018;
+$callout-color-important: #FFCB05;
+
+/*-- PRESENTATIONS --*/
+
+/*-- change menue logo to block M --*/
+
+.reveal .slide-menu-button .fa-bars::before {
+  background-image: url('https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png') !important;
+}
+
+/*-- scss:rules --*/
+.reveal pre code {
+  background-color: #42affa;
+  font-size: 1em;
+  padding: 1em;
+  line-height: 1.1em;
+}
+
+
+.transparent {
+   Opacity:0;
+   font-size: 0.01em;
+}
+
+.subtitleqwerty {
+  color: $body-color;
+  font-size: $h2-font-size;
+  font-family: $presentation-heading-font;
+}
+
+.author {
+  color: $body-bg;
+  font-size: $h2-font-size;
+  font-family: $presentation-heading-font;
+}
+
+.footer {
+  font-family: $presentation-heading-font;
+}
+
+.reveal .slide-number {
+  font-family: $presentation-heading-font;
+}
+
+.reveal .panel-tabset [role=tab] {
+    font-size: 0.8em;
+}
+
+.reveal .footer {
+    color: #4c6782;
+}
+
+
+.center-x{
+    text-align: center;
+}
+
+
+
+
+
+mark {
+  background-color: #FFCB05;
+  color: #001B35;
+}
+
+p {
+    margin-top:-5px;
+}
+
+
+
+
+/*-- scss:rules --*/
+
+.reveal blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 1em;
+  font-style: italic;
+  font-weight: bold;
+  color: #4c6782;
+}
+
+.reveal ol li:first-child:nth-last-child(n + 10),
+.reveal ol li:first-child:nth-last-child(n + 10) ~ li {
+  margin-left: 1em;
+}
+

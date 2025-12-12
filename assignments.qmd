@@ -1,0 +1,51 @@
+---
+# title: "Assignment Guide <br>   <br> "
+# title-block-banner: "#001B35" # banner.png
+# title-block-banner-color: body-bg
+format:
+# pdf: default. # for printing 
+ html:
+   toc: true
+   toc-location: left
+   theme: michigan.scss
+   toc-title: Assignment Guide
+css: styles.css
+execute:
+  echo: false
+  engine: knitr
+---
+
+# The Main Assignment
+
+## Part 1
+
+## Part 2
+
+# Peer Reviews 
+
+My expectation for the peer review is a significant and thoughtful engagement with the piece's ideas, as well as detailed notes on the writing. This is an exercise in constructive critique, so there must be suggestions for improvement.
+
+This means <mark> at least a page of written feedback</mark>  (when reviewing multiple essays, this minimum is for all of them combined---though a page on each essay would be great), <mark> as well as some notes or markup of their writing.</mark>  Writing can always be improved. 
+
+### How to submit your review
+
+You can use the <mark> markup features on Canvas</mark>  as you read. </mark> Your written critique should then be uploaded for the peer critique assignment **and** sent to your colleague.</mark>  (You should be able to share a Google Doc or attach a file in the "Comments for this Attempt" bar on Canvas.) <mark> Make sure to submit it in both places.</mark>  The assignment upload goes to me so that you get credit for the assignment. The "Comments for this attempt" make it available to your colleague.
+
+Please let me know if you have any questions. Giving helpful critiques is a nuanced art, and I am happy to talk it through with you. 
+
+### Tips on peer reviews
+
+From [Pedagogy in Action](https://serc.carleton.edu/sp/library/peerreview/tips.html): 
+
+- Before you even make your first comment, read the document all the way through.
+- Make sure you leave enough time for you to read through, respond, and for your peer to edit his/her document with your comments before any deadlines.
+- If you are provided with a feedback form to fill out and something is unclear, do not ignore the item but ask the instructor for clarification.
+- Point out the strengths as well as the weaknesses of the document.
+- Offer suggestions, not commands.
+- Editorial comments should be appropriate and constructive. There is no need to be rude. Be respectful and considerate of the writer's feelings.
+- Be sure that your comments are clear and text-specific so that your peer will know what you are referring to (for example, terms such as "unclear" or "vague" are too general to be helpful).
+- As a reader, raise questions that cross your mind, points that may not have occurred to your peer author.
+- Try not to overwhelm your peer with too much commentary. Follow the feedback form and the issues you are supposed to address.
+- Be careful not to let your own opinions bias your review (for example, don't suggest that your peer completely rewrite the paper just because you don't agree with his/her point of view).
+- Reread your comments before passing them on to your peer. Make sure all your comments make sense and are easy to follow.
+- Avoid turning your peer's paper into your paper.

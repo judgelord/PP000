@@ -1,0 +1,13 @@
+---
+# title: ""
+#title-block-banner:  "#001B35" # banner.png #
+#title-block-banner-color: body-bg
+format:
+  html:
+    toc: false
+    theme: michigan.scss
+css: styles.css
+---
+
+This class explores ... 
+

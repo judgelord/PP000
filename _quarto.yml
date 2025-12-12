@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "PubPol 000"
+  navbar:
+    left:
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: assignments.qmd
+        text: Assignment Guide
+      - href: slides
+        text: Slides
+
+format:
+ html:
+   toc: true
+   toc-location: left
+   theme: michigan.scss
+   css: styles.css
+
+
+number-depth: 3
+
+# bibliography: xxx.bib

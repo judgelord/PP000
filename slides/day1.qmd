@@ -1,0 +1,29 @@
+---
+title: "Day 1"
+date: today
+image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg"
+subtitle: ""
+title-slide-attributes:
+    data-background-image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg"
+    data-background-size: cover
+    data-background-opacity: "0.5"
+format:
+ revealjs:
+   incremental: false
+   scrollable: true
+   theme: [../michigan.scss, ford.scss]
+smaller: true
+---
+
+
+## Tuesday: Introductions and Syllabus Review 
+
+
+> Please read <mark> the entire syllabus</mark> before class---this is your chance to ask questions about the assignments and readings.
+
+
+
+## Thursday
+
+- What are you hoping to get out of this semester?
+- What aspects of the discussion environment will help achieve these goals? 

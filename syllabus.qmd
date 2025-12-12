@@ -1,0 +1,196 @@
+---
+# title: ""
+# title-block-banner:  "#001B35" # banner.png #
+# title-block-banner-color: body-bg
+format:
+# pdf: default # to print
+ html:
+   toc: true
+   toc-location: left
+   toc-title: Syllabus
+   theme: michigan.scss
+css: styles.css
+execute:
+  echo: false
+  engine: knitr
+
+---
+
+Time: 
+
+Instructor:
+
+- Office hours: 
+
+---
+
+This class explores ...
+	
+
+Links to course resources: 
+
+
+- 🪶 [Assignment Guide](assignments)
+
+- 📚 [Required books](#required-books)
+
+-  📖  [Reading by week](#reading-by-week)
+
+<!--
+-  📓 [Glossary](glossary)
+--> 
+
+<!--
+- [📅 Subscribe to the course calendar])
+--> 
+ 
+<!--
+- [📅 Sign up for discussion opening, closing remarks, and paper meetings]()
+--> 
+
+---
+
+🚧 Syllabus updated: [`r Sys.Date() |> format("%B %d %Y")`](https://github.com/judgelord/PP000/commits/main/docs/syllabus.html). The current version is [here](syllabus.html). 🚧
+
+<!--
+This course advanced my understanding of the subject matter. Q1631*
+My interest in the subject has increased because of this course. Q1632
+I knew what was expected of me in this course. Q1633
+I had a strong desire to take this course. Q4
+As compared with other courses of equal credit, the workload for this course was (Much Lighter, Lighter, Typical, Heavier, Much Heavier). Q891
+The instructor seemed well-prepared for class meetings. Q230
+The instructor explained the material clearly. Q199
+The instructor treated students with respect. Q217
+--> 
+
+	
+
+# 🗺️  Objectives
+
+This class aims to empower students to ...
+
+
+## ∴ Course Philosophy 
+
+In designing this course, I proceed from several premises: 
+
+1. 
+
+
+# 🏛️ Learning Environment
+
+Learning from each other is only possible if we show the respect due to our fellow citizens of this class.
+
+To realize this goal, I expect us to respect our colleagues and cultivate inclusive discussions. This means that we must be careful not to mislead, degrade, interrupt someone who does not speak as much, or enforce hierarchies based on race, religion, ethnicity, nationality, gender expression, sexual orientation, or ability.
+
+
+## 📜 Ford School and University of Michigan Policies
+
+**Ford School Inclusivity Statement:**
+Members of the Ford School community represent a rich variety of backgrounds and perspectives. We are committed to providing an atmosphere for learning that respects diversity. While working together to build this community, we ask all members to: 
+
+- share their unique experiences, values, and beliefs
+- be open to the views of others
+- honor the uniqueness of their colleagues
+- appreciate the opportunity that we have to learn from each other in this community
+- value one another’s opinions and communicate in a respectful manner
+- keep confidential discussions that the community has of a personal (or professional) nature
+- use this opportunity together to discuss ways in which we can create an inclusive environment in Ford - classes and across the UM community
+
+
+Being a constructive member of a diverse community is always a learning process. The University has many resources to help us in this endeavor, including a [glossary of terms]( 
+https://www.dropbox.com/sh/7whjk69ckv3h39r/AAAsKb3tOl4OulF63-mJsHa1a/Glossary%20of%20Terms?dl=0&preview=Clearinghouse+-+Glossary.pdf&subfolder_nav_tracking=1).
+
+**Ford School Public Health Protection Policy.**  In order to participate in any in-person aspects of this course---including meeting with other students to study or work on a team project---you must follow all the public health safety measures and policies put in place by the State of Michigan, Washtenaw County, the University of Michigan, and the Ford School. Up-to-date information on U-M policies can be found on the  [U-M Health Response website](https://campusblueprint.umich.edu/).  It is expected that you will protect and enhance the health of everyone in the Ford School community by staying home and following self-isolation guidelines if you are experiencing any symptoms of COVID-19. 
+
+**Student Mental Health and Wellbeing.**  The University of Michigan is committed to advancing the mental health and wellbeing of its students.  We acknowledge that a variety of issues, both those relating to the pandemic and other issues such as strained relationships, increased anxiety, alcohol/drug problems, and depression, can directly impact students’ academic performance and overall wellbeing. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available. 
+
+You may access the Ford School’s embedded counselor, Paige Ziegler (pziegler@umich.edu), and/or counselors and urgent services at [Counseling and Psychological Services (CAPS)](https://caps.umich.edu/) and/or [University Health Service (UHS)](https://www.uhs.umich.edu/mentalhealthsvcs).  Students may also use the Crisis Text Line (text '4UMICH' to 741741) to be connected to a trained crisis volunteer.  You can find additional resources both on and off campus through the [University Health Service](https://uhs.umich.edu/stressresources) and through [CAPS](https://caps.umich.edu/article/um-mental-health-resources).
+
+**Student/Faculty Interaction Best Practices.** We strive to ensure a safe learning environment free from gender-based and sexual harassment, sexual violence, retaliation, and a hostile environment based on discrimination and intimidation. We make the following commitments:  
+
+- To conduct office hours with the door open unless the student requests a closed-door meeting;
+- To document meeting times with students so that this record can be reviewed.
+- To meet students individually only at university venues;
+- To conduct off-campus meetings only at places where alcohol is not served;
+- To communicate electronically with students only on university platforms and not on social media, text, or non-university apps.
+- For more information on resources for reporting sexual misconduct, please see [the faculty senate best practices for faculty interactions](https://facultysenate.umich.edu/wp-content/uploads/2022/08/BEST-PRACTICES-FOR-FACULTY-_-STUDENT-INTERACTIONS.pdf) and [U-M's page on Sexual and Gender-Based Misconduct](https://sexualmisconduct.umich.edu/).
+
+
+**Accommodations for Students with Disabilities:**  
+Accommodations for Students with Disabilities: The University of Michigan recognizes disability as an integral part of diversity and is committed to creating an inclusive and equitable educational environment for students with disabilities. Students who are experiencing a disability-related barrier should visit the Services for Students with Disabilities website. They can be reached at 734-763-3000 or ssdoffice@umich.edu. For students who are connected with SSD, accommodation requests can be made in Accommodate. If you have any questions or concerns, please contact your SSD Coordinator or visit SSD’s Current Student webpage. SSD considers aspects of the course design, course learning objects, and the individual academic and course barriers experienced by the student. Further conversation with SSD, instructors, and the student may be warranted to ensure an accessible course experience.
+
+::: {.callout-important}
+**If you require accommodations from SSD, please start that process quickly because it takes time. **
+:::
+
+**Academic Integrity:**  The Ford School academic community, like all communities, functions best when its members treat one another with honesty, fairness, respect, and trust. We hold all members of our community to high standards of scholarship and integrity. To accomplish its mission of providing an optimal educational environment and developing leaders of society, the Ford School promotes the assumption of personal responsibility and integrity and prohibits all forms of academic dishonesty, plagiarism, and misconduct. Academic dishonesty may be understood as any action or attempted action that may result in creating an unfair academic advantage for oneself or an unfair academic advantage or disadvantage for any other member or members of the academic community. Plagiarism involves representing the words, ideas, or work of others as one’s own in writing or presentations, and failing to give full and proper credit to the original source. Conduct, without regard to motive, that violates academic integrity and ethical standards will result in serious consequences and disciplinary action. The Ford School's policy of academic integrity can be found in the [MPP](https://www.dropbox.com/s/wuq2jfmbpflm4f2/FINAL%202023%20Masters%20Handbook.pdf?dl=0),  [BA](https://www.dropbox.com/s/zhllbd4vpfr439r/FINAL%202023%20BA%20Handbook.pdf?dl=0), and [Ph.D. Program](https://www.dropbox.com/s/06x1tzt1e32pjjw/FINAL%202023%20PHD%20Handbook.pdf?dl=0) handbooks. Additional information regarding academic dishonesty, plagiarism, and misconduct and their consequences is available at [U-M's academic-policies page]( http://www.rackham.umich.edu/current-students/policies/academic-policies/section11#112).
+
+
+
+**Use of Technology:**  Students should follow instructions from their instructor as to acceptable use of technology in the classroom, including laptops, in each course. All course materials (including slides, assignments, handouts, pre-recorded lectures, or recordings of class) are to be considered confidential material and are not to be shared in full or in part with anyone outside of the course participants. Likewise, your own personal recording (audio or video) of your classes or office hour sessions is allowed only with the express written permission of your instructor.  If you wish to post course materials or photographs/videos of classmates or your instructor to third-party sites (e.g., social media), you must first obtain informed consent. Without explicit permission from the instructor and, in some cases, your classmates, the public distribution or posting of any photos, audio/video recordings, or pre-recordings from class, discussion section, or office hours, even if you have permission to record, is not allowed and could be considered academic misconduct.
+
+Please review additional information and policies regarding [academic expectations and resources](https://intranet.fordschool.umich.edu/academic-expectations) at the Ford School of Public Policy.
+
+See the end of the syllabus for information about our commitment to best practices of instructor/student interactions. 
+
+
+## 📵 Technology in Class
+
+
+## <i class="bi bi-tools"></i>️ Tools That Generate Text
+
+
+##  🛠️ Tools That Generate Images
+
+
+
+# 🪶 Assignments 
+
+Credit hours will be earned by attending two classes of $1.3\bar{3}$ hours each, reading and preparing written work outside of class for 6 to 9 hours per week, and a series of  assignments.
+
+## Due Dates 
+
+Below is the schedule of due dates. 
+
+## Late Submissions
+
+
+## Participation
+
+
+### Make-up policy 
+
+
+
+#	 📚 Required Books
+
+## Additional Books 
+
+# ℹ Resources 
+
+# 📖 Reading by Week
+
+
+> Each week's required readings are indented and marked with a grey sidebar. I also often note "resources" or "further readings" with bullets---these are not required readings.
+
+
+
+## Week 1: Orientation
+
+### Tuesday: Introductions and Syllabus Review 
+
+
+> Please read <mark> the entire syllabus</mark> before class---this is your chance to ask questions about the assignments and readings.
+
+::: {.callout-note collapse="true" title="Further reading"}
+
+- 
+
+::: 
+
+
+### Thursday
+
+- What are you hoping to get out of this semester?
+- What aspects of the class environment will help achieve these goals? 
