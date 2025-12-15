@@ -8,31 +8,31 @@ A [Quarto](https://quarto.org/docs/websites/) Template for University of Michiga
 
 # Contents 
 
+- `_quarto.yml` controls the structure of the website (e.g., [navigation](ttps://quarto.org/docs/reference/projects/websites.html) tabs)
+
+- `index.qmd` is home page content
+
 - `syllabus.qmd` is a template syllabus 
 
-- `/slides/` is a folder to put slide decks
+- `ford_policies.qmd` is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)
+
+- `assignments.qmd` is a template assignment guide 
+
+- /slides/ is a folder for slide decks
 
    - `day1.qmd` is a template [Revealjs](https://quarto.org/docs/presentations/revealjs/) slide deck
    
-   - `ford.scss` gives slides the Ford School logo when added to `theme:`
+   - `ford.scss` gives slides a Ford School logo background when added to `theme:`
    
-   - `weill.scss` gives slides the Ford School logo when added to `theme:`
+   - `weill.scss` gives slides a Weill Hall background when added to `theme:` (see, e.g., day1 slides)
    
    - `index.qmd` automatically indexes slide decks in the `slides` folder on the slides tab of the website
    
 - `michigan.scss` styles all web pages, documents, and slides based on Ford School and [University of Michigan](https://brand.umich.edu/design-resources/colors/) font and color guidance (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html))
 
-- `index.qmd` is home page content
+- /docs/ is where the HTML files for the website are rendered when you build the website---DON'T EDIT MANUALLY
 
-- `ford_policies.qmd` is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)
-
-- `/docs/` is where the HTML files for the website are rendered when you build the website---DON'T EDIT MANUALLY
-
-- `assignments.qmd` is a template assignment guide 
-
-- `.gitignore` is a list of files for GitHub to ignore (not track or publish)
-
-- `_quarto.yml` controls the structure of the website (e.g., [navigation](ttps://quarto.org/docs/reference/projects/websites.html) tabs)
+- `.gitignore` is a list of files to ignore (not track or publish)
 
 
 # To publish for free on GitHub pages
