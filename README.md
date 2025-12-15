@@ -47,7 +47,7 @@ Name this new repository whatever you want the course website address to be (e.g
 
 ## 3. Download as a [version-controlled project](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
 
-In RStudio:  "New Project"--> "Version Control" in RStudio
+In RStudio:  "New Project"--> "Version Control"
 
 ![](https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png)
 
