@@ -6,8 +6,17 @@ format:
   html:
     toc: false
     theme: michigan.scss
-css: styles.css
 ---
 
-This class explores ... 
 
+::: {.callout-tip title="👆"}
+Change the navigation bar by editing `_quarto.yml` 
+:::
+
+
+::: {.callout-note title="👇"}
+Replace this with anything you want on the home page by editing `index.qmd` 
+:::
+
+
+{{< include README.md >}}

@@ -1,7 +1,10 @@
+# On quarto websites, see https://quarto.org/docs/reference/projects/websites.html
+# On publishing with github pages, see https://quarto.org/docs/publishing/github-pages.html
 project:
   type: website
   output-dir: docs
 
+# see https://quarto.org/docs/websites/website-navigation.html
 website:
   title: "PubPol 000"
   navbar:

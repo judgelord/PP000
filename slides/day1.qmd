@@ -1,18 +1,17 @@
 ---
 title: "Day 1"
-date: today
-image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg"
 subtitle: ""
-title-slide-attributes:
-    data-background-image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg"
-    data-background-size: cover
-    data-background-opacity: "0.5"
+date: today
 format:
- revealjs:
-   incremental: false
+ revealjs: # see https://quarto.org/docs/presentations/revealjs/
+   incremental: false # <-- "true" = bullets and numbers to appear incrementally by default
    scrollable: true
-   theme: [../michigan.scss, ford.scss]
-smaller: true
+   theme: [../michigan.scss, weill.scss] # <-- in addition to michigan style sheet, use "weill.scss" to apply a background to all slides 
+   title-slide-attributes:
+    data-background-opacity: "0.5" # <-- background opacity of title slide, see https://quarto.org/docs/presentations/revealjs/advanced.html
+smaller: false # <-- text size toggle 
+image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" # <-- to be used in links to thses slides
+footer: "👈 Click on Block M for menue. Click [here](index) to return to the website."
 ---
 
 
