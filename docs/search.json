@@ -35,18 +35,53 @@
     "text": "👆\n\n\n\nChange the navigation bar by editing _quarto.yml"
   },
   {
-    "objectID": "index.html#contents",
-    "href": "index.html#contents",
+    "objectID": "index.html#make-a-github-account",
+    "href": "index.html#make-a-github-account",
     "title": "PP000",
-    "section": "Contents",
-    "text": "Contents\n\nsyllabus.qmd is a template syllabus\n/slides/ is a folder to put slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides the Ford School logo when added totheme:\nweill.scss gives slides the Ford School logo when added totheme:\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\nmichigan.scss styles all web pages, documents, and slides based on Ford School and University of Michigan font and color guidance (see HTML Theming)\nindex.qmd is home page content\nford_policies.qmd is boilerplate content to include in all syllabi\n/docs/ is where the HTML files for the website are rendered when you build the website—DON’T EDIT MANUALLY\nassignments.qmd is a template assignment guide\n.gitignore is a list of files for GitHub to ignore (not track or publish)\n_quarto.yml controls the structure of the website (e.g., navigation tabs)"
+    "section": "1. Make a GitHub account",
+    "text": "1. Make a GitHub account"
   },
   {
-    "objectID": "index.html#to-publish-for-free-on-github-pages",
-    "href": "index.html#to-publish-for-free-on-github-pages",
+    "objectID": "index.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
+    "href": "index.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
     "title": "PP000",
-    "section": "To publish for free on GitHub pages",
-    "text": "To publish for free on GitHub pages\n\nMake a GitHub account\nFork (i.e., copy) this template repository (https://github.com/judgelord/PP000) to your account and name it your course number, e.g., “PP475” or whatever you want the web address to be\n\n\n\nDownload as a version-controlled project, e.g., “New Project”–&gt; “Version Control” in Rstudio\n\n\n\nConfigure your GitHub repository to publish from the docs directory of your main branch in Settings:"
+    "section": "2. On https://github.com/judgelord/PP000, click Use this template",
+    "text": "2. On https://github.com/judgelord/PP000, click Use this template\nName this new repository whatever you want the course website address to be (e.g., “PP475”)"
+  },
+  {
+    "objectID": "index.html#download-as-a-version-controlled-project",
+    "href": "index.html#download-as-a-version-controlled-project",
+    "title": "PP000",
+    "section": "3. Download as a version-controlled project",
+    "text": "3. Download as a version-controlled project\nIn RStudio: “New Project”–&gt; “Version Control” in RStudio"
+  },
+  {
+    "objectID": "index.html#add-your-content",
+    "href": "index.html#add-your-content",
+    "title": "PP000",
+    "section": "4. Add your content",
+    "text": "4. Add your content"
+  },
+  {
+    "objectID": "index.html#buildrender-website",
+    "href": "index.html#buildrender-website",
+    "title": "PP000",
+    "section": "5. Build/render website",
+    "text": "5. Build/render website"
+  },
+  {
+    "objectID": "index.html#commit-the-changes-and-push-them-to-github",
+    "href": "index.html#commit-the-changes-and-push-them-to-github",
+    "title": "PP000",
+    "section": "6. Commit the changes, and push them to GitHub",
+    "text": "6. Commit the changes, and push them to GitHub\n(If you don’t already use GitHub, you will need to authenticate to push changes to GitHub via a personal access token)"
+  },
+  {
+    "objectID": "index.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
+    "href": "index.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
+    "title": "PP000",
+    "section": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch",
+    "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch"
   },
   {
     "objectID": "slides/index.html",

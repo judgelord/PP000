@@ -155,40 +155,54 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Contents: <a href="https://github.com/judgelord/PP000" class="uri">https://github.com/judgelord/PP000</a></p></li>
 <li><p>Published website: <a href="http://judgelord.github.io/PP000" class="uri">http://judgelord.github.io/PP000</a></p></li>
 </ul>
-<section id="contents" class="level2">
-<h2 class="anchored" data-anchor-id="contents">Contents</h2>
+</section>
+<section id="contents" class="level1">
+<h1>Contents</h1>
 <ul>
 <li><p><code>syllabus.qmd</code> is a template syllabus</p></li>
 <li><p><code>/slides/</code> is a folder to put slide decks</p>
 <ul>
 <li><p><code>day1.qmd</code> is a template <a href="https://quarto.org/docs/presentations/revealjs/">Revealjs</a> slide deck</p></li>
-<li><p><code>ford.scss</code> gives slides the Ford School logo when added to<code>theme:</code></p></li>
-<li><p><code>weill.scss</code> gives slides the Ford School logo when added to<code>theme:</code></p></li>
+<li><p><code>ford.scss</code> gives slides the Ford School logo when added to <code>theme:</code></p></li>
+<li><p><code>weill.scss</code> gives slides the Ford School logo when added to <code>theme:</code></p></li>
 <li><p><code>index.qmd</code> automatically indexes slide decks in the <code>slides</code> folder on the slides tab of the website</p></li>
 </ul></li>
 <li><p><code>michigan.scss</code> styles all web pages, documents, and slides based on Ford School and <a href="https://brand.umich.edu/design-resources/colors/">University of Michigan</a> font and color guidance (see <a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Theming</a>)</p></li>
 <li><p><code>index.qmd</code> is home page content</p></li>
-<li><p><code>ford_policies.qmd</code> is boilerplate content to include in all syllabi</p></li>
+<li><p><code>ford_policies.qmd</code> is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)</p></li>
 <li><p><code>/docs/</code> is where the HTML files for the website are rendered when you build the website—DON’T EDIT MANUALLY</p></li>
 <li><p><code>assignments.qmd</code> is a template assignment guide</p></li>
 <li><p><code>.gitignore</code> is a list of files for GitHub to ignore (not track or publish)</p></li>
 <li><p><code>_quarto.yml</code> controls the structure of the website (e.g., <a href="ttps://quarto.org/docs/reference/projects/websites.html">navigation</a> tabs)</p></li>
 </ul>
 </section>
-<section id="to-publish-for-free-on-github-pages" class="level2">
-<h2 class="anchored" data-anchor-id="to-publish-for-free-on-github-pages">To publish for free on GitHub pages</h2>
-<ol type="1">
-<li><p>Make a GitHub account</p></li>
-<li><p><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo">Fork</a> (i.e., copy) this template repository (<a href="https://github.com/judgelord/PP000" class="uri">https://github.com/judgelord/PP000</a>) to your account and name it your course number, e.g., “PP475” or whatever you want the web address to be</p></li>
-</ol>
-<p><img src="https://docs.github.com/assets/cb-34352/mw-1440/images/help/repository/fork-button.webp" class="img-fluid"></p>
-<ol start="3" type="1">
-<li>Download as a <a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html">version-controlled project</a>, e.g., “New Project”–&gt; “Version Control” in Rstudio</li>
-</ol>
+<section id="to-publish-for-free-on-github-pages" class="level1">
+<h1>To publish for free on GitHub pages</h1>
+<section id="make-a-github-account" class="level2">
+<h2 class="anchored" data-anchor-id="make-a-github-account">1. Make a GitHub account</h2>
+</section>
+<section id="on-httpsgithub.comjudgelordpp000-click-use-this-template" class="level2">
+<h2 class="anchored" data-anchor-id="on-httpsgithub.comjudgelordpp000-click-use-this-template">2. On <a href="https://github.com/judgelord/PP000" class="uri">https://github.com/judgelord/PP000</a>, click <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template">Use this template</a></h2>
+<p>Name this new repository whatever you want the course website address to be (e.g., “PP475”)</p>
+<p><img src="https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp" class="img-fluid"></p>
+</section>
+<section id="download-as-a-version-controlled-project" class="level2">
+<h2 class="anchored" data-anchor-id="download-as-a-version-controlled-project">3. Download as a <a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html">version-controlled project</a></h2>
+<p>In RStudio: “New Project”–&gt; “Version Control” in RStudio</p>
 <p><img src="https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png" class="img-fluid"></p>
-<ol start="4" type="1">
-<li>Configure your GitHub repository to publish from the <code>docs</code> directory of your main branch in Settings:</li>
-</ol>
+</section>
+<section id="add-your-content" class="level2">
+<h2 class="anchored" data-anchor-id="add-your-content">4. Add your content</h2>
+</section>
+<section id="buildrender-website" class="level2">
+<h2 class="anchored" data-anchor-id="buildrender-website">5. <a href="https://quarto.org/docs/websites/#website-preview">Build/render website</a></h2>
+</section>
+<section id="commit-the-changes-and-push-them-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="commit-the-changes-and-push-them-to-github">6. Commit the changes, and push them to GitHub</h2>
+<p>(If you don’t already use GitHub, you will need to authenticate to push changes to GitHub via <a href="https://happygitwithr.com/https-pat">a personal access token</a>)</p>
+</section>
+<section id="in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch" class="level2">
+<h2 class="anchored" data-anchor-id="in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch">7. In Settings, configure your GitHub repository to publish from the <code>/docs</code> directory of your main branch</h2>
 <p><img src="https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png" class="img-fluid"></p>
 
 
