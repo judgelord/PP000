@@ -14,9 +14,9 @@ A [Quarto](https://quarto.org/docs/websites/) Template for University of Michiga
 
    - `day1.qmd` is a template [Revealjs](https://quarto.org/docs/presentations/revealjs/) slide deck
    
-   - `ford.scss` gives slides the Ford School logo when added to`theme:`
+   - `ford.scss` gives slides the Ford School logo when added to `theme:`
    
-   - `weill.scss` gives slides the Ford School logo when added to`theme:`
+   - `weill.scss` gives slides the Ford School logo when added to `theme:`
    
    - `index.qmd` automatically indexes slide decks in the `slides` folder on the slides tab of the website
    

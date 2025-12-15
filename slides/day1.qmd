@@ -10,16 +10,13 @@ format:
    title-slide-attributes:
     data-background-opacity: "0.5" # <-- background opacity of title slide, see https://quarto.org/docs/presentations/revealjs/advanced.html
 smaller: false # <-- text size toggle 
-image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" # <-- to be used in links to thses slides
+image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" # <-- image to be used in links to slides
 footer: "👈 Click on Block M for menue. Click [here](index) to return to the website."
 ---
 
-
 ## Tuesday: Introductions and Syllabus Review 
 
-
 > Please read <mark> the entire syllabus</mark> before class---this is your chance to ask questions about the assignments and readings.
-
 
 
 ## Thursday
