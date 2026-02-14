@@ -1,18 +1,8 @@
 ---
-# title: "Assignment Guide <br>   <br> "
-# title-block-banner: "#001B35" # banner.png
-# title-block-banner-color: body-bg
+title: Assignment Guide
 format:
-# pdf: default. # for printing 
- html:
-   toc: true
-   toc-location: left
-   theme: michigan.scss
-   toc-title: Assignment Guide
-css: styles.css
-execute:
-  echo: false
-  engine: knitr
+ pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
+ html: default
 ---
 
 # The Main Assignment

@@ -18,7 +18,7 @@ A [Quarto](https://quarto.org/docs/websites/) Template for University of Michiga
 
 - `assignments.qmd` is a template assignment guide 
 
-- /slides/ is a folder for slide decks
+- `/slides/` is a folder for slide decks
 
    - `day1.qmd` is a template [Revealjs](https://quarto.org/docs/presentations/revealjs/) slide deck
    
@@ -30,9 +30,9 @@ A [Quarto](https://quarto.org/docs/websites/) Template for University of Michiga
    
 - `michigan.scss` styles all web pages, documents, and slides based on Ford School and [University of Michigan](https://brand.umich.edu/design-resources/colors/) font and color guidance (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html))
 
-- /docs/ is where the HTML files for the website are rendered when you build the website---DON'T EDIT MANUALLY
+- `/docs/` is where the HTML files for the website are rendered when you build the website --- ⚠️ DON'T EDIT IT MANUALLY ⚠️
 
-- `.gitignore` is a list of files to ignore (not track or publish)
+- `.gitignore` is a list of files to ignore (i.e., to not track or publish)
 
 
 # To publish for free on GitHub pages
@@ -43,22 +43,28 @@ A [Quarto](https://quarto.org/docs/websites/) Template for University of Michiga
 
 Name this new repository whatever you want the course website address to be (e.g., "PP475")
 
-![](https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp)
+![A picture of the "Use this template"" button](https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp)
 
 ## 3. Download as a [version-controlled project](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
 
 In RStudio:  "New Project"--> "Version Control"
 
-![](https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png)
+![A picture of new project options in Rstudio](https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png)
 
-## 4. Add your content
+## 4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder
 
-## 5. [Build/render website](https://quarto.org/docs/websites/#website-preview)
+## 5. [Build/render your new website!](https://quarto.org/docs/websites/#website-preview)
 
-## 6. Commit the changes, and push them to GitHub
+![A screenshot of the Render Project/Website button in Rsudio](https://quarto-tdg.org/images/projects-rstudio-build.png)
 
-(If you don't already use GitHub, you will need to authenticate to push changes to GitHub via [a personal access token](https://happygitwithr.com/https-pat))
+## 6. Commit any changes and push them to GitHub
+
+Note: For the website, you only need to push changes to the `/docs/` folder. Add other files only if you want to track changes. Don't push too many large files like PDFs (other than the syllabus) to GitHub. 
+
+![A screenshot of the Git tab in Rstudio](https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png)
+
+(If you don't already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via [a personal access token](https://happygitwithr.com/https-pat))
 
 ## 7. In Settings, configure your GitHub repository to publish from the `/docs` directory of your main branch
 
-![](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png)
+![A picture of the option to publish GitHub pages from the docs folder](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png)

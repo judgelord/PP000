@@ -1,7 +1,4 @@
 ---
-# title: ""
-#title-block-banner:  "#001B35" # banner.png #
-#title-block-banner-color: body-bg
 format:
   html:
     toc: false
@@ -14,8 +11,8 @@ Change the navigation bar by editing `_quarto.yml`
 :::
 
 
-::: {.callout-note title="👇"}
-Replace this with anything you want on the home page by editing `index.qmd` 
+::: {.callout-note title=""}
+👇 Replace text below with anything you want on the home page by editing `index.qmd` 
 :::
 
 

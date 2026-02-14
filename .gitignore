@@ -34,3 +34,5 @@ rsconnect/
 /.quarto/
 .DS_Store
 PP000.Rproj
+**/*.quarto_ipynb
+archive

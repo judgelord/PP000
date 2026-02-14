@@ -13,8 +13,8 @@ website:
         text: Syllabus
       - href: assignments.qmd
         text: Assignment Guide
-      - href: slides
-        text: Slides
+      - href: slides  # Delete these two lines to remove the slides tab from the navigation bar.
+        text: Slides  # Unless you delete slides/index.qmd, a slides page will still available by adding "/slides" to the course URL
 
 format:
  html:
@@ -23,7 +23,6 @@ format:
    theme: michigan.scss
    css: styles.css
 
-
 number-depth: 3
 
-# bibliography: xxx.bib
+# bibliography: XXX.bib

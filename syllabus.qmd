@@ -1,19 +1,10 @@
 ---
-# title: ""
-# title-block-banner:  "#001B35" # banner.png #
-# title-block-banner-color: body-bg
+title: Syllabus Template # add course title here 
 format:
-# pdf: default # to print
- html:
-   toc: true
-   toc-location: left
-   toc-title: Syllabus
-   theme: michigan.scss
-css: styles.css
+ pdf:  default # delete this line if you don't want a pdf version rendered via LaTeX
+ html: default
 execute:
-  echo: false
-  engine: knitr
-
+  engine: knitr # enables inline R code
 ---
 
 Time: 
@@ -22,18 +13,11 @@ Instructor:
 
 - Office hours: 
 
-Links to course resources: 
-
-
-- 🪶 [Assignment Guide](assignments)
-
-- 📚 [Required books](#required-books)
-
--  📖  [Reading by week](#reading-by-week)
+Skip to [reading by week](#reading-by-week)
 
 ---
 
-🚧 Syllabus updated: [`r Sys.Date() |> format("%B %d %Y")`](https://github.com/judgelord/PP000/commits/main/docs/syllabus.html). The current version is [here](syllabus). 🚧
+🚧 Syllabus updated: [`r Sys.Date() |> format("%B %d %Y")`](https://github.com/judgelord/PP000/commits/main/docs/syllabus.html). The current version is [here](https://judgelord.github.io/PP000/syllabus.html). 🚧
 
 <!-- THIS IS AN HTML NOTE. IT WILL NOT BE PART OF THE DOCUMENT --> 
 
@@ -69,10 +53,16 @@ Learning from each other is only possible if we show the respect due to our fell
 
 To realize this goal, I expect us to respect our colleagues and cultivate inclusive discussions. This means that we must be careful not to mislead, degrade, interrupt someone who does not speak as much, or enforce hierarchies based on race, religion, ethnicity, nationality, gender expression, sexual orientation, or ability.
 
-{{< include ford_policies.qmd >}}
+{{< include syllabus-insert.md >}}
+
+::: callout-important
+**If you require accommodations from SSD, please start that process quickly because it takes time.**
+:::
 
 
 ## 📵 Technology in Class
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 ## <i class="bi bi-tools"></i>️ Tools That Generate Text
@@ -87,25 +77,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Credit hours will be earned by attending two classes of $1.3\bar{3}$ hours each, reading and preparing written work outside of class for 6 to 9 hours per week, and a series of  assignments.
 
-## Due Dates 
+## 📅 Due Dates 
 
 Below is the schedule of due dates. 
 
-## Late Submissions
+- 
+
+## <i class="bi bi-clock"></i> Late Submissions
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Participation
+## 🗣 Participation
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-### Make-up policy 
+### <i class="bi bi-reply"></i> Make-up policy 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 #	 📚 Required Books
 
-## Additional Books 
+- 
+
+## <i class="bi bi-bookshelf"></i> Additional Books 
+
+- 
 
 # ℹ Resources 
 
@@ -123,7 +119,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ### Tuesday: Introductions and Syllabus Review 
 
 
-> Please read <mark> the entire syllabus</mark> before class---this is your chance to ask questions about the assignments and readings.
+> Please read <mark> the entire syllabus</mark> before class --- this is your chance to ask questions about the assignments and readings.
 
 ::: {.callout-note collapse="true" title="Further reading"}
 
