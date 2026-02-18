@@ -12,16 +12,22 @@ website:
       - href: syllabus.qmd
         text: Syllabus
       - href: assignments.qmd
-        text: Assignment Guide
+        text: Assignments
       - href: slides  # Delete these two lines to remove the slides tab from the navigation bar.
         text: Slides  # Unless you delete slides/index.qmd, a slides page will still available by adding "/slides" to the course URL
+        aria-label: Slides
+      - href: accessibility.qmd
+        text: Accessibility
 
 format:
  html:
    toc: true
    toc-location: left
    theme: michigan.scss
-   css: styles.css
+   include-after-body: assets/accessibility-fixes.js
+   axe: true # https://quarto.org/docs/output-formats/html-accessibility.html
+   # axe:
+   #    output: document # to make accessability report appear on the web page
 
 number-depth: 3
 

@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-94bec42f26c950a74f88e992ce58751d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bbc91289911af0b617c8cfbefba664b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e496227da2b714f32137fc42a0b61dfd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,9 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script id="quarto-axe-checker-options" type="text/plain">dHJ1ZQ==</script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="floating nav-fixed fullcontent quarto-light">
@@ -96,11 +96,15 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./assignments.html"> 
-<span class="menu-text">Assignment Guide</span></a>
+<span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./slides"> 
 <span class="menu-text">Slides</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./accessibility.html"> 
+<span class="menu-text">Accessibility</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -148,23 +152,21 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>👇 Replace text below with anything you want on the home page by editing <code>index.qmd</code></p>
+<p><i class="bi bi-universal-access"></i> Remember to add alt text for images! <code>![Caption](image.jpg "alt text")</code></p>
 </div>
 </div>
-<section id="pp000" class="level1">
-<h1>PP000</h1>
-<p>A <a href="https://quarto.org/docs/websites/">Quarto</a> Template for University of Michigan Ford School Course Websites</p>
+<p>This is a <a href="https://quarto.org/docs/websites/">Quarto</a> Template for University of Michigan Ford School Course Websites</p>
 <ul>
 <li><p>Contents: <a href="https://github.com/judgelord/PP000" class="uri">https://github.com/judgelord/PP000</a></p></li>
 <li><p>Published website: <a href="http://judgelord.github.io/PP000" class="uri">http://judgelord.github.io/PP000</a></p></li>
 </ul>
-</section>
 <section id="contents" class="level1">
 <h1>Contents</h1>
 <ul>
 <li><p><code>_quarto.yml</code> controls the structure of the website (e.g., <a href="ttps://quarto.org/docs/reference/projects/websites.html">navigation</a> tabs)</p></li>
 <li><p><code>index.qmd</code> is home page content</p></li>
 <li><p><code>syllabus.qmd</code> is a template syllabus</p></li>
-<li><p><code>ford_policies.qmd</code> is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)</p></li>
+<li><p><code>syllabus-insert.qmd</code> is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)</p></li>
 <li><p><code>assignments.qmd</code> is a template assignment guide</p></li>
 <li><p><code>/slides/</code> is a folder for slide decks</p>
 <ul>
@@ -186,60 +188,66 @@ Note
 <section id="on-httpsgithub.comjudgelordpp000-click-use-this-template" class="level2">
 <h2 class="anchored" data-anchor-id="on-httpsgithub.comjudgelordpp000-click-use-this-template">2. On <a href="https://github.com/judgelord/PP000" class="uri">https://github.com/judgelord/PP000</a>, click <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template">Use this template</a></h2>
 <p>Name this new repository whatever you want the course website address to be (e.g., “PP475”)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp" class="img-fluid figure-img"></p>
-<figcaption>A picture of the “Use this template”” button</figcaption>
-</figure>
-</div>
+<p><img src="https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp" title="A picture of the Use this template button" class="img-fluid"></p>
 </section>
-<section id="download-as-a-version-controlled-project" class="level2">
-<h2 class="anchored" data-anchor-id="download-as-a-version-controlled-project">3. Download as a <a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html">version-controlled project</a></h2>
+<section id="download-as-a" class="level2">
+<h2 class="anchored" data-anchor-id="download-as-a">3. Download as a <a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html" title="version-controlled project"></a></h2>
 <p>In RStudio: “New Project”–&gt; “Version Control”</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png" class="img-fluid figure-img"></p>
-<figcaption>A picture of new project options in Rstudio</figcaption>
-</figure>
-</div>
+<p><img src="https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png" title="A picture of new project options in Rstudio" class="img-fluid"></p>
 </section>
 <section id="add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder" class="level2">
 <h2 class="anchored" data-anchor-id="add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder">4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder</h2>
 </section>
-<section id="buildrender-your-new-website" class="level2">
-<h2 class="anchored" data-anchor-id="buildrender-your-new-website">5. <a href="https://quarto.org/docs/websites/#website-preview">Build/render your new website!</a></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://quarto-tdg.org/images/projects-rstudio-build.png" class="img-fluid figure-img"></p>
-<figcaption>A screenshot of the Render Project/Website button in Rsudio</figcaption>
-</figure>
-</div>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">5. <a href="https://quarto.org/docs/websites/#website-preview" title="Build/render your new website!"></a></h2>
+<p>In RStudio: “Build”–&gt; “Render Project” (the button may say “Render Website” instead)</p>
+<p><img src="https://quarto-tdg.org/images/projects-rstudio-build.png" title="A screenshot of the Render Project button in Rsudio" class="img-fluid"></p>
 </section>
 <section id="commit-any-changes-and-push-them-to-github" class="level2">
 <h2 class="anchored" data-anchor-id="commit-any-changes-and-push-them-to-github">6. Commit any changes and push them to GitHub</h2>
 <p>Note: For the website, you only need to push changes to the <code>/docs/</code> folder. Add other files only if you want to track changes. Don’t push too many large files like PDFs (other than the syllabus) to GitHub.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png" class="img-fluid figure-img"></p>
-<figcaption>A screenshot of the Git tab in Rstudio</figcaption>
-</figure>
-</div>
+<p>In RStudio: select changes/files to commit on the “Git” tab. Then push the changes to GitHub.</p>
+<p><img src="https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png" title="A screenshot of the Git tab in Rstudio" class="img-fluid"></p>
 <p>(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via <a href="https://happygitwithr.com/https-pat">a personal access token</a>)</p>
 </section>
 <section id="in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch" class="level2">
 <h2 class="anchored" data-anchor-id="in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch">7. In Settings, configure your GitHub repository to publish from the <code>/docs</code> directory of your main branch</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png" class="img-fluid figure-img"></p>
-<figcaption>A picture of the option to publish GitHub pages from the docs folder</figcaption>
-</figure>
-</div>
+<p><img src="https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png" title="A picture of the option to publish GitHub pages from the docs folder" class="img-fluid"></p>
 
 
 </section>
 </section>
 
 </main> <!-- /main -->
+<script>
+  // If you have multiple navbars (e.g., main + sidebar), label uniquely:
+  const navbars = document.querySelectorAll('nav.navbar');
+  navbars.forEach((nav, idx) => {
+    nav.setAttribute('aria-label', idx === 0 ? 'Main site navigation' : `Secondary navigation`);
+  });
+  const sidebar = document.getElementById('quarto-sidebar');
+  if (sidebar && sidebar.tagName === 'NAV') {
+    sidebar.setAttribute('aria-label', 'Sidebar navigation');
+  }
+  // If your sidebar is a div with role="navigation"
+  else if (sidebar && sidebar.getAttribute('role') === 'navigation') {
+    sidebar.setAttribute('aria-label', 'Sidebar navigation');
+  }
+  // Add tabindex=0 to scrollable <pre> elements
+  document.querySelectorAll('pre').forEach(function(pre) {
+    if (pre.scrollWidth > pre.clientWidth) {
+      pre.setAttribute('tabindex', '0');
+      pre.setAttribute('aria-label', 'Code sample');
+    }
+  });
+  document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {
+  if (!header.hasAttribute('role')) {
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+  }});
+</script>
+
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

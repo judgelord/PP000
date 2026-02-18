@@ -1,4 +1,5 @@
 ---
+title: Slides
 listing:
   contents:
     - "*.qmd"

@@ -1,6 +1,4 @@
-# PP000
-
-A [Quarto](https://quarto.org/docs/websites/) Template for University of Michigan Ford School Course Websites
+This is a [Quarto](https://quarto.org/docs/websites/) Template for University of Michigan Ford School Course Websites
 
 - Contents: <https://github.com/judgelord/PP000>
 
@@ -14,7 +12,7 @@ A [Quarto](https://quarto.org/docs/websites/) Template for University of Michiga
 
 - `syllabus.qmd` is a template syllabus 
 
-- `ford_policies.qmd` is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)
+- `syllabus-insert.qmd` is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)
 
 - `assignments.qmd` is a template assignment guide 
 
@@ -43,28 +41,32 @@ A [Quarto](https://quarto.org/docs/websites/) Template for University of Michiga
 
 Name this new repository whatever you want the course website address to be (e.g., "PP475")
 
-![A picture of the "Use this template"" button](https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp)
+![](https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp "A picture of the Use this template button")
 
-## 3. Download as a [version-controlled project](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
+## 3. Download as a [](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html "version-controlled project")
 
 In RStudio:  "New Project"--> "Version Control"
 
-![A picture of new project options in Rstudio](https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png)
+![](https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png "A picture of new project options in Rstudio")
 
 ## 4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder
 
-## 5. [Build/render your new website!](https://quarto.org/docs/websites/#website-preview)
+## 5. [](https://quarto.org/docs/websites/#website-preview "Build/render your new website!")
 
-![A screenshot of the Render Project/Website button in Rsudio](https://quarto-tdg.org/images/projects-rstudio-build.png)
+In RStudio:  "Build"--> "Render Project" (the button may say "Render Website" instead)
+
+![](https://quarto-tdg.org/images/projects-rstudio-build.png "A screenshot of the Render Project button in Rsudio")
 
 ## 6. Commit any changes and push them to GitHub
 
 Note: For the website, you only need to push changes to the `/docs/` folder. Add other files only if you want to track changes. Don't push too many large files like PDFs (other than the syllabus) to GitHub. 
 
-![A screenshot of the Git tab in Rstudio](https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png)
+In RStudio: select changes/files to commit on the "Git" tab. Then push the changes to GitHub.
+
+![](https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png "A screenshot of the Git tab in Rstudio")
 
 (If you don't already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via [a personal access token](https://happygitwithr.com/https-pat))
 
 ## 7. In Settings, configure your GitHub repository to publish from the `/docs` directory of your main branch
 
-![A picture of the option to publish GitHub pages from the docs folder](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png)
+![](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png "A picture of the option to publish GitHub pages from the docs folder")

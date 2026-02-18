@@ -1,8 +1,8 @@
 ---
 title: Assignment Guide
 format:
- pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
  html: default
+ pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
 ---
 
 # The Main Assignment

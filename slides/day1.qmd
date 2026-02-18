@@ -2,15 +2,16 @@
 title: "Day 1"
 subtitle: ""
 date: today
+image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" # <-- image to be used in links to slides
+image-alt: Weill Hall # <- alt text for accessibility
 format:
  revealjs: # see https://quarto.org/docs/presentations/revealjs/
    incremental: false # <-- "true" = bullets and numbers to appear incrementally by default
    scrollable: true
    theme: [../michigan.scss, weill.scss] # <-- in addition to michigan style sheet, use "weill.scss" to apply a background to all slides 
    title-slide-attributes:
-    data-background-opacity: "0.5" # <-- background opacity of title slide, see https://quarto.org/docs/presentations/revealjs/advanced.html
+    data-background-opacity: "0.5" # <-- background opacity of title slide
 smaller: false # <-- text size toggle 
-image: "https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" # <-- image to be used in links to slides
 footer: "👈 Click on Block M for menue. Click [here](index) to return to the website."
 ---
 

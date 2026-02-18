@@ -1,0 +1,175 @@
+---
+#title: "Accessibility"
+format: 
+  html: default
+---
+
+# Word and PDF documents
+
+Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value. 
+
+My students report that they really appreciate materials in HTML because they are accessibility on mobile devices (especially with links for easy navigation).
+
+However, we may need PDF or DOCX formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding `docx: default` below `format:` in the document header, unless your document includes math or complex tables, which may not render as well in Word.  
+
+
+If you want an accessible PDF, you need to turn on tagging.
+
+## LaTeX 
+
+Add `\DocumentMetadata{tagging=on}` to your LaTeX template before `\documentclass`. 
+
+
+This requires installing some packages:
+
+```
+tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))
+```
+
+Normally, you can add lines in the LaTeX preamble using `include-in-header:` in the YAML header of quarto documents. However, this may not work for lines that need to go before `\documentclass`, so it may require a LaTeX template. For example, this causes an error: 
+
+```
+ pdf: 
+   include-in-header: 
+     - text: |
+        \DocumentMetadata{tagging=on}
+        \documentclass{article}
+```
+
+Thus, I believe that a LaTeX template is required (I could be wrong).
+
+# HTML Accessibility Checks
+
+- <https://quarto.org/docs/output-formats/html-accessibility.html>
+
+The automated check returned some issues with quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
+
+# More accessibility tips
+
+<i class="bi bi-universal-access"></i> Remember to add alt text for images!  `![caption](image.jpg "alt text")` 
+
+## General tips for Quarto-generated PDFs
+
+- <https://remlapmot.github.io/post/2025/quarto-accessibility/>
+
+## Math in HTML
+
+- <https://docs.mathjax.org/en/latest/basic/accessibility.html>
+
+
+# More accessiblity discussions 
+
+## revealjs HTML slides
+
+- <https://github.com/orgs/quarto-dev/discussions/8621>
+
+# Patches
+
+
+## Scrollboxes 
+
+Issue: 
+
+> Serious: Ensure elements that have scrollable content are accessible by keyboard
+Scrollable region must have keyboard access
+
+To make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:
+
+```
+// Add tabindex=0 to scrollable <pre> elements
+  document.querySelectorAll('pre').forEach(function(pre) {
+    if (pre.scrollWidth > pre.clientWidth) {
+      pre.setAttribute('tabindex', '0');
+      pre.setAttribute('aria-label', 'Code sample');
+    }
+  });
+```
+
+## Collapsable callout chunks 
+
+Issue: 
+
+> Critical: Ensure an element's role supports its ARIA attributes
+Elements must only use supported ARIA attributes
+.collapsed
+
+To make callout chunks accessible, I added a JavaScript patch to label it as a button: 
+
+```
+  document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {
+  if (!header.hasAttribute('role')) {
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+  }});
+```
+
+## Website navigation buttons
+
+Issue: 
+
+> Critical: Ensure an element's role supports its ARIA attributes
+
+This seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this): 
+
+The HTML originally included: `aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"`
+
+GPT's response: 
+
+> The role="menu" is usually reserved for a list of menu items (think dropdown menus for accessibility, not a toggle button). You’re probably applying role="menu" to the navbar toggle button, which is incorrect per ARIA standards.
+ARIA attribute permissions:  
+
+> aria-expanded makes sense for interactive elements like a button, a link, or something toggling visibility.
+aria-label="Toggle navigation" is fine for such a toggle.
+role="menu" is not appropriate for a toggle button—it is used for containers of menu items, not the toggle itself.
+Common toggle buttons should have role="button", not role="menu".
+
+> Accessibility checkers will flag this combo because:
+aria-expanded, aria-label, and aria-controls are meant for elements like buttons.
+role="menu" does not support these attributes (see W3C ARIA roles reference).
+
+This issue seems to have been fixed by the same fix as the next.
+
+## Navbar labels 
+
+Issue: 
+
+> Moderate: Ensure landmarks are unique
+Landmarks should have a unique role or role/label/title (i.e. accessible name) combination
+.navbar
+
+This also seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this): 
+
+Patch: 
+
+```
+  // If you have multiple navbars (e.g., main + sidebar), label uniquely:
+  const navbars = document.querySelectorAll('nav.navbar');
+  navbars.forEach((nav, idx) => {
+    nav.setAttribute('aria-label', idx === 0 ? 'Main site navigation' : `Secondary navigation`);
+  });
+  const sidebar = document.getElementById('quarto-sidebar');
+  if (sidebar && sidebar.tagName === 'NAV') {
+    sidebar.setAttribute('aria-label', 'Sidebar navigation');
+  }
+  // If your sidebar is a div with role="navigation"
+  else if (sidebar && sidebar.getAttribute('role') === 'navigation') {
+    sidebar.setAttribute('aria-label', 'Sidebar navigation');
+  }
+```
+
+## "div" vs. "main"
+
+Issue: 
+
+> Moderate: Ensure all page content is contained by landmarks
+All page content should be contained by landmarks
+
+From GPT: 
+
+> Quarto’s default template uses `<div id="quarto-content">` instead of `<main id="quarto-content">`. Your accessibility checker wants your main content inside a `<main>` — the most robust, semantically correct landmark.
+
+> How to  Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site, you can replace the `<div>` with `<main>`.
+
+Fix: 
+
+This issue seems to have been fixed by adding caused by `<script>` to `assets/accessibility-fixes.js`.
