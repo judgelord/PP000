@@ -2,6 +2,7 @@
   {
     "listing": "/slides/index.html",
     "items": [
+      "/slides/ghpages.html",
       "/slides/day1.html"
     ]
   }
