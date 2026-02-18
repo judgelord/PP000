@@ -4,13 +4,26 @@ format:
   html: default
 ---
 
+# <i class="bi bi-universal-access"></i>  Tips
+
+Remember to add alt text for all images!  `![Caption](image.jpg "alt text")` 
+
+# HTML accessibility checks
+
+- <https://quarto.org/docs/output-formats/html-accessibility.html>
+
+The automated check returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
+
+
+
+
 # Word and PDF documents
 
 Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value. 
 
 My students report that they really appreciate materials in HTML because they are accessibility on mobile devices (especially with links for easy navigation).
 
-However, we may need PDF or DOCX formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding `docx: default` below `format:` in the document header, unless your document includes math or complex tables, which may not render as well in Word.  
+However, we may need PDF- or DOCX-formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding `docx: default` below `format:` in the document header, unless your document includes math or complex tables, which may not render as well in Word.  
 
 
 If you want an accessible PDF, you need to turn on tagging.
@@ -26,7 +39,7 @@ This requires installing some packages:
 tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))
 ```
 
-Normally, you can add lines in the LaTeX preamble using `include-in-header:` in the YAML header of quarto documents. However, this may not work for lines that need to go before `\documentclass`, so it may require a LaTeX template. For example, this causes an error: 
+Normally, you can add lines in the LaTeX preamble using `include-in-header:` in the YAML header of Quarto documents. However, this may not work for lines that need to go before `\documentclass`, so it may require a LaTeX template. For example, this causes an error: 
 
 ```
  pdf: 
@@ -38,15 +51,6 @@ Normally, you can add lines in the LaTeX preamble using `include-in-header:` in 
 
 Thus, I believe that a LaTeX template is required (I could be wrong).
 
-# HTML Accessibility Checks
-
-- <https://quarto.org/docs/output-formats/html-accessibility.html>
-
-The automated check returned some issues with quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
-
-# More accessibility tips
-
-<i class="bi bi-universal-access"></i> Remember to add alt text for images!  `![caption](image.jpg "alt text")` 
 
 ## General tips for Quarto-generated PDFs
 
@@ -57,7 +61,7 @@ The automated check returned some issues with quarto defaults, which I fixed wit
 - <https://docs.mathjax.org/en/latest/basic/accessibility.html>
 
 
-# More accessiblity discussions 
+# More accessibility discussions 
 
 ## revealjs HTML slides
 
@@ -70,8 +74,7 @@ The automated check returned some issues with quarto defaults, which I fixed wit
 
 Issue: 
 
-> Serious: Ensure elements that have scrollable content are accessible by keyboard
-Scrollable region must have keyboard access
+> Serious: Ensure elements that have scrollable content are accessible by keyboard. A scrollable region must have keyboard access.
 
 To make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:
 
@@ -90,10 +93,10 @@ To make scrollboxes accessible, I added a JavaScript patch that makes the scroll
 Issue: 
 
 > Critical: Ensure an element's role supports its ARIA attributes
-Elements must only use supported ARIA attributes
-.collapsed
 
-To make callout chunks accessible, I added a JavaScript patch to label it as a button: 
+> .collapsed
+
+To make callout chunks accessible, I added a JavaScript patch to label them as buttons: 
 
 ```
   document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {
@@ -109,9 +112,15 @@ Issue:
 
 > Critical: Ensure an element's role supports its ARIA attributes
 
-This seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this): 
+> .navbar
 
-The HTML originally included: `aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"`
+This seems to be related to how the navigation bar is constructed (by Quarto defaults, I did not modify this): 
+
+The HTML originally included: 
+
+```
+aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"
+```
 
 GPT's response: 
 
@@ -133,11 +142,11 @@ This issue seems to have been fixed by the same fix as the next.
 
 Issue: 
 
-> Moderate: Ensure landmarks are unique
-Landmarks should have a unique role or role/label/title (i.e. accessible name) combination
-.navbar
+> Moderate: Landmarks should have a unique role or role/label/title (i.e., accessible name) combination
 
-This also seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this): 
+> .navbar
+
+This also seems to be related to how the navigation bar is constructed (by quarto defaults, I did not modify this): 
 
 Patch: 
 
@@ -162,14 +171,14 @@ Patch:
 Issue: 
 
 > Moderate: Ensure all page content is contained by landmarks
-All page content should be contained by landmarks
+
 
 From GPT: 
 
 > Quarto’s default template uses `<div id="quarto-content">` instead of `<main id="quarto-content">`. Your accessibility checker wants your main content inside a `<main>` — the most robust, semantically correct landmark.
 
-> How to  Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site, you can replace the `<div>` with `<main>`.
+> How to  Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site. You can replace the `<div>` with `<main>`.
 
 Fix: 
 
-This issue seems to have been fixed by adding caused by `<script>` to `assets/accessibility-fixes.js`.
+This issue seems to have been fixed by adding `<script>` to `assets/accessibility-fixes.js`.

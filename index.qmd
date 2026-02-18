@@ -13,8 +13,6 @@ Change the navigation bar by editing `_quarto.yml`
 
 ::: {.callout-note title=""}
 👇 Replace text below with anything you want on the home page by editing `index.qmd` 
-
-<i class="bi bi-universal-access"></i> Remember to add alt text for images!  `![Caption](image.jpg "alt text")`
 :::
 
 

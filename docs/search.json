@@ -2,72 +2,72 @@
   {
     "objectID": "accessibility.html",
     "href": "accessibility.html",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "",
-    "text": "Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value.\nMy students report that they really appreciate materials in HTML because they are accessibility on mobile devices (especially with links for easy navigation).\nHowever, we may need PDF or DOCX formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding docx: default below format: in the document header, unless your document includes math or complex tables, which may not render as well in Word.\nIf you want an accessible PDF, you need to turn on tagging.\n\n\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
+    "text": "Remember to add alt text for all images! ![Caption](image.jpg \"alt text\")"
   },
   {
     "objectID": "accessibility.html#latex",
     "href": "accessibility.html#latex",
-    "title": "Word and PDF documents",
-    "section": "",
-    "text": "Add \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
+    "title": " Tips",
+    "section": "LaTeX",
+    "text": "LaTeX\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
   },
   {
     "objectID": "accessibility.html#general-tips-for-quarto-generated-pdfs",
     "href": "accessibility.html#general-tips-for-quarto-generated-pdfs",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "General tips for Quarto-generated PDFs",
     "text": "General tips for Quarto-generated PDFs\n\nhttps://remlapmot.github.io/post/2025/quarto-accessibility/"
   },
   {
     "objectID": "accessibility.html#math-in-html",
     "href": "accessibility.html#math-in-html",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "Math in HTML",
     "text": "Math in HTML\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html"
   },
   {
     "objectID": "accessibility.html#revealjs-html-slides",
     "href": "accessibility.html#revealjs-html-slides",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "revealjs HTML slides",
     "text": "revealjs HTML slides\n\nhttps://github.com/orgs/quarto-dev/discussions/8621"
   },
   {
     "objectID": "accessibility.html#scrollboxes",
     "href": "accessibility.html#scrollboxes",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "Scrollboxes",
-    "text": "Scrollboxes\nIssue:\n\nSerious: Ensure elements that have scrollable content are accessible by keyboard Scrollable region must have keyboard access\n\nTo make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:\n// Add tabindex=0 to scrollable &lt;pre&gt; elements\n  document.querySelectorAll('pre').forEach(function(pre) {\n    if (pre.scrollWidth &gt; pre.clientWidth) {\n      pre.setAttribute('tabindex', '0');\n      pre.setAttribute('aria-label', 'Code sample');\n    }\n  });"
+    "text": "Scrollboxes\nIssue:\n\nSerious: Ensure elements that have scrollable content are accessible by keyboard. A scrollable region must have keyboard access.\n\nTo make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:\n// Add tabindex=0 to scrollable &lt;pre&gt; elements\n  document.querySelectorAll('pre').forEach(function(pre) {\n    if (pre.scrollWidth &gt; pre.clientWidth) {\n      pre.setAttribute('tabindex', '0');\n      pre.setAttribute('aria-label', 'Code sample');\n    }\n  });"
   },
   {
     "objectID": "accessibility.html#collapsable-callout-chunks",
     "href": "accessibility.html#collapsable-callout-chunks",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "Collapsable callout chunks",
-    "text": "Collapsable callout chunks\nIssue:\n\nCritical: Ensure an element’s role supports its ARIA attributes Elements must only use supported ARIA attributes .collapsed\n\nTo make callout chunks accessible, I added a JavaScript patch to label it as a button:\n  document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {\n  if (!header.hasAttribute('role')) {\n    header.setAttribute('role', 'button');\n    header.setAttribute('tabindex', '0');\n  }});"
+    "text": "Collapsable callout chunks\nIssue:\n\nCritical: Ensure an element’s role supports its ARIA attributes\n\n\n.collapsed\n\nTo make callout chunks accessible, I added a JavaScript patch to label them as buttons:\n  document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {\n  if (!header.hasAttribute('role')) {\n    header.setAttribute('role', 'button');\n    header.setAttribute('tabindex', '0');\n  }});"
   },
   {
     "objectID": "accessibility.html#website-navigation-buttons",
     "href": "accessibility.html#website-navigation-buttons",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "Website navigation buttons",
-    "text": "Website navigation buttons\nIssue:\n\nCritical: Ensure an element’s role supports its ARIA attributes\n\nThis seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this):\nThe HTML originally included: aria-controls=\"navbarCollapse\" role=\"menu\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\nGPT’s response:\n\nThe role=“menu” is usually reserved for a list of menu items (think dropdown menus for accessibility, not a toggle button). You’re probably applying role=“menu” to the navbar toggle button, which is incorrect per ARIA standards. ARIA attribute permissions:\n\n\naria-expanded makes sense for interactive elements like a button, a link, or something toggling visibility. aria-label=“Toggle navigation” is fine for such a toggle. role=“menu” is not appropriate for a toggle button—it is used for containers of menu items, not the toggle itself. Common toggle buttons should have role=“button”, not role=“menu”.\n\n\nAccessibility checkers will flag this combo because: aria-expanded, aria-label, and aria-controls are meant for elements like buttons. role=“menu” does not support these attributes (see W3C ARIA roles reference).\n\nThis issue seems to have been fixed by the same fix as the next."
+    "text": "Website navigation buttons\nIssue:\n\nCritical: Ensure an element’s role supports its ARIA attributes\n\n\n.navbar\n\nThis seems to be related to how the navigation bar is constructed (by Quarto defaults, I did not modify this):\nThe HTML originally included:\naria-controls=\"navbarCollapse\" role=\"menu\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\nGPT’s response:\n\nThe role=“menu” is usually reserved for a list of menu items (think dropdown menus for accessibility, not a toggle button). You’re probably applying role=“menu” to the navbar toggle button, which is incorrect per ARIA standards. ARIA attribute permissions:\n\n\naria-expanded makes sense for interactive elements like a button, a link, or something toggling visibility. aria-label=“Toggle navigation” is fine for such a toggle. role=“menu” is not appropriate for a toggle button—it is used for containers of menu items, not the toggle itself. Common toggle buttons should have role=“button”, not role=“menu”.\n\n\nAccessibility checkers will flag this combo because: aria-expanded, aria-label, and aria-controls are meant for elements like buttons. role=“menu” does not support these attributes (see W3C ARIA roles reference).\n\nThis issue seems to have been fixed by the same fix as the next."
   },
   {
     "objectID": "accessibility.html#navbar-labels",
     "href": "accessibility.html#navbar-labels",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "Navbar labels",
-    "text": "Navbar labels\nIssue:\n\nModerate: Ensure landmarks are unique Landmarks should have a unique role or role/label/title (i.e. accessible name) combination .navbar\n\nThis also seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this):\nPatch:\n  // If you have multiple navbars (e.g., main + sidebar), label uniquely:\n  const navbars = document.querySelectorAll('nav.navbar');\n  navbars.forEach((nav, idx) =&gt; {\n    nav.setAttribute('aria-label', idx === 0 ? 'Main site navigation' : `Secondary navigation`);\n  });\n  const sidebar = document.getElementById('quarto-sidebar');\n  if (sidebar && sidebar.tagName === 'NAV') {\n    sidebar.setAttribute('aria-label', 'Sidebar navigation');\n  }\n  // If your sidebar is a div with role=\"navigation\"\n  else if (sidebar && sidebar.getAttribute('role') === 'navigation') {\n    sidebar.setAttribute('aria-label', 'Sidebar navigation');\n  }"
+    "text": "Navbar labels\nIssue:\n\nModerate: Landmarks should have a unique role or role/label/title (i.e., accessible name) combination\n\n\n.navbar\n\nThis also seems to be related to how the navigation bar is constructed (by quarto defaults, I did not modify this):\nPatch:\n  // If you have multiple navbars (e.g., main + sidebar), label uniquely:\n  const navbars = document.querySelectorAll('nav.navbar');\n  navbars.forEach((nav, idx) =&gt; {\n    nav.setAttribute('aria-label', idx === 0 ? 'Main site navigation' : `Secondary navigation`);\n  });\n  const sidebar = document.getElementById('quarto-sidebar');\n  if (sidebar && sidebar.tagName === 'NAV') {\n    sidebar.setAttribute('aria-label', 'Sidebar navigation');\n  }\n  // If your sidebar is a div with role=\"navigation\"\n  else if (sidebar && sidebar.getAttribute('role') === 'navigation') {\n    sidebar.setAttribute('aria-label', 'Sidebar navigation');\n  }"
   },
   {
     "objectID": "accessibility.html#div-vs.-main",
     "href": "accessibility.html#div-vs.-main",
-    "title": "Word and PDF documents",
+    "title": " Tips",
     "section": "“div” vs. “main”",
-    "text": "“div” vs. “main”\nIssue:\n\nModerate: Ensure all page content is contained by landmarks All page content should be contained by landmarks\n\nFrom GPT:\n\nQuarto’s default template uses &lt;div id=\"quarto-content\"&gt; instead of &lt;main id=\"quarto-content\"&gt;. Your accessibility checker wants your main content inside a &lt;main&gt; — the most robust, semantically correct landmark.\n\n\nHow to Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site, you can replace the &lt;div&gt; with &lt;main&gt;.\n\nFix:\nThis issue seems to have been fixed by adding caused by &lt;script&gt; to assets/accessibility-fixes.js."
+    "text": "“div” vs. “main”\nIssue:\n\nModerate: Ensure all page content is contained by landmarks\n\nFrom GPT:\n\nQuarto’s default template uses &lt;div id=\"quarto-content\"&gt; instead of &lt;main id=\"quarto-content\"&gt;. Your accessibility checker wants your main content inside a &lt;main&gt; — the most robust, semantically correct landmark.\n\n\nHow to Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site. You can replace the &lt;div&gt; with &lt;main&gt;.\n\nFix:\nThis issue seems to have been fixed by adding &lt;script&gt; to assets/accessibility-fixes.js."
   },
   {
     "objectID": "slides/day1.html#tuesday-introductions-and-syllabus-review",

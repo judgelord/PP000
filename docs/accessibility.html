@@ -121,17 +121,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#word-and-pdf-documents" id="toc-word-and-pdf-documents" class="nav-link active" data-scroll-target="#word-and-pdf-documents">Word and PDF documents</a>
+  <li><a href="#tips" id="toc-tips" class="nav-link active" data-scroll-target="#tips"><i class="bi bi-universal-access"></i> Tips</a></li>
+  <li><a href="#html-accessibility-checks" id="toc-html-accessibility-checks" class="nav-link" data-scroll-target="#html-accessibility-checks">HTML accessibility checks</a></li>
+  <li><a href="#word-and-pdf-documents" id="toc-word-and-pdf-documents" class="nav-link" data-scroll-target="#word-and-pdf-documents">Word and PDF documents</a>
   <ul class="collapse">
   <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex">LaTeX</a></li>
-  </ul></li>
-  <li><a href="#html-accessibility-checks" id="toc-html-accessibility-checks" class="nav-link" data-scroll-target="#html-accessibility-checks">HTML Accessibility Checks</a></li>
-  <li><a href="#more-accessibility-tips" id="toc-more-accessibility-tips" class="nav-link" data-scroll-target="#more-accessibility-tips">More accessibility tips</a>
-  <ul class="collapse">
   <li><a href="#general-tips-for-quarto-generated-pdfs" id="toc-general-tips-for-quarto-generated-pdfs" class="nav-link" data-scroll-target="#general-tips-for-quarto-generated-pdfs">General tips for Quarto-generated PDFs</a></li>
   <li><a href="#math-in-html" id="toc-math-in-html" class="nav-link" data-scroll-target="#math-in-html">Math in HTML</a></li>
   </ul></li>
-  <li><a href="#more-accessiblity-discussions" id="toc-more-accessiblity-discussions" class="nav-link" data-scroll-target="#more-accessiblity-discussions">More accessiblity discussions</a>
+  <li><a href="#more-accessibility-discussions" id="toc-more-accessibility-discussions" class="nav-link" data-scroll-target="#more-accessibility-discussions">More accessibility discussions</a>
   <ul class="collapse">
   <li><a href="#revealjs-html-slides" id="toc-revealjs-html-slides" class="nav-link" data-scroll-target="#revealjs-html-slides">revealjs HTML slides</a></li>
   </ul></li>
@@ -156,18 +154,29 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="tips" class="level1">
+<h1><i class="bi bi-universal-access"></i> Tips</h1>
+<p>Remember to add alt text for all images! <code>![Caption](image.jpg "alt text")</code></p>
+</section>
+<section id="html-accessibility-checks" class="level1">
+<h1>HTML accessibility checks</h1>
+<ul>
+<li><a href="https://quarto.org/docs/output-formats/html-accessibility.html" class="uri">https://quarto.org/docs/output-formats/html-accessibility.html</a></li>
+</ul>
+<p>The automated check returned some issues with Quarto defaults, which I fixed with JavaScript <a href="#patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</p>
+</section>
 <section id="word-and-pdf-documents" class="level1">
 <h1>Word and PDF documents</h1>
 <p>Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value.</p>
 <p>My students report that they really appreciate materials in HTML because they are accessibility on mobile devices (especially with links for easy navigation).</p>
-<p>However, we may need PDF or DOCX formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding <code>docx: default</code> below <code>format:</code> in the document header, unless your document includes math or complex tables, which may not render as well in Word.</p>
+<p>However, we may need PDF- or DOCX-formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding <code>docx: default</code> below <code>format:</code> in the document header, unless your document includes math or complex tables, which may not render as well in Word.</p>
 <p>If you want an accessible PDF, you need to turn on tagging.</p>
 <section id="latex" class="level2">
 <h2 class="anchored" data-anchor-id="latex">LaTeX</h2>
 <p>Add <code>\DocumentMetadata{tagging=on}</code> to your LaTeX template before <code>\documentclass</code>.</p>
 <p>This requires installing some packages:</p>
 <pre><code>tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))</code></pre>
-<p>Normally, you can add lines in the LaTeX preamble using <code>include-in-header:</code> in the YAML header of quarto documents. However, this may not work for lines that need to go before <code>\documentclass</code>, so it may require a LaTeX template. For example, this causes an error:</p>
+<p>Normally, you can add lines in the LaTeX preamble using <code>include-in-header:</code> in the YAML header of Quarto documents. However, this may not work for lines that need to go before <code>\documentclass</code>, so it may require a LaTeX template. For example, this causes an error:</p>
 <pre><code> pdf: 
    include-in-header: 
      - text: |
@@ -175,17 +184,6 @@ ul.task-list li input[type="checkbox"] {
         \documentclass{article}</code></pre>
 <p>Thus, I believe that a LaTeX template is required (I could be wrong).</p>
 </section>
-</section>
-<section id="html-accessibility-checks" class="level1">
-<h1>HTML Accessibility Checks</h1>
-<ul>
-<li><a href="https://quarto.org/docs/output-formats/html-accessibility.html" class="uri">https://quarto.org/docs/output-formats/html-accessibility.html</a></li>
-</ul>
-<p>The automated check returned some issues with quarto defaults, which I fixed with JavaScript <a href="#patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</p>
-</section>
-<section id="more-accessibility-tips" class="level1">
-<h1>More accessibility tips</h1>
-<p><i class="bi bi-universal-access"></i> Remember to add alt text for images! <code>![caption](image.jpg "alt text")</code></p>
 <section id="general-tips-for-quarto-generated-pdfs" class="level2">
 <h2 class="anchored" data-anchor-id="general-tips-for-quarto-generated-pdfs">General tips for Quarto-generated PDFs</h2>
 <ul>
@@ -199,8 +197,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="more-accessiblity-discussions" class="level1">
-<h1>More accessiblity discussions</h1>
+<section id="more-accessibility-discussions" class="level1">
+<h1>More accessibility discussions</h1>
 <section id="revealjs-html-slides" class="level2">
 <h2 class="anchored" data-anchor-id="revealjs-html-slides">revealjs HTML slides</h2>
 <ul>
@@ -214,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="scrollboxes">Scrollboxes</h2>
 <p>Issue:</p>
 <blockquote class="blockquote">
-<p>Serious: Ensure elements that have scrollable content are accessible by keyboard Scrollable region must have keyboard access</p>
+<p>Serious: Ensure elements that have scrollable content are accessible by keyboard. A scrollable region must have keyboard access.</p>
 </blockquote>
 <p>To make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:</p>
 <pre><code>// Add tabindex=0 to scrollable &lt;pre&gt; elements
@@ -229,9 +227,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="collapsable-callout-chunks">Collapsable callout chunks</h2>
 <p>Issue:</p>
 <blockquote class="blockquote">
-<p>Critical: Ensure an element’s role supports its ARIA attributes Elements must only use supported ARIA attributes .collapsed</p>
+<p>Critical: Ensure an element’s role supports its ARIA attributes</p>
 </blockquote>
-<p>To make callout chunks accessible, I added a JavaScript patch to label it as a button:</p>
+<blockquote class="blockquote">
+<p>.collapsed</p>
+</blockquote>
+<p>To make callout chunks accessible, I added a JavaScript patch to label them as buttons:</p>
 <pre><code>  document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {
   if (!header.hasAttribute('role')) {
     header.setAttribute('role', 'button');
@@ -244,8 +245,12 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>Critical: Ensure an element’s role supports its ARIA attributes</p>
 </blockquote>
-<p>This seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this):</p>
-<p>The HTML originally included: <code>aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"</code></p>
+<blockquote class="blockquote">
+<p>.navbar</p>
+</blockquote>
+<p>This seems to be related to how the navigation bar is constructed (by Quarto defaults, I did not modify this):</p>
+<p>The HTML originally included:</p>
+<pre><code>aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"</code></pre>
 <p>GPT’s response:</p>
 <blockquote class="blockquote">
 <p>The role=“menu” is usually reserved for a list of menu items (think dropdown menus for accessibility, not a toggle button). You’re probably applying role=“menu” to the navbar toggle button, which is incorrect per ARIA standards. ARIA attribute permissions:</p>
@@ -262,9 +267,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="navbar-labels">Navbar labels</h2>
 <p>Issue:</p>
 <blockquote class="blockquote">
-<p>Moderate: Ensure landmarks are unique Landmarks should have a unique role or role/label/title (i.e.&nbsp;accessible name) combination .navbar</p>
+<p>Moderate: Landmarks should have a unique role or role/label/title (i.e., accessible name) combination</p>
 </blockquote>
-<p>This also seems to be relate to how the navigation bar is constructed (by quarto defaults, I did not modify this):</p>
+<blockquote class="blockquote">
+<p>.navbar</p>
+</blockquote>
+<p>This also seems to be related to how the navigation bar is constructed (by quarto defaults, I did not modify this):</p>
 <p>Patch:</p>
 <pre><code>  // If you have multiple navbars (e.g., main + sidebar), label uniquely:
   const navbars = document.querySelectorAll('nav.navbar');
@@ -284,17 +292,17 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="div-vs.-main">“div” vs.&nbsp;“main”</h2>
 <p>Issue:</p>
 <blockquote class="blockquote">
-<p>Moderate: Ensure all page content is contained by landmarks All page content should be contained by landmarks</p>
+<p>Moderate: Ensure all page content is contained by landmarks</p>
 </blockquote>
 <p>From GPT:</p>
 <blockquote class="blockquote">
 <p>Quarto’s default template uses <code>&lt;div id="quarto-content"&gt;</code> instead of <code>&lt;main id="quarto-content"&gt;</code>. Your accessibility checker wants your main content inside a <code>&lt;main&gt;</code> — the most robust, semantically correct landmark.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>How to Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site, you can replace the <code>&lt;div&gt;</code> with <code>&lt;main&gt;</code>.</p>
+<p>How to Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site. You can replace the <code>&lt;div&gt;</code> with <code>&lt;main&gt;</code>.</p>
 </blockquote>
 <p>Fix:</p>
-<p>This issue seems to have been fixed by adding caused by <code>&lt;script&gt;</code> to <code>assets/accessibility-fixes.js</code>.</p>
+<p>This issue seems to have been fixed by adding <code>&lt;script&gt;</code> to <code>assets/accessibility-fixes.js</code>.</p>
 
 
 </section>
