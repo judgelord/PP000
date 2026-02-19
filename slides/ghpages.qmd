@@ -11,7 +11,7 @@ format:
    theme: [../michigan.scss, ford.scss] # <-- in addition to michigan style sheet, use "ford.scss" to apply a background to all slides 
    title-slide-attributes:
     data-background-opacity: "0.2" # <-- background opacity of title slide
-smaller: false # <-- text size toggle 
+smaller: true # <-- text size toggle 
 footer: "👈 Click on Block M for menue. Click [here](index) to return to the website."
 ---
 

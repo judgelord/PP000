@@ -27,6 +27,7 @@ $link-color: #42affa;
 $link_color: #006EB2;
 $text-muted: #4c6782;
 $code_highlight_color: #FFCB05;
+$code-highlight-color: #FFCB05;
 $background_color: #FFFFFF;
 $text_font_size: 1rem;
 $header_h1_font_size: 1.75rem;
@@ -86,7 +87,6 @@ $callout-color-important: #9A3324;
     color: #4c6782;
 }
 
-
 .center-x{
     text-align: center;
 }
@@ -132,7 +132,7 @@ ul, ol {
   li {
     margin-bottom: 0.0em; // Adjust as needed
     padding-bottom: 0.0em;
-    line-height: 1.1; // Or greater for more space
+    line-height: 1.3; // Or greater for more space
     gap: 0.0em;
   }
 }
