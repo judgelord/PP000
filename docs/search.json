@@ -14,6 +14,13 @@
     "text": "LaTeX\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
   },
   {
+    "objectID": "accessibility.html#general-tips-for-latex-generated-pdfs",
+    "href": "accessibility.html#general-tips-for-latex-generated-pdfs",
+    "title": " Tips",
+    "section": "General tips for LaTeX-generated PDFs",
+    "text": "General tips for LaTeX-generated PDFs\n\nAlton Worthington’s LaTeX accessibility resources"
+  },
+  {
     "objectID": "accessibility.html#general-tips-for-quarto-generated-pdfs",
     "href": "accessibility.html#general-tips-for-quarto-generated-pdfs",
     "title": " Tips",
@@ -84,6 +91,13 @@
     "text": "Thursday\n\nWhat are you hoping to get out of this semester?\nWhat aspects of the discussion environment will help achieve these goals?"
   },
   {
+    "objectID": "slides/ghpages.html#contents",
+    "href": "slides/ghpages.html#contents",
+    "title": "Publishing on GitHub",
+    "section": "Contents",
+    "text": "Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\nmichigan.scss styles all web pages, documents, and slides based on Ford School and University of Michigan font and color guidance (see HTML Theming)\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
+  },
+  {
     "objectID": "slides/ghpages.html#make-a-github-account",
     "href": "slides/ghpages.html#make-a-github-account",
     "title": "Publishing on GitHub",
@@ -130,61 +144,68 @@
     "href": "slides/ghpages.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
     "title": "Publishing on GitHub",
     "section": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch",
-    "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch"
+    "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "",
     "text": "Tip👆\n\n\n\nChange the navigation bar by editing _quarto.yml\nThis is a Quarto Template for University of Michigan Ford School Course Websites"
   },
   {
+    "objectID": "index.html#contents",
+    "href": "index.html#contents",
+    "title": "To publish for free on GitHub pages",
+    "section": "Contents",
+    "text": "Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\nmichigan.scss styles all web pages, documents, and slides based on Ford School and University of Michigan font and color guidance (see HTML Theming)\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
+  },
+  {
     "objectID": "index.html#make-a-github-account",
     "href": "index.html#make-a-github-account",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "1. Make a GitHub account",
     "text": "1. Make a GitHub account"
   },
   {
     "objectID": "index.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
     "href": "index.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "2. On https://github.com/judgelord/PP000, click Use this template",
     "text": "2. On https://github.com/judgelord/PP000, click Use this template\nName this new repository whatever you want the course website address to be (e.g., “PP475”)"
   },
   {
     "objectID": "index.html#download-as-a",
     "href": "index.html#download-as-a",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "3. Download as a ",
     "text": "3. Download as a \nIn RStudio: “New Project”–&gt; “Version Control”"
   },
   {
     "objectID": "index.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
     "href": "index.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder",
     "text": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder"
   },
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "5. ",
     "text": "5. \nIn RStudio: “Build”–&gt; “Render Project” (the button may say “Render Website” instead)"
   },
   {
     "objectID": "index.html#commit-any-changes-and-push-them-to-github",
     "href": "index.html#commit-any-changes-and-push-them-to-github",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "6. Commit any changes and push them to GitHub",
     "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push too many large files like PDFs (other than the syllabus) to GitHub.\nIn RStudio: select changes/files to commit on the “Git” tab. Then push the changes to GitHub.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
   },
   {
     "objectID": "index.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
     "href": "index.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
-    "title": "Contents",
+    "title": "To publish for free on GitHub pages",
     "section": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch",
     "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch"
   },
@@ -235,14 +256,14 @@
     "href": "slides/index.html",
     "title": "Slides",
     "section": "",
-    "text": "Publishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\nFeb 19, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Publishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\nFeb 24, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus Template",
     "section": "",
-    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: February 19 2026. The current version is here. 🚧"
+    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: February 24 2026. The current version is here. 🚧"
   },
   {
     "objectID": "syllabus.html#course-philosophy",
@@ -298,7 +319,7 @@
     "href": "syllabus.html#additional-books",
     "title": "Syllabus Template",
     "section": " Additional Books",
-    "text": "Additional Books"
+    "text": "Additional Books\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "objectID": "syllabus.html#week-1-orientation",

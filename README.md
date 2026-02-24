@@ -4,7 +4,7 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for University of
 
 - Published website: <http://judgelord.github.io/PP000>
 
-# Contents 
+## Contents 
 
 - `_quarto.yml` controls the structure of the website (e.g., [navigation](ttps://quarto.org/docs/reference/projects/websites.html) tabs)
 
@@ -27,6 +27,8 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for University of
    - `index.qmd` automatically indexes slide decks in the `slides` folder on the slides tab of the website
    
 - `michigan.scss` styles all web pages, documents, and slides based on Ford School and [University of Michigan](https://brand.umich.edu/design-resources/colors/) font and color guidance (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html))
+
+- `assets/accessiblity-fixes.js` is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)
 
 - `/docs/` is where the HTML files for the website are rendered when you build the website --- ⚠️ DON'T EDIT IT MANUALLY ⚠️
 

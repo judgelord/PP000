@@ -12,7 +12,7 @@ format:
    title-slide-attributes:
     data-background-opacity: "0.5" # <-- background opacity of title slide
 smaller: false # <-- text size toggle 
-footer: "👈 Click on Block M for menue. Click [here](index) to return to the website."
+footer: "👈 Click on Block M for menu. Click [here](index) to return to the website."
 ---
 
 ## Tuesday: Introductions and Syllabus Review 

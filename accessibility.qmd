@@ -51,6 +51,10 @@ Normally, you can add lines in the LaTeX preamble using `include-in-header:` in 
 
 Thus, I believe that a LaTeX template is required (I could be wrong).
 
+## General tips for LaTeX-generated PDFs
+
+- [Alton Worthington's LaTeX accessibility resources](https://docs.google.com/document/d/1K1phwLYhJ0stnBDMbfrwwVOq6b0Fo9ehnUZ3a0jQGgo/edit?tab=t.0)
+
 
 ## General tips for Quarto-generated PDFs
 
@@ -67,8 +71,9 @@ Thus, I believe that a LaTeX template is required (I could be wrong).
 
 - <https://github.com/orgs/quarto-dev/discussions/8621>
 
-# Patches
+# Fixes
 
+`assets/accessiblity-fixes.js` is JavaScript that fixes accessibly the following issues with web pages and HTML slides: 
 
 ## Scrollboxes 
 
