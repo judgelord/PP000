@@ -2,8 +2,10 @@
   {
     "listing": "/slides/index.html",
     "items": [
+      "/slides/backgrounds.html",
+      "/slides/day1.html",
       "/slides/ghpages.html",
-      "/slides/day1.html"
+      "/slides/pandoc.html"
     ]
   }
 ]

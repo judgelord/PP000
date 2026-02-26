@@ -1,21 +1,16 @@
 ---
 title: "Publishing on GitHub"
 subtitle: ""
-# date: today
-image: "https://fordschool.umich.edu/themes/custom/ford/images/og-image.png" # <-- image to be used in links to slides
-image-alt: Weill Hall # <- alt text for accessibility
+author: ""
+date: today
 format:
  revealjs: # see https://quarto.org/docs/presentations/revealjs/
    incremental: false # <-- "true" = bullets and numbers to appear incrementally by default
    scrollable: true
-   theme: [../michigan.scss, ford.scss] # <-- in addition to michigan style sheet, use "ford.scss" to apply a background to all slides 
-   title-slide-attributes:
-    data-background-opacity: "0.2" # <-- background opacity of title slide
-smaller: true # <-- text size toggle 
+   theme: [../michigan.scss]
 footer: "👈 Click on Block M for menu. Click [here](index) to return to the website."
 ---
 
+(the home page as slides)
 
 {{< include ../README.md >}}
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

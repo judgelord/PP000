@@ -91,6 +91,48 @@
     "text": "Thursday\n\nWhat are you hoping to get out of this semester?\nWhat aspects of the discussion environment will help achieve these goals?"
   },
   {
+    "objectID": "slides/backgrounds.html#to-set-a-background-for-one-slide",
+    "href": "slides/backgrounds.html#to-set-a-background-for-one-slide",
+    "title": "Slide Backgrounds",
+    "section": "To set a background for one slide",
+    "text": "To set a background for one slide\nFor this background on one slide, add {background-image=\"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"} after the title"
+  },
+  {
+    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
+    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
+    "title": "Slide Backgrounds",
+    "section": "To set a theme for all slides",
+    "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford.scss]"
+  },
+  {
+    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
+    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
+    "title": "Slide Backgrounds",
+    "section": "To set a theme for all slides",
+    "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford2.scss]"
+  },
+  {
+    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
+    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
+    "title": "Slide Backgrounds",
+    "section": "To set a theme for all slides",
+    "text": "To set a theme for all slides\ntheme: [../michigan.scss, weill.scss]"
+  },
+  {
+    "objectID": "slides/backgrounds.html#to-make-new-themes",
+    "href": "slides/backgrounds.html#to-make-new-themes",
+    "title": "Slide Backgrounds",
+    "section": "To make new themes",
+    "text": "To make new themes\n\nFind an image url or save an image in the slides folder\nMake a .scss styling file. This is what “ford.scss” looks like:\n\n/*-- scss:rules --*/\n.slide-background-content{\n  background-image: url(\"https://fordschool.umich.edu/themes/custom/ford/images/og-image.png\");\n  background-size: 100% 100%;\n  opacity: .1\n}\n\nAdd your new scss style to the theme: line of the slide header\n\nformat:\n revealjs: \n   theme: [../michigan.scss, ford.scss] \n(these slides also use the .michigan.scss style)"
+  },
+  {
+    "objectID": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
+    "href": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
+    "title": "Slide Backgrounds",
+    "section": "R code to make new slide theme files",
+    "text": "R code to make new slide theme files\n(overkill, but it shows how you can execute code in .qmd documents)\n\nurl &lt;- \"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"\n\npaste('/*-- scss:rules --*/\n  .slide-background-content{\n      background-image: url(\"',\n      url,\n      '\");\n  background-size: 100% 100%;\n  opacity: .1\n}') |&gt;\n  write(\"ford2.scss\")"
+  },
+  {
     "objectID": "slides/ghpages.html#contents",
     "href": "slides/ghpages.html#contents",
     "title": "Publishing on GitHub",
@@ -144,7 +186,7 @@
     "href": "slides/ghpages.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
     "title": "Publishing on GitHub",
     "section": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch",
-    "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch"
   },
   {
     "objectID": "index.html",
@@ -256,14 +298,49 @@
     "href": "slides/index.html",
     "title": "Slides",
     "section": "",
-    "text": "Publishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\nFeb 24, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Slide Backgrounds\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files\n\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
+    "href": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
+    "title": "Converting .tex or .docx Files",
+    "section": "Markdown is a lightweight syntax",
+    "text": "Markdown is a lightweight syntax\n\nin contrast to LaTeX, you type a lot less funny business\nin contrast to Word, everything is plain text and in your control—no buttons or formatting changes on different"
+  },
+  {
+    "objectID": "slides/pandoc.html#pandoc-converts-between-file-types",
+    "href": "slides/pandoc.html#pandoc-converts-between-file-types",
+    "title": "Converting .tex or .docx Files",
+    "section": "Pandoc converts between file types",
+    "text": "Pandoc converts between file types"
+  },
+  {
+    "objectID": "slides/pandoc.html#docx-syllabus-to-markdown",
+    "href": "slides/pandoc.html#docx-syllabus-to-markdown",
+    "title": "Converting .tex or .docx Files",
+    "section": "Docx syllabus to markdown",
+    "text": "Docx syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.docx\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a pdf version rendered via LaTeX\n(just copy the header from syllabus.qmd)"
+  },
+  {
+    "objectID": "slides/pandoc.html#latex-syllabus-to-markdown",
+    "href": "slides/pandoc.html#latex-syllabus-to-markdown",
+    "title": "Converting .tex or .docx Files",
+    "section": "LaTeX syllabus to markdown",
+    "text": "LaTeX syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a pdf version rendered via LaTeX\n# docx: default # do you really want a docx version, too? \n(just copy the header from syllabus.qmd)"
+  },
+  {
+    "objectID": "slides/pandoc.html#beamer-to-markdown",
+    "href": "slides/pandoc.html#beamer-to-markdown",
+    "title": "Converting .tex or .docx Files",
+    "section": "Beamer to markdown",
+    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(just copy from the file that made these slides, “pandoc.qmd”)\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course."
   },
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus Template",
     "section": "",
-    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: February 24 2026. The current version is here. 🚧"
+    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: February 26 2026. The current version is here. 🚧"
   },
   {
     "objectID": "syllabus.html#course-philosophy",

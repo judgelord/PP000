@@ -1,0 +1,79 @@
+---
+title: "Converting .tex or .docx Files"
+subtitle: ""
+author: ""
+date: today
+image: "https://pandoc.org/diagram.svgz" # <-- image to be used in links to slides
+image-alt: Pandoc diogram # <- alt text for accessibility
+format:
+ revealjs: # see https://quarto.org/docs/presentations/revealjs/
+   title-slide-attributes:
+    data-background-image: "https://pandoc.org/diagram.svgz" # <-- background of title slide
+    data-background-opacity: "0.5" # <-- background opacity of title slide
+   theme: [../michigan.scss]
+   scrollable: false
+footer: "👈 Click on Block M for menu. Click [here](index) to return to the website."
+---
+
+
+## Markdown is a *lightweight* syntax
+
+- in contrast to LaTeX, you type a lot less funny business
+- in contrast to Word, everything is plain text and in your control---no buttons or formatting changes on different
+
+![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme")
+
+## Pandoc converts between file types
+
+![](https://pandoc.org/pandoc-cartoon.svgz "pandoc cartoon")
+
+## Docx syllabus to markdown
+
+1.  In terminal: `pandoc -t markdown -o syllabus.md syllabus.docx`
+1.  Change ".md" to ".qmd" 
+1.  Add a YAML header at the top:
+
+```yaml
+title: Syllabus
+format:
+ html: default
+ pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
+```
+
+(just copy the header from syllabus.qmd)
+
+
+## LaTeX syllabus to markdown
+
+1.  In terminal: `pandoc -t markdown -o syllabus.md syllabus.tex`
+1.  Change ".md" to ".qmd" 
+1.  Add a YAML header at the top:
+
+```yaml
+title: Syllabus
+format:
+ html: default
+ pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
+# docx: default # do you really want a docx version, too? 
+```
+
+(just copy the header from syllabus.qmd)
+
+## Beamer to markdown
+
+1.  In terminal: `pandoc -t markdown -o slides.md slides.tex`
+1.  Change ".md" to ".qmd" 
+1.  Add a YAML header at the top:
+
+```yaml
+  title: "My Slides"
+  format:
+    revealjs: 
+      slide-number: true
+```
+
+(just copy from the file that made these slides, "pandoc.qmd")
+
+::: callout-tip
+Pandoc can also do the reverse, of course.
+:::

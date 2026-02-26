@@ -1,0 +1,83 @@
+---
+title: "Slide Backgrounds"
+subtitle: ""
+author: ""
+date: ""
+image: "https://fordschool.umich.edu/themes/custom/ford/images/og-image.png" # <-- image to be used in links to slides
+image-alt: Ford School Logo # <- alt text for accessibility
+format:
+ revealjs: # see https://quarto.org/docs/presentations/revealjs/
+   theme: [../michigan.scss, ford2.scss] # <-- in addition to michigan style sheet, use "ford2.scss" to apply a background to all slides 
+   title-slide-attributes:
+     data-background-image: "https://fordschool.umich.edu/themes/custom/ford/images/og-image.png" # <-- background of title slide is different
+     data-background-opacity: "0.5" # <-- background opacity of title slide
+scrollable: false
+echo: true
+footer: "👈 Click on Block M for menu. Click [here](index) to return to the website."
+---
+
+## To set a background  for one slide 
+
+For this background on one slide, add `{background-image="https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png"}` after the title
+
+## To set a theme for all slides {background-image="https://fordschool.umich.edu/themes/custom/ford/images/og-image.png"}
+
+```yaml
+theme: [../michigan.scss, ford.scss] 
+```
+
+## To set a theme for all slides 
+
+```yaml
+theme: [../michigan.scss, ford2.scss] 
+```
+
+## To set a theme for all slides {background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg"}
+
+```yaml
+theme: [../michigan.scss, weill.scss] 
+```
+
+
+## To make new themes
+
+1. Find an image url or save an image in the slides folder
+
+2. Make a .scss styling file. This is what "ford.scss" looks like: 
+
+```
+/*-- scss:rules --*/
+.slide-background-content{
+  background-image: url("https://fordschool.umich.edu/themes/custom/ford/images/og-image.png");
+  background-size: 100% 100%;
+  opacity: .1
+}
+```
+
+3. Add your new scss style to the `theme:` line of the slide header 
+
+```yaml
+format:
+ revealjs: 
+   theme: [../michigan.scss, ford.scss] 
+```
+(these slides also use the .michigan.scss style)
+
+
+## R code to make new slide theme files 
+
+(overkill, but it shows how you can execute code in .qmd documents)
+
+```{r}
+url <- "https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png"
+
+paste('/*-- scss:rules --*/
+  .slide-background-content{
+      background-image: url("',
+      url,
+      '");
+  background-size: 100% 100%;
+  opacity: .1
+}') |>
+  write("ford2.scss")
+```
