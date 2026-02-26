@@ -6,7 +6,7 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for University of
 
 ## Contents 
 
-- `_quarto.yml` controls the structure of the website (e.g., [navigation](ttps://quarto.org/docs/reference/projects/websites.html) tabs)
+- `_quarto.yml` controls the structure of the website (e.g., [navigation](https://quarto.org/docs/reference/projects/websites.html) tabs)
 
 - `index.qmd` is home page content
 
@@ -25,6 +25,8 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for University of
    - `weill.scss` gives slides a Weill Hall background when added to `theme:` (see, e.g., day1 slides)
    
    - `index.qmd` automatically indexes slide decks in the `slides` folder on the slides tab of the website
+   
+- `accessibility.qmd` is a page of accessibility tips 
    
 - `michigan.scss` styles all web pages, documents, and slides based on Ford School and [University of Michigan](https://brand.umich.edu/design-resources/colors/) font and color guidance (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html))
 
@@ -45,7 +47,7 @@ Name this new repository whatever you want the course website address to be (e.g
 
 ![](https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp "A picture of the Use this template button")
 
-## 3. Download as a [](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html "version-controlled project")
+## 3. Download as a [version-controlled project](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html)
 
 In RStudio:  "New Project"--> "Version Control"
 
@@ -53,7 +55,7 @@ In RStudio:  "New Project"--> "Version Control"
 
 ## 4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder
 
-## 5. [](https://quarto.org/docs/websites/#website-preview "Build/render your new website!")
+## 5. [Build/render your new website!](https://quarto.org/docs/websites/#website-preview)
 
 In RStudio:  "Build"--> "Render Project" (the button may say "Render Website" instead)
 
@@ -61,9 +63,9 @@ In RStudio:  "Build"--> "Render Project" (the button may say "Render Website" in
 
 ## 6. Commit any changes and push them to GitHub
 
-Note: For the website, you only need to push changes to the `/docs/` folder. Add other files only if you want to track changes. Don't push too many large files like PDFs (other than the syllabus) to GitHub. 
+Note: For the website, you only need to push changes to the `/docs/` folder. Add other files only if you want to track changes. Don't push large files to GitHub. 
 
-In RStudio: select changes/files to commit on the "Git" tab. Then push the changes to GitHub.
+In RStudio: select changes/files to commit on the "Git" tab. Then push the changes.
 
 ![](https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png "A screenshot of the Git tab in Rstudio")
 

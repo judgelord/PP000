@@ -146,7 +146,7 @@
 <section id="contents" class="slide level2">
 <h2>Contents</h2>
 <ul>
-<li><p><code>_quarto.yml</code> controls the structure of the website (e.g., <a href="ttps://quarto.org/docs/reference/projects/websites.html">navigation</a> tabs)</p></li>
+<li><p><code>_quarto.yml</code> controls the structure of the website (e.g., <a href="https://quarto.org/docs/reference/projects/websites.html">navigation</a> tabs)</p></li>
 <li><p><code>index.qmd</code> is home page content</p></li>
 <li><p><code>syllabus.qmd</code> is a template syllabus</p></li>
 <li><p><code>syllabus-insert.qmd</code> is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)</p></li>
@@ -158,6 +158,7 @@
 <li><p><code>weill.scss</code> gives slides a Weill Hall background when added to <code>theme:</code> (see, e.g., day1 slides)</p></li>
 <li><p><code>index.qmd</code> automatically indexes slide decks in the <code>slides</code> folder on the slides tab of the website</p></li>
 </ul></li>
+<li><p><code>accessibility.qmd</code> is a page of accessibility tips</p></li>
 <li><p><code>michigan.scss</code> styles all web pages, documents, and slides based on Ford School and <a href="https://brand.umich.edu/design-resources/colors/">University of Michigan</a> font and color guidance (see <a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Theming</a>)</p></li>
 <li><p><code>assets/accessiblity-fixes.js</code> is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)</p></li>
 <li><p><code>/docs/</code> is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️</p></li>
@@ -177,23 +178,23 @@
 <p>Name this new repository whatever you want the course website address to be (e.g., “PP475”)</p>
 
 <img data-src="https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp" title="A picture of the Use this template button" class="r-stretch"></section>
-<section id="download-as-a" class="slide level2">
-<h2>3. Download as a <a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html" title="version-controlled project"></a></h2>
+<section id="download-as-a-version-controlled-project" class="slide level2">
+<h2>3. Download as a <a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html">version-controlled project</a></h2>
 <p>In RStudio: “New Project”–&gt; “Version Control”</p>
 
 <img data-src="https://towardsdatascience.com/wp-content/uploads/2022/01/1PPhgC3GyhuLnWjNuUYIVrQ.png" title="A picture of new project options in Rstudio" class="r-stretch"></section>
 <section id="add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder" class="slide level2">
 <h2>4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder</h2>
 </section>
-<section id="section" class="slide level2">
-<h2>5. <a href="https://quarto.org/docs/websites/#website-preview" title="Build/render your new website!"></a></h2>
+<section id="buildrender-your-new-website" class="slide level2">
+<h2>5. <a href="https://quarto.org/docs/websites/#website-preview">Build/render your new website!</a></h2>
 <p>In RStudio: “Build”–&gt; “Render Project” (the button may say “Render Website” instead)</p>
 
 <img data-src="https://quarto-tdg.org/images/projects-rstudio-build.png" title="A screenshot of the Render Project button in Rsudio" class="r-stretch"></section>
 <section id="commit-any-changes-and-push-them-to-github" class="slide level2">
 <h2>6. Commit any changes and push them to GitHub</h2>
-<p>Note: For the website, you only need to push changes to the <code>/docs/</code> folder. Add other files only if you want to track changes. Don’t push too many large files like PDFs (other than the syllabus) to GitHub.</p>
-<p>In RStudio: select changes/files to commit on the “Git” tab. Then push the changes to GitHub.</p>
+<p>Note: For the website, you only need to push changes to the <code>/docs/</code> folder. Add other files only if you want to track changes. Don’t push large files to GitHub.</p>
+<p>In RStudio: select changes/files to commit on the “Git” tab. Then push the changes.</p>
 
 <img data-src="https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png" title="A screenshot of the Git tab in Rstudio" class="r-stretch"><p>(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via <a href="https://happygitwithr.com/https-pat">a personal access token</a>)</p>
 </section>

@@ -10,12 +10,7 @@ Remember to add alt text for all images!  `![Caption](image.jpg "alt text")`
 
 # HTML accessibility checks
 
-- <https://quarto.org/docs/output-formats/html-accessibility.html>
-
-The automated check returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
-
-
-
+The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
 
 # Word and PDF documents
 
@@ -32,8 +27,7 @@ If you want an accessible PDF, you need to turn on tagging.
 
 Add `\DocumentMetadata{tagging=on}` to your LaTeX template before `\documentclass`. 
 
-
-This requires installing some packages:
+This requires installing some packages. In R:
 
 ```
 tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))
@@ -41,7 +35,7 @@ tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luam
 
 Normally, you can add lines in the LaTeX preamble using `include-in-header:` in the YAML header of Quarto documents. However, this may not work for lines that need to go before `\documentclass`, so it may require a LaTeX template. For example, this causes an error: 
 
-```
+```yaml
  pdf: 
    include-in-header: 
      - text: |

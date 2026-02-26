@@ -3,6 +3,8 @@ title: "Publishing on GitHub"
 subtitle: "(this is just the home page rendered as slides instead)"
 author: ""
 date: ""
+image: "https://docs.github.com/assets/cb-76823/mw-1440/images/help/repository/use-this-template-button.webp" # <-- image to be used in links to slides
+image-alt: Use this template button on GitHub.com # <- alt text for accessibility
 format:
  revealjs: # see https://quarto.org/docs/presentations/revealjs/
    incremental: false # <-- "true" = bullets and numbers to appear incrementally by default
