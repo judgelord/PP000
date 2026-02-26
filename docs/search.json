@@ -298,7 +298,7 @@
     "href": "slides/index.html",
     "title": "Slides",
     "section": "",
-    "text": "Slide Backgrounds\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files\n\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Slide Backgrounds\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
@@ -333,7 +333,7 @@
     "href": "slides/pandoc.html#beamer-to-markdown",
     "title": "Converting .tex or .docx Files",
     "section": "Beamer to markdown",
-    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(just copy from the file that made these slides, “pandoc.qmd”)\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course."
+    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course."
   },
   {
     "objectID": "syllabus.html",

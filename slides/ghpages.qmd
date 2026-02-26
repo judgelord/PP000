@@ -1,8 +1,8 @@
 ---
 title: "Publishing on GitHub"
-subtitle: ""
+subtitle: "(this is just the home page rendered as slides instead)"
 author: ""
-date: today
+date: ""
 format:
  revealjs: # see https://quarto.org/docs/presentations/revealjs/
    incremental: false # <-- "true" = bullets and numbers to appear incrementally by default
@@ -10,7 +10,5 @@ format:
    theme: [../michigan.scss]
 footer: "👈 Click on Block M for menu. Click [here](index) to return to the website."
 ---
-
-(the home page as slides)
 
 {{< include ../README.md >}}

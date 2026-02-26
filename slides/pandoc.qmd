@@ -2,7 +2,7 @@
 title: "Converting .tex or .docx Files"
 subtitle: ""
 author: ""
-date: today
+date: ""
 image: "https://pandoc.org/diagram.svgz" # <-- image to be used in links to slides
 image-alt: Pandoc diogram # <- alt text for accessibility
 format:
@@ -72,7 +72,7 @@ format:
       slide-number: true
 ```
 
-(just copy from the file that made these slides, "pandoc.qmd")
+(just copy from the file that made these slides, pandoc.qmd)
 
 ::: callout-tip
 Pandoc can also do the reverse, of course.
