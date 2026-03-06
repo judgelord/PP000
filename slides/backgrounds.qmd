@@ -13,7 +13,7 @@ format:
      data-background-opacity: "0.5" # <-- background opacity of title slide
 scrollable: false
 echo: true
-footer: "👈 Click on Block M for menu. Click [here](index) to return to the website."
+footer: "👈 Click on Block M for menu - [Return to the website](index.qmd)"
 ---
 
 ## To set a background  for one slide 

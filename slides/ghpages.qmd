@@ -10,7 +10,7 @@ format:
    incremental: false # <-- "true" = bullets and numbers to appear incrementally by default
    scrollable: true
    theme: [../michigan.scss]
-footer: "👈 Click on Block M for menu. Click [here](index) to return to the website."
+footer: "👈 Click on Block M for menu - [Return to the website](index.qmd)"
 ---
 
 {{< include ../README.md >}}

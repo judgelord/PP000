@@ -12,6 +12,8 @@ Remember to add alt text for all images!  `![Caption](image.jpg "alt text")`
 
 The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
 
+You can also use the [site improve Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
+
 # Word and PDF documents
 
 Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value. 
