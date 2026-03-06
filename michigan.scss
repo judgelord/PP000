@@ -28,24 +28,20 @@ $link-color: #2F65A7;
 $text-muted: #655A52;
 $background_color: #FFFFFF;
 $text_font_size: 1rem;
-$header_h1_font_size: 1.75rem;
-$header_h2_font_size: 1.5rem;
-$header_h3_font_size: 1.25rem;
-$table_row_even_background_color:#CFC096;
-$presentation-font-size-root: 35px !default;
-$base_font_size: 35px !default;
 $callout-color-note: #75988d;
 $callout-color-tip: #A5A508;
 $callout-color-warning: #9A3324;
 $callout-color-caution: #D86018;
 $callout-color-important: #FFCB05;
+$table_row_even_background_color:#CFC096;
 
+/*-- scss:rules --*/
 ul li:first-child,
 ol li:first-child {
   margin-top: 0; // No extra space at the end
 }
 
-/*-- scss:rules --*/
+// tiny transparent text
 .transparent {
    Opacity:0;
    font-size: 0.01em;
@@ -98,6 +94,7 @@ ul, ol {
 
 
 /*-- PRESENTATIONS --*/
+// $presentation-font-size-root: 35px !default;
 
 // Override for Reveal.js slides
 .reveal li { padding: 0px 0px; }
