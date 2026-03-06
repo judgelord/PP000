@@ -94,7 +94,10 @@ ul, ol {
 
 
 /*-- PRESENTATIONS --*/
-// $presentation-font-size-root: 35px !default;
+
+.reveal {
+  font-size: 35px;
+}
 
 // Override for Reveal.js slides
 .reveal li { padding: 0px 0px; }
