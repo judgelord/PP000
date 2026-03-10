@@ -18,7 +18,7 @@ Skip to [reading by week](#reading-by-week)
 
 ---
 
-🚧 Syllabus updated: [`r Sys.Date() |> format("%B %d %Y")`](https://github.com/judgelord/PP000/commits/main/docs/syllabus.html). The current version is [here](https://judgelord.github.io/PP000/syllabus.html). 🚧
+🚧 Syllabus updated: [`r Sys.Date() |> format("%B %d %Y")`](https://github.com/judgelord/PP000/commits/main/docs/syllabus.html). This is [the current version](https://judgelord.github.io/PP000/syllabus.html). 🚧
 
 <!-- THIS IS AN HTML NOTE. IT WILL NOT BE PART OF THE DOCUMENT --> 
 
