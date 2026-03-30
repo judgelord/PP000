@@ -65,9 +65,13 @@ In RStudio:  "Build"--> "Render Project" (the button may say "Render Website" in
 
 Note: For the website, you only need to push changes to the `/docs/` folder. Add other files only if you want to track changes. Don't push large files to GitHub. 
 
+## 
+
 In RStudio: select changes/files to commit on the "Git" tab. Then push the changes.
 
 ![](https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png "A screenshot of the Git tab in Rstudio")
+
+
 
 (If you don't already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via [a personal access token](https://happygitwithr.com/https-pat))
 

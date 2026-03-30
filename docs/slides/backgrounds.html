@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="">
-  <title>PubPol 000 – Slide Backgrounds</title>
+  <title>PubPol 000 – Slide Backgrounds    </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-a92e12c00e3dd007750a3b23125c5e93.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-db63c0dd1f850c498a23ed2be2e63349.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -193,7 +193,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="https://fordschool.umich.edu/themes/custom/ford/images/og-image.png" data-background-opacity="0.5" class="quarto-title-block center">
-  <h1 class="title">Slide Backgrounds</h1>
+  <h1 class="title">Slide Backgrounds <br> <br></h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -211,7 +211,7 @@
 <h2>To set a theme for all slides</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">../michigan.scss</span><span class="kw">,</span><span class="at"> ford2.scss</span><span class="kw">]</span><span class="at"> </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="to-set-a-theme-for-all-slides-2" class="slide level2" data-background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg">
+<section id="to-set-a-theme-for-all-slides-2" class="slide level2" data-background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" data-background-opacity="0.3">
 <h2>To set a theme for all slides</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">../michigan.scss</span><span class="kw">,</span><span class="at"> weill.scss</span><span class="kw">]</span><span class="at"> </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
@@ -240,16 +240,17 @@
 <p>(overkill, but it shows how you can execute code in .qmd documents)</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>url <span class="ot">&lt;-</span> <span class="st">"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png"</span></span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a><span class="fu">paste</span>(<span class="st">'/*-- scss:rules --*/</span></span>
-<span id="cb6-4"><a></a><span class="st">  .slide-background-content{</span></span>
-<span id="cb6-5"><a></a><span class="st">      background-image: url("'</span>,</span>
-<span id="cb6-6"><a></a>      url,</span>
-<span id="cb6-7"><a></a>      <span class="st">'");</span></span>
-<span id="cb6-8"><a></a><span class="st">  background-size: 100% 100%;</span></span>
-<span id="cb6-9"><a></a><span class="st">  opacity: .1</span></span>
-<span id="cb6-10"><a></a><span class="st">}'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-11"><a></a>  <span class="fu">write</span>(<span class="st">"ford2.scss"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-2"><a></a>file <span class="ot">&lt;-</span> <span class="st">"ford2.scss"</span></span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="fu">paste</span>(<span class="st">'/*-- scss:rules --*/</span></span>
+<span id="cb6-5"><a></a><span class="st">  .slide-background-content{</span></span>
+<span id="cb6-6"><a></a><span class="st">      background-image: url("'</span>,</span>
+<span id="cb6-7"><a></a>      url,</span>
+<span id="cb6-8"><a></a>      <span class="st">'");</span></span>
+<span id="cb6-9"><a></a><span class="st">  background-size: 100% 100%;</span></span>
+<span id="cb6-10"><a></a><span class="st">  opacity: .1</span></span>
+<span id="cb6-11"><a></a><span class="st">}'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-12"><a></a>  <span class="fu">write</span>(file)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 

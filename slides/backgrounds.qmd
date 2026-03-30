@@ -1,5 +1,5 @@
 ---
-title: "Slide Backgrounds"
+title: "Slide Backgrounds <br> <br>"
 subtitle: ""
 author: ""
 date: ""
@@ -7,7 +7,7 @@ image: "https://fordschool.umich.edu/themes/custom/ford/images/og-image.png" # <
 image-alt: Ford School Logo # <- alt text for accessibility
 format:
  revealjs: # see https://quarto.org/docs/presentations/revealjs/
-   theme: [../michigan.scss, ford2.scss] # <-- in addition to michigan style sheet, use "ford2.scss" to apply a background to all slides 
+   theme: [../michigan.scss, ford2.scss] # <-- in addition to the michigan style sheet, use ford2.scss to apply a background to all slides 
    title-slide-attributes:
      data-background-image: "https://fordschool.umich.edu/themes/custom/ford/images/og-image.png" # <-- background of title slide is different
      data-background-opacity: "0.5" # <-- background opacity of title slide
@@ -26,13 +26,15 @@ For this background on one slide, add `{background-image="https://fordschool.umi
 theme: [../michigan.scss, ford.scss] 
 ```
 
+
 ## To set a theme for all slides 
 
 ```yaml
 theme: [../michigan.scss, ford2.scss] 
 ```
 
-## To set a theme for all slides {background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg"}
+
+## To set a theme for all slides {background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" background-opacity="0.3"}
 
 ```yaml
 theme: [../michigan.scss, weill.scss] 
@@ -54,6 +56,7 @@ theme: [../michigan.scss, weill.scss]
 }
 ```
 
+
 3. Add your new scss style to the `theme:` line of the slide header 
 
 ```yaml
@@ -70,6 +73,7 @@ format:
 
 ```{r}
 url <- "https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png"
+file <- "ford2.scss"
 
 paste('/*-- scss:rules --*/
   .slide-background-content{
@@ -79,5 +83,5 @@ paste('/*-- scss:rules --*/
   background-size: 100% 100%;
   opacity: .1
 }') |>
-  write("ford2.scss")
+  write(file)
 ```

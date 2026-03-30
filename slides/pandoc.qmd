@@ -1,5 +1,5 @@
 ---
-title: "Converting .tex or .docx Files"
+title: "Converting .tex or .docx Files to Markdown"
 subtitle: ""
 author: ""
 date: ""
@@ -18,10 +18,24 @@ footer: "👈 Click on Block M for menu - [Return to the website](index.qmd)"
 
 ## Markdown is a *lightweight* syntax
 
-- in contrast to LaTeX, you type a lot less funny business
-- in contrast to Word, everything is plain text and in your control---no buttons or formatting changes on different
+- In contrast to LaTeX, you type a lot less funny business
+- In contrast to Word, everything is plain text and in your control---no buttons or formatting changes on different machines
 
 ![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme")
+
+## Markdown math is $\approxeq$ LaTeX
+
+Inline: `$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
+
+Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+
+Display mode:
+
+`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$`
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+
 
 ## Pandoc converts between file types
 
@@ -37,10 +51,10 @@ footer: "👈 Click on Block M for menu - [Return to the website](index.qmd)"
 title: Syllabus
 format:
  html: default
- pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
+ pdf: default # delete this line if you don't want a PDF version rendered via LaTeX
 ```
 
-(just copy the header from syllabus.qmd)
+(Just copy the header from syllabus.qmd)
 
 
 ## LaTeX syllabus to markdown
@@ -53,11 +67,11 @@ format:
 title: Syllabus
 format:
  html: default
- pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
-# docx: default # do you really want a docx version, too? 
+ pdf: default # delete this line if you don't want a PDF version rendered via LaTeX
+# docx: default # Do you really want a docx version, too? 
 ```
 
-(just copy the header from syllabus.qmd)
+(Just copy the header from syllabus.qmd)
 
 ## Beamer to markdown
 

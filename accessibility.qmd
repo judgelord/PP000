@@ -56,10 +56,23 @@ Thus, I believe that a LaTeX template is required (I could be wrong).
 
 - <https://remlapmot.github.io/post/2025/quarto-accessibility/>
 
-## Math in HTML
+# Math is more accessble in HTML than LaTeX
+
+Inline: `$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
+
+Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+
+Display mode:
+
+`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$`
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
 
 - <https://docs.mathjax.org/en/latest/basic/accessibility.html>
+- More on how to make MathJax content universally interpretable, aligning with 
+WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
 
+TODO: Use descriptive alt text for equations by including `\label{}` or `\tag{}`
 
 # More accessibility discussions 
 

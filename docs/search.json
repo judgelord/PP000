@@ -28,13 +28,6 @@
     "text": "General tips for Quarto-generated PDFs\n\nhttps://remlapmot.github.io/post/2025/quarto-accessibility/"
   },
   {
-    "objectID": "accessibility.html#math-in-html",
-    "href": "accessibility.html#math-in-html",
-    "title": " Tips",
-    "section": "Math in HTML",
-    "text": "Math in HTML\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html"
-  },
-  {
     "objectID": "accessibility.html#revealjs-html-slides",
     "href": "accessibility.html#revealjs-html-slides",
     "title": " Tips",
@@ -93,44 +86,44 @@
   {
     "objectID": "slides/backgrounds.html#to-set-a-background-for-one-slide",
     "href": "slides/backgrounds.html#to-set-a-background-for-one-slide",
-    "title": "Slide Backgrounds",
+    "title": "Slide Backgrounds  ",
     "section": "To set a background for one slide",
     "text": "To set a background for one slide\nFor this background on one slide, add {background-image=\"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"} after the title"
   },
   {
     "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
     "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
-    "title": "Slide Backgrounds",
+    "title": "Slide Backgrounds  ",
     "section": "To set a theme for all slides",
     "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford.scss]"
   },
   {
     "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
     "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
-    "title": "Slide Backgrounds",
+    "title": "Slide Backgrounds  ",
     "section": "To set a theme for all slides",
     "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford2.scss]"
   },
   {
     "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
     "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
-    "title": "Slide Backgrounds",
+    "title": "Slide Backgrounds  ",
     "section": "To set a theme for all slides",
     "text": "To set a theme for all slides\ntheme: [../michigan.scss, weill.scss]"
   },
   {
     "objectID": "slides/backgrounds.html#to-make-new-themes",
     "href": "slides/backgrounds.html#to-make-new-themes",
-    "title": "Slide Backgrounds",
+    "title": "Slide Backgrounds  ",
     "section": "To make new themes",
     "text": "To make new themes\n\nFind an image url or save an image in the slides folder\nMake a .scss styling file. This is what “ford.scss” looks like:\n\n/*-- scss:rules --*/\n.slide-background-content{\n  background-image: url(\"https://fordschool.umich.edu/themes/custom/ford/images/og-image.png\");\n  background-size: 100% 100%;\n  opacity: .1\n}\n\nAdd your new scss style to the theme: line of the slide header\n\nformat:\n revealjs: \n   theme: [../michigan.scss, ford.scss] \n(these slides also use the .michigan.scss style)"
   },
   {
     "objectID": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
     "href": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
-    "title": "Slide Backgrounds",
+    "title": "Slide Backgrounds  ",
     "section": "R code to make new slide theme files",
-    "text": "R code to make new slide theme files\n(overkill, but it shows how you can execute code in .qmd documents)\n\nurl &lt;- \"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"\n\npaste('/*-- scss:rules --*/\n  .slide-background-content{\n      background-image: url(\"',\n      url,\n      '\");\n  background-size: 100% 100%;\n  opacity: .1\n}') |&gt;\n  write(\"ford2.scss\")"
+    "text": "R code to make new slide theme files\n(overkill, but it shows how you can execute code in .qmd documents)\n\nurl &lt;- \"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"\nfile &lt;- \"ford2.scss\"\n\npaste('/*-- scss:rules --*/\n  .slide-background-content{\n      background-image: url(\"',\n      url,\n      '\");\n  background-size: 100% 100%;\n  opacity: .1\n}') |&gt;\n  write(file)"
   },
   {
     "objectID": "slides/ghpages.html#contents",
@@ -179,7 +172,14 @@
     "href": "slides/ghpages.html#commit-any-changes-and-push-them-to-github",
     "title": "Publishing on GitHub",
     "section": "6. Commit any changes and push them to GitHub",
-    "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push large files to GitHub.\nIn RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
+    "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push large files to GitHub."
+  },
+  {
+    "objectID": "slides/ghpages.html#section",
+    "href": "slides/ghpages.html#section",
+    "title": "Publishing on GitHub",
+    "section": "",
+    "text": "In RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
   },
   {
     "objectID": "slides/ghpages.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
@@ -242,7 +242,14 @@
     "href": "index.html#commit-any-changes-and-push-them-to-github",
     "title": "To publish for free on GitHub pages",
     "section": "6. Commit any changes and push them to GitHub",
-    "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push large files to GitHub.\nIn RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
+    "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push large files to GitHub."
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "To publish for free on GitHub pages",
+    "section": "",
+    "text": "In RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
   },
   {
     "objectID": "index.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
@@ -305,40 +312,47 @@
     "href": "slides/index.html",
     "title": "Slides",
     "section": "",
-    "text": "Slide Backgrounds\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Slide Backgrounds  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files to Markdown\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
     "href": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
-    "title": "Converting .tex or .docx Files",
+    "title": "Converting .tex or .docx Files to Markdown",
     "section": "Markdown is a lightweight syntax",
-    "text": "Markdown is a lightweight syntax\n\nin contrast to LaTeX, you type a lot less funny business\nin contrast to Word, everything is plain text and in your control—no buttons or formatting changes on different"
+    "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type a lot less funny business\nIn contrast to Word, everything is plain text and in your control—no buttons or formatting changes on different machines"
+  },
+  {
+    "objectID": "slides/pandoc.html#markdown-math-is-approxeq-latex",
+    "href": "slides/pandoc.html#markdown-math-is-approxeq-latex",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "Markdown math is \\(\\approxeq\\) LaTeX",
+    "text": "Markdown math is \\(\\approxeq\\) LaTeX\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode:\n$$\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$$\n\\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\]"
   },
   {
     "objectID": "slides/pandoc.html#pandoc-converts-between-file-types",
     "href": "slides/pandoc.html#pandoc-converts-between-file-types",
-    "title": "Converting .tex or .docx Files",
+    "title": "Converting .tex or .docx Files to Markdown",
     "section": "Pandoc converts between file types",
     "text": "Pandoc converts between file types"
   },
   {
     "objectID": "slides/pandoc.html#docx-syllabus-to-markdown",
     "href": "slides/pandoc.html#docx-syllabus-to-markdown",
-    "title": "Converting .tex or .docx Files",
+    "title": "Converting .tex or .docx Files to Markdown",
     "section": "Docx syllabus to markdown",
-    "text": "Docx syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.docx\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a pdf version rendered via LaTeX\n(just copy the header from syllabus.qmd)"
+    "text": "Docx syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.docx\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n(Just copy the header from syllabus.qmd)"
   },
   {
     "objectID": "slides/pandoc.html#latex-syllabus-to-markdown",
     "href": "slides/pandoc.html#latex-syllabus-to-markdown",
-    "title": "Converting .tex or .docx Files",
+    "title": "Converting .tex or .docx Files to Markdown",
     "section": "LaTeX syllabus to markdown",
-    "text": "LaTeX syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a pdf version rendered via LaTeX\n# docx: default # do you really want a docx version, too? \n(just copy the header from syllabus.qmd)"
+    "text": "LaTeX syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n# docx: default # Do you really want a docx version, too? \n(Just copy the header from syllabus.qmd)"
   },
   {
     "objectID": "slides/pandoc.html#beamer-to-markdown",
     "href": "slides/pandoc.html#beamer-to-markdown",
-    "title": "Converting .tex or .docx Files",
+    "title": "Converting .tex or .docx Files to Markdown",
     "section": "Beamer to markdown",
     "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course."
   },
@@ -347,7 +361,7 @@
     "href": "syllabus.html",
     "title": "Syllabus Template",
     "section": "",
-    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: March 06 2026. This is the current version. 🚧"
+    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: March 30 2026. This is the current version. 🚧"
   },
   {
     "objectID": "syllabus.html#course-philosophy",
