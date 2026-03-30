@@ -25,7 +25,7 @@ $body-bg: #FFFFFF;
 $body-color: #00274C;
 $navbar-bg: $body-color;
 $link-color: #2F65A7;
-$text-muted: #655A52;
+$text-muted: #989C97;// #655A52;
 $background_color: #FFFFFF;
 $text_font_size: 1rem;
 $callout-color-note: #75988d;
@@ -74,7 +74,7 @@ p {
 
 
 .blockquote {
-  border-left: 3px solid $text-muted;
+  border-left: 3px solid #989C97;
   padding-left: 1em;
   font-style: italic;
   color: $text-muted;

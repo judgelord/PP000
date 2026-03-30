@@ -1,9 +1,3 @@
----
-#title: "Accessibility"
-format: 
-  html: default
----
-
 # <i class="bi bi-universal-access"></i>  Tips
 
 Remember to add alt text for all images!  `![Caption](image.jpg "alt text")` 
@@ -13,6 +7,27 @@ Remember to add alt text for all images!  `![Caption](image.jpg "alt text")`
 The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
 
 You can also use the [site improve Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
+
+# Math is more accessible in HTML than PDF
+
+Otherwise, writing math in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) is similar to LaTeX.
+
+Inline: `$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
+
+Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+
+Display mode:
+
+`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$`
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+- <https://docs.mathjax.org/en/latest/basic/accessibility.html>
+- More on how to make MathJax content universally interpretable, aligning with 
+WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
+
+*TODO:* Use descriptive alt text for equations by including `\label{}` or `\tag{}`.
+
 
 # Word and PDF documents
 
@@ -56,23 +71,6 @@ Thus, I believe that a LaTeX template is required (I could be wrong).
 
 - <https://remlapmot.github.io/post/2025/quarto-accessibility/>
 
-# Math is more accessble in HTML than LaTeX
-
-Inline: `$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
-
-Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
-
-Display mode:
-
-`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$`
-
-$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
-
-- <https://docs.mathjax.org/en/latest/basic/accessibility.html>
-- More on how to make MathJax content universally interpretable, aligning with 
-WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
-
-TODO: Use descriptive alt text for equations by including `\label{}` or `\tag{}`
 
 # More accessibility discussions 
 
@@ -82,7 +80,7 @@ TODO: Use descriptive alt text for equations by including `\label{}` or `\tag{}`
 
 # Fixes
 
-`assets/accessiblity-fixes.js` is JavaScript that fixes accessibly the following issues with web pages and HTML slides: 
+`assets/accessiblity-fixes.js` is JavaScript that fixes the following issues with web pages and HTML slides: 
 
 ## Scrollboxes 
 

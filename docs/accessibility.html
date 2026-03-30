@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-94bec42f26c950a74f88e992ce58751d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6145306e87c0ceaa7b2890ac9d7be340.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0e63b6952836fb55e846225b7099439f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -187,13 +187,13 @@ window.Quarto = {
   <ul>
   <li><a href="#tips" id="toc-tips" class="nav-link active" data-scroll-target="#tips"><i class="bi bi-universal-access"></i> Tips</a></li>
   <li><a href="#html-accessibility-checks" id="toc-html-accessibility-checks" class="nav-link" data-scroll-target="#html-accessibility-checks">HTML accessibility checks</a></li>
+  <li><a href="#math-is-more-accessible-in-html-than-pdf" id="toc-math-is-more-accessible-in-html-than-pdf" class="nav-link" data-scroll-target="#math-is-more-accessible-in-html-than-pdf">Math is more accessible in HTML than PDF</a></li>
   <li><a href="#word-and-pdf-documents" id="toc-word-and-pdf-documents" class="nav-link" data-scroll-target="#word-and-pdf-documents">Word and PDF documents</a>
   <ul class="collapse">
   <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex">LaTeX</a></li>
   <li><a href="#general-tips-for-latex-generated-pdfs" id="toc-general-tips-for-latex-generated-pdfs" class="nav-link" data-scroll-target="#general-tips-for-latex-generated-pdfs">General tips for LaTeX-generated PDFs</a></li>
   <li><a href="#general-tips-for-quarto-generated-pdfs" id="toc-general-tips-for-quarto-generated-pdfs" class="nav-link" data-scroll-target="#general-tips-for-quarto-generated-pdfs">General tips for Quarto-generated PDFs</a></li>
   </ul></li>
-  <li><a href="#math-is-more-accessble-in-html-than-latex" id="toc-math-is-more-accessble-in-html-than-latex" class="nav-link" data-scroll-target="#math-is-more-accessble-in-html-than-latex">Math is more accessble in HTML than LaTeX</a></li>
   <li><a href="#more-accessibility-discussions" id="toc-more-accessibility-discussions" class="nav-link" data-scroll-target="#more-accessibility-discussions">More accessibility discussions</a>
   <ul class="collapse">
   <li><a href="#revealjs-html-slides" id="toc-revealjs-html-slides" class="nav-link" data-scroll-target="#revealjs-html-slides">revealjs HTML slides</a></li>
@@ -228,6 +228,20 @@ window.Quarto = {
 <p>The <a href="https://quarto.org/docs/output-formats/html-accessibility.html">automated check</a> returned some issues with Quarto defaults, which I fixed with JavaScript <a href="#patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</p>
 <p>You can also use the <a href="chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html">site improve Chrome extension</a>.</p>
 </section>
+<section id="math-is-more-accessible-in-html-than-pdf" class="level1">
+<h1>Math is more accessible in HTML than PDF</h1>
+<p>Otherwise, writing math in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is similar to LaTeX.</p>
+<p>Inline: <code>$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$</code></p>
+<p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
+<p>Display mode:</p>
+<p><code>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</code></p>
+<p><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\]</span></p>
+<ul>
+<li><a href="https://docs.mathjax.org/en/latest/basic/accessibility.html" class="uri">https://docs.mathjax.org/en/latest/basic/accessibility.html</a></li>
+<li>More on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: <a href="https://app.studyraid.com/en/read/15521/539779/accessibility-considerations" class="uri">https://app.studyraid.com/en/read/15521/539779/accessibility-considerations</a></li>
+</ul>
+<p><em>TODO:</em> Use descriptive alt text for equations by including <code>\label{}</code> or <code>\tag{}</code>.</p>
+</section>
 <section id="word-and-pdf-documents" class="level1">
 <h1>Word and PDF documents</h1>
 <p>Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value.</p>
@@ -260,19 +274,6 @@ window.Quarto = {
 </ul>
 </section>
 </section>
-<section id="math-is-more-accessble-in-html-than-latex" class="level1">
-<h1>Math is more accessble in HTML than LaTeX</h1>
-<p>Inline: <code>$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$</code></p>
-<p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
-<p>Display mode:</p>
-<p><code>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</code></p>
-<p><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\]</span></p>
-<ul>
-<li><a href="https://docs.mathjax.org/en/latest/basic/accessibility.html" class="uri">https://docs.mathjax.org/en/latest/basic/accessibility.html</a></li>
-<li>More on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: <a href="https://app.studyraid.com/en/read/15521/539779/accessibility-considerations" class="uri">https://app.studyraid.com/en/read/15521/539779/accessibility-considerations</a></li>
-</ul>
-<p>TODO: Use descriptive alt text for equations by including <code>\label{}</code> or <code>\tag{}</code></p>
-</section>
 <section id="more-accessibility-discussions" class="level1">
 <h1>More accessibility discussions</h1>
 <section id="revealjs-html-slides" class="level2">
@@ -284,7 +285,7 @@ window.Quarto = {
 </section>
 <section id="fixes" class="level1">
 <h1>Fixes</h1>
-<p><code>assets/accessiblity-fixes.js</code> is JavaScript that fixes accessibly the following issues with web pages and HTML slides:</p>
+<p><code>assets/accessiblity-fixes.js</code> is JavaScript that fixes the following issues with web pages and HTML slides:</p>
 <section id="scrollboxes" class="level2">
 <h2 class="anchored" data-anchor-id="scrollboxes">Scrollboxes</h2>
 <p>Issue:</p>
