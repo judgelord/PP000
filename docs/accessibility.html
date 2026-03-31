@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-94bec42f26c950a74f88e992ce58751d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0e63b6952836fb55e846225b7099439f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2e6fbf7345f912d4df7de699bcedfe1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -230,17 +230,48 @@ window.Quarto = {
 </section>
 <section id="math-is-more-accessible-in-html-than-pdf" class="level1">
 <h1>Math is more accessible in HTML than PDF</h1>
-<p>Otherwise, writing math in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is similar to LaTeX.</p>
-<p>Inline: <code>$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$</code></p>
+<p>Otherwise, writing equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to LaTeX</a>.</p>
+<p><code>Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$</code></p>
 <p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
-<p>Display mode:</p>
-<p><code>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</code></p>
-<p><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\]</span></p>
+<p><code>Display mode allows equation labels (see @eq-1a):</code></p>
+<p><code>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ {#eq-1a}</code></p>
+<p>Display mode allows equation labels (see <a href="#eq-1a" class="quarto-xref">Equation&nbsp;1</a>): <span id="eq-1a"><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag{1}\]</span></span></p>
+<!--
+Alternatively, the theorem environment also allows cross-referencing: 
+
+```
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+See @thm-line.
+```
+
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+See @thm-line.
+-->
 <ul>
 <li><a href="https://docs.mathjax.org/en/latest/basic/accessibility.html" class="uri">https://docs.mathjax.org/en/latest/basic/accessibility.html</a></li>
 <li>More on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: <a href="https://app.studyraid.com/en/read/15521/539779/accessibility-considerations" class="uri">https://app.studyraid.com/en/read/15521/539779/accessibility-considerations</a></li>
 </ul>
-<p><em>TODO:</em> Use descriptive alt text for equations by including <code>\label{}</code> or <code>\tag{}</code>.</p>
+<p><em>TODO:</em> Use descriptive alt text for equations by including <code>\tag{}</code>.</p>
 </section>
 <section id="word-and-pdf-documents" class="level1">
 <h1>Word and PDF documents</h1>

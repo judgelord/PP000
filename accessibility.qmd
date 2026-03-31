@@ -10,23 +10,55 @@ You can also use the [site improve Chrome extension](chrome-extension://djcglbmb
 
 # Math is more accessible in HTML than PDF
 
-Otherwise, writing math in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) is similar to LaTeX.
+Otherwise, writing equations in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) is [similar to LaTeX](https://quarto.org/docs/authoring/markdown-basics.html#equations). 
 
-Inline: `$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
+`Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
 
 Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
 
-Display mode:
+`Display mode allows equation labels (see @eq-1a):`
+`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ {#eq-1a}`
 
-`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$`
+Display mode allows equation labels (see @eq-1a):
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ {#eq-1a}
 
-$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+<!--
+Alternatively, the theorem environment also allows cross-referencing: 
+
+```
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+See @thm-line.
+```
+
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+See @thm-line.
+--> 
 
 - <https://docs.mathjax.org/en/latest/basic/accessibility.html>
 - More on how to make MathJax content universally interpretable, aligning with 
 WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
 
-*TODO:* Use descriptive alt text for equations by including `\label{}` or `\tag{}`.
+*TODO:* Use descriptive alt text for equations by including `\tag{}`.
 
 
 # Word and PDF documents

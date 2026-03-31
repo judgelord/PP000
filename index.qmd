@@ -8,10 +8,7 @@ format:
 
 ::: {.callout-tip title="👆"}
 Change the navigation bar by editing `_quarto.yml` 
-:::
 
-
-::: {.callout-note title=""}
 👇 Replace text below with anything you want on the home page by editing `index.qmd` 
 :::
 
