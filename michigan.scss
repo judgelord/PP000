@@ -13,13 +13,6 @@ $h1-font-size: 1.6em !default;
 $h2-font-size: 1.3em !default;
 $h3-font-size: 1.15em !default;
 
-//code
-$code-color: #00274C !default;
-$font-family-monospace: 'Nunito Sans', monospace  !default;
-$code-bg: #FFCB05;
-$code_inline_background_color: $code-bg;
-$code-highlight-color: #FFCB05;
-
 // general
 $body-bg: #FFFFFF;
 $body-color: #00274C;
@@ -34,6 +27,14 @@ $callout-color-warning: #9A3324;
 $callout-color-caution: #D86018;
 $callout-color-important: #FFCB05;
 $table_row_even_background_color:#CFC096;
+
+//code
+$code-color: #00274C !default;
+$font-family-monospace: 'Nunito Sans', monospace  !default;
+$code-bg: #FFCB05;
+$code_inline_background_color: $code-bg;
+$code-highlight-color: $code-bg;
+
 
 /*-- scss:rules --*/
 ul li:first-child,
@@ -94,7 +95,6 @@ ul, ol {
 
 
 /*-- PRESENTATIONS --*/
-
 .reveal {
   font-size: 35px;
 }

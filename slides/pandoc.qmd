@@ -12,36 +12,43 @@ format:
     data-background-opacity: "0.5" # <-- background opacity of title slide
    theme: [../michigan.scss]
    scrollable: false
-footer: "👈 Click on Block M for menu - [Return to the website](index.qmd)"
+footer: "👈 Click on Block M for a menu | [Click here to return to the website](index.qmd)"
 ---
 
 ## Markdown is a *lightweight* syntax
 
-- In contrast to LaTeX, you type [a lot less funny business](https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements)
-- In contrast to Microsoft Office, everything is plain text and in your control---no buttons or formatting issues on different machines
+- In contrast to LaTeX, you type [less funny business](https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements)
+- In contrast to Microsoft Office, everything is plain text --- no buttons or formatting issues on different machines
 
 ![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme")
 
-## Markdown math is $\approxeq$ LaTeX
+## Markdown math is $\approxeq \LaTeX$
 
-(but more accessible)
+Equations in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) are [similar to LaTeX](https://quarto.org/docs/authoring/markdown-basics.html#equations) but more accessible.
 
-`Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
+```tex
+Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+```
 
 Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
 
-Display mode allows labeling:
+```tex
+Display mode allows equation labels (see @eq-1a):
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$ {#eq-1a}
+```
 
-`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag{1a}$$`
+Display mode allows equation labels (see @eq-1a):
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$ {#eq-1a}
 
-$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag{1a}$$
 
-
-<!--
 ## Pandoc converts between file types
 
 ![](https://pandoc.org/pandoc-cartoon.svgz "pandoc cartoon")
---> 
+
 
 ## Docx syllabus to markdown
 
@@ -91,7 +98,7 @@ format:
 (Just copy from the file that made these slides, [pandoc.qmd](https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd))
 
 ::: callout-tip
-Pandoc can also do the reverse, of course, but .qmd can also render beamer
+Pandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.
 
 ```yaml
 format:

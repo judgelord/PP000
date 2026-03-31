@@ -7,11 +7,11 @@
     "text": "Remember to add alt text for all images! ![Caption](image.jpg \"alt text\")"
   },
   {
-    "objectID": "accessibility.html#latex",
-    "href": "accessibility.html#latex",
+    "objectID": "accessibility.html#section",
+    "href": "accessibility.html#section",
     "title": " Tips",
-    "section": "LaTeX",
-    "text": "LaTeX\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
+    "section": "",
+    "text": "Add \\DocumentMetadata{tagging=on} to your template before \\documentclass.\nThis requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
   },
   {
     "objectID": "accessibility.html#general-tips-for-latex-generated-pdfs",
@@ -319,14 +319,21 @@
     "href": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
     "title": "Converting .tex or .docx Files to Markdown",
     "section": "Markdown is a lightweight syntax",
-    "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type a lot less funny business\nIn contrast to Microsoft Office, everything is plain text and in your control—no buttons or formatting issues on different machines"
+    "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type less funny business\nIn contrast to Microsoft Office, everything is plain text — no buttons or formatting issues on different machines"
   },
   {
     "objectID": "slides/pandoc.html#markdown-math-is-approxeq-latex",
     "href": "slides/pandoc.html#markdown-math-is-approxeq-latex",
     "title": "Converting .tex or .docx Files to Markdown",
-    "section": "Markdown math is \\(\\approxeq\\) LaTeX",
-    "text": "Markdown math is \\(\\approxeq\\) LaTeX\n(but more accessible)\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows labeling:\n$$\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1a}$$\n\\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1a}\\]"
+    "section": "Markdown math is \\(\\approxeq \\LaTeX\\)",
+    "text": "Markdown math is \\(\\approxeq \\LaTeX\\)\nEquations in MathJax are similar to LaTeX but more accessible.\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n\\tag{1}\\]"
+  },
+  {
+    "objectID": "slides/pandoc.html#pandoc-converts-between-file-types",
+    "href": "slides/pandoc.html#pandoc-converts-between-file-types",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "Pandoc converts between file types",
+    "text": "Pandoc converts between file types"
   },
   {
     "objectID": "slides/pandoc.html#docx-syllabus-to-markdown",
@@ -347,7 +354,7 @@
     "href": "slides/pandoc.html#beamer-to-markdown",
     "title": "Converting .tex or .docx Files to Markdown",
     "section": "Beamer to markdown",
-    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(Just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course, but .qmd can also render beamer\nformat:\n  beamer:\n    keep-tex: true\n    fontsize: 11pt         # optional\n    toc: false             # optional\n    slide-level: 2         # optional"
+    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(Just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.\nformat:\n  beamer:\n    keep-tex: true\n    fontsize: 11pt         # optional\n    toc: false             # optional\n    slide-level: 2         # optional"
   },
   {
     "objectID": "syllabus.html",

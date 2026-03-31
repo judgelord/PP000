@@ -10,17 +10,24 @@ You can also use the [site improve Chrome extension](chrome-extension://djcglbmb
 
 # Math is more accessible in HTML than PDF
 
-Otherwise, writing equations in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) is [similar to LaTeX](https://quarto.org/docs/authoring/markdown-basics.html#equations). 
+Otherwise, writing equations in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) is [similar to $\LaTeX$](https://quarto.org/docs/authoring/markdown-basics.html#equations).
 
-`Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$`
+```tex
+Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
+```
 
 Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
 
-`Display mode allows equation labels (see @eq-1a):`
-`$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ {#eq-1a}`
+```tex
+Display mode allows equation labels (see @eq-1a):
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$ {#eq-1a}
+```
 
 Display mode allows equation labels (see @eq-1a):
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ {#eq-1a}
+
 
 <!--
 Alternatively, the theorem environment also allows cross-referencing: 
@@ -58,7 +65,7 @@ See @thm-line.
 - More on how to make MathJax content universally interpretable, aligning with 
 WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
 
-*TODO:* Use descriptive alt text for equations by including `\tag{}`.
+You don't need `\tag{}` or `\tag{}` if you have proper equation labels like `{#eq-1a}` above.
 
 
 # Word and PDF documents
@@ -72,13 +79,13 @@ However, we may need PDF- or DOCX-formatted documents in some cases. If those ca
 
 If you want an accessible PDF, you need to turn on tagging.
 
-## LaTeX 
+## \LaTeX
 
-Add `\DocumentMetadata{tagging=on}` to your LaTeX template before `\documentclass`. 
+Add `\DocumentMetadata{tagging=on}` to your \LaTeX template before `\documentclass`. 
 
 This requires installing some packages. In R:
 
-```
+```r
 tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))
 ```
 
@@ -122,7 +129,7 @@ Issue:
 
 To make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:
 
-```
+```js
 // Add tabindex=0 to scrollable <pre> elements
   document.querySelectorAll('pre').forEach(function(pre) {
     if (pre.scrollWidth > pre.clientWidth) {
@@ -142,7 +149,7 @@ Issue:
 
 To make callout chunks accessible, I added a JavaScript patch to label them as buttons: 
 
-```
+```js
   document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {
   if (!header.hasAttribute('role')) {
     header.setAttribute('role', 'button');
@@ -162,7 +169,7 @@ This seems to be related to how the navigation bar is constructed (by Quarto def
 
 The HTML originally included: 
 
-```
+```js
 aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"
 ```
 
@@ -194,7 +201,7 @@ This also seems to be related to how the navigation bar is constructed (by quart
 
 Patch: 
 
-```
+```js
   // If you have multiple navbars (e.g., main + sidebar), label uniquely:
   const navbars = document.querySelectorAll('nav.navbar');
   navbars.forEach((nav, idx) => {

@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-94bec42f26c950a74f88e992ce58751d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2e6fbf7345f912d4df7de699bcedfe1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-828533119ad1083dc0b6f1e197c90774.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -190,7 +190,7 @@ window.Quarto = {
   <li><a href="#math-is-more-accessible-in-html-than-pdf" id="toc-math-is-more-accessible-in-html-than-pdf" class="nav-link" data-scroll-target="#math-is-more-accessible-in-html-than-pdf">Math is more accessible in HTML than PDF</a></li>
   <li><a href="#word-and-pdf-documents" id="toc-word-and-pdf-documents" class="nav-link" data-scroll-target="#word-and-pdf-documents">Word and PDF documents</a>
   <ul class="collapse">
-  <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex">LaTeX</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#general-tips-for-latex-generated-pdfs" id="toc-general-tips-for-latex-generated-pdfs" class="nav-link" data-scroll-target="#general-tips-for-latex-generated-pdfs">General tips for LaTeX-generated PDFs</a></li>
   <li><a href="#general-tips-for-quarto-generated-pdfs" id="toc-general-tips-for-quarto-generated-pdfs" class="nav-link" data-scroll-target="#general-tips-for-quarto-generated-pdfs">General tips for Quarto-generated PDFs</a></li>
   </ul></li>
@@ -230,11 +230,13 @@ window.Quarto = {
 </section>
 <section id="math-is-more-accessible-in-html-than-pdf" class="level1">
 <h1>Math is more accessible in HTML than PDF</h1>
-<p>Otherwise, writing equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to LaTeX</a>.</p>
-<p><code>Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$</code></p>
+<p>Otherwise, writing equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to <span class="math inline">\(\LaTeX\)</span></a>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Inline: <span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}$</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
-<p><code>Display mode allows equation labels (see @eq-1a):</code></p>
-<p><code>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$ {#eq-1a}</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Display mode allows equation labels (see @eq-1a):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span> {#eq-1a}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Display mode allows equation labels (see <a href="#eq-1a" class="quarto-xref">Equation&nbsp;1</a>): <span id="eq-1a"><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag{1}\]</span></span></p>
 <!--
 Alternatively, the theorem environment also allows cross-referencing: 
@@ -271,7 +273,7 @@ See @thm-line.
 <li><a href="https://docs.mathjax.org/en/latest/basic/accessibility.html" class="uri">https://docs.mathjax.org/en/latest/basic/accessibility.html</a></li>
 <li>More on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: <a href="https://app.studyraid.com/en/read/15521/539779/accessibility-considerations" class="uri">https://app.studyraid.com/en/read/15521/539779/accessibility-considerations</a></li>
 </ul>
-<p><em>TODO:</em> Use descriptive alt text for equations by including <code>\tag{}</code>.</p>
+<p>You don’t need <code>\tag{}</code> or <code>\tag{}</code> if you have proper equation labels like <code>{#eq-1a}</code> above.</p>
 </section>
 <section id="word-and-pdf-documents" class="level1">
 <h1>Word and PDF documents</h1>
@@ -279,17 +281,17 @@ See @thm-line.
 <p>My students report that they really appreciate materials in HTML because they are accessibility on mobile devices (especially with links for easy navigation).</p>
 <p>However, we may need PDF- or DOCX-formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding <code>docx: default</code> below <code>format:</code> in the document header, unless your document includes math or complex tables, which may not render as well in Word.</p>
 <p>If you want an accessible PDF, you need to turn on tagging.</p>
-<section id="latex" class="level2">
-<h2 class="anchored" data-anchor-id="latex">LaTeX</h2>
-<p>Add <code>\DocumentMetadata{tagging=on}</code> to your LaTeX template before <code>\documentclass</code>.</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p>Add <code>\DocumentMetadata{tagging=on}</code> to your template before <code>\documentclass</code>.</p>
 <p>This requires installing some packages. In R:</p>
-<pre><code>tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">tlmgr_install</span>(<span class="fu">c</span>(<span class="st">'latex-lab'</span>, <span class="st">'pdfmanagement-testphase'</span>, <span class="st">'tagpdf'</span>, <span class="st">'luamml'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Normally, you can add lines in the LaTeX preamble using <code>include-in-header:</code> in the YAML header of Quarto documents. However, this may not work for lines that need to go before <code>\documentclass</code>, so it may require a LaTeX template. For example, this causes an error:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">include-in-header</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">     - </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="ch">|</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        \DocumentMetadata{tagging=on}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        \documentclass{article}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">   </span><span class="fu">include-in-header</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">     - </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="ch">|</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        \DocumentMetadata{tagging=on}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        \documentclass{article}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Thus, I believe that a LaTeX template is required (I could be wrong).</p>
 </section>
 <section id="general-tips-for-latex-generated-pdfs" class="level2">
@@ -324,13 +326,13 @@ See @thm-line.
 <p>Serious: Ensure elements that have scrollable content are accessible by keyboard. A scrollable region must have keyboard access.</p>
 </blockquote>
 <p>To make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:</p>
-<pre><code>// Add tabindex=0 to scrollable &lt;pre&gt; elements
-  document.querySelectorAll('pre').forEach(function(pre) {
-    if (pre.scrollWidth &gt; pre.clientWidth) {
-      pre.setAttribute('tabindex', '0');
-      pre.setAttribute('aria-label', 'Code sample');
-    }
-  });</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Add tabindex=0 to scrollable &lt;pre&gt; elements</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'pre'</span>)<span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(pre) {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (pre<span class="op">.</span><span class="at">scrollWidth</span> <span class="op">&gt;</span> pre<span class="op">.</span><span class="at">clientWidth</span>) {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      pre<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'tabindex'</span><span class="op">,</span> <span class="st">'0'</span>)<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      pre<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="st">'Code sample'</span>)<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="collapsable-callout-chunks" class="level2">
 <h2 class="anchored" data-anchor-id="collapsable-callout-chunks">Collapsable callout chunks</h2>
@@ -342,11 +344,11 @@ See @thm-line.
 <p>.collapsed</p>
 </blockquote>
 <p>To make callout chunks accessible, I added a JavaScript patch to label them as buttons:</p>
-<pre><code>  document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {
-  if (!header.hasAttribute('role')) {
-    header.setAttribute('role', 'button');
-    header.setAttribute('tabindex', '0');
-  }});</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'.callout-header.collapsed'</span>)<span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(header) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>header<span class="op">.</span><span class="fu">hasAttribute</span>(<span class="st">'role'</span>)) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    header<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'role'</span><span class="op">,</span> <span class="st">'button'</span>)<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    header<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'tabindex'</span><span class="op">,</span> <span class="st">'0'</span>)<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  }})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="website-navigation-buttons" class="level2">
 <h2 class="anchored" data-anchor-id="website-navigation-buttons">Website navigation buttons</h2>
@@ -359,7 +361,7 @@ See @thm-line.
 </blockquote>
 <p>This seems to be related to how the navigation bar is constructed (by Quarto defaults, I did not modify this):</p>
 <p>The HTML originally included:</p>
-<pre><code>aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation"</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>aria<span class="op">-</span>controls<span class="op">=</span><span class="st">"navbarCollapse"</span> role<span class="op">=</span><span class="st">"menu"</span> aria<span class="op">-</span>expanded<span class="op">=</span><span class="st">"false"</span> aria<span class="op">-</span>label<span class="op">=</span><span class="st">"Toggle navigation"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>GPT’s response:</p>
 <blockquote class="blockquote">
 <p>The role=“menu” is usually reserved for a list of menu items (think dropdown menus for accessibility, not a toggle button). You’re probably applying role=“menu” to the navbar toggle button, which is incorrect per ARIA standards. ARIA attribute permissions:</p>
@@ -383,19 +385,19 @@ See @thm-line.
 </blockquote>
 <p>This also seems to be related to how the navigation bar is constructed (by quarto defaults, I did not modify this):</p>
 <p>Patch:</p>
-<pre><code>  // If you have multiple navbars (e.g., main + sidebar), label uniquely:
-  const navbars = document.querySelectorAll('nav.navbar');
-  navbars.forEach((nav, idx) =&gt; {
-    nav.setAttribute('aria-label', idx === 0 ? 'Main site navigation' : `Secondary navigation`);
-  });
-  const sidebar = document.getElementById('quarto-sidebar');
-  if (sidebar &amp;&amp; sidebar.tagName === 'NAV') {
-    sidebar.setAttribute('aria-label', 'Sidebar navigation');
-  }
-  // If your sidebar is a div with role="navigation"
-  else if (sidebar &amp;&amp; sidebar.getAttribute('role') === 'navigation') {
-    sidebar.setAttribute('aria-label', 'Sidebar navigation');
-  }</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  <span class="co">// If you have multiple navbars (e.g., main + sidebar), label uniquely:</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> navbars <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'nav.navbar'</span>)<span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  navbars<span class="op">.</span><span class="fu">forEach</span>((nav<span class="op">,</span> idx) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    nav<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> idx <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">'Main site navigation'</span> <span class="op">:</span> <span class="vs">`Secondary navigation`</span>)<span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> sidebar <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'quarto-sidebar'</span>)<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (sidebar <span class="op">&amp;&amp;</span> sidebar<span class="op">.</span><span class="at">tagName</span> <span class="op">===</span> <span class="st">'NAV'</span>) {</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    sidebar<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="st">'Sidebar navigation'</span>)<span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">// If your sidebar is a div with role="navigation"</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (sidebar <span class="op">&amp;&amp;</span> sidebar<span class="op">.</span><span class="fu">getAttribute</span>(<span class="st">'role'</span>) <span class="op">===</span> <span class="st">'navigation'</span>) {</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    sidebar<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="st">'Sidebar navigation'</span>)<span class="op">;</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="div-vs.-main" class="level2">
 <h2 class="anchored" data-anchor-id="div-vs.-main">“div” vs.&nbsp;“main”</h2>

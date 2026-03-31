@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5e6fb5a4d37cab460caf5253ea279c04.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-9bfcf1ffd18c50ade6669ca776de2fc6.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -202,25 +202,28 @@
 <section id="markdown-is-a-lightweight-syntax" class="slide level2">
 <h2>Markdown is a <em>lightweight</em> syntax</h2>
 <ul>
-<li>In contrast to LaTeX, you type <a href="https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements">a lot less funny business</a></li>
-<li>In contrast to Microsoft Office, everything is plain text and in your control—no buttons or formatting issues on different machines</li>
+<li>In contrast to LaTeX, you type <a href="https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements">less funny business</a></li>
+<li>In contrast to Microsoft Office, everything is plain text — no buttons or formatting issues on different machines</li>
 </ul>
 
 <img data-src="https://i.imgflip.com/253k2f.jpg" title="Join me in the light side meme" class="r-stretch"></section>
 <section id="markdown-math-is-approxeq-latex" class="slide level2">
-<h2>Markdown math is <span class="math inline">\(\approxeq\)</span> LaTeX</h2>
-<p>(but more accessible)</p>
-<p><code>Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$</code></p>
+<h2>Markdown math is <span class="math inline">\(\approxeq \LaTeX\)</span></h2>
+<p>Equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> are <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to LaTeX</a> but more accessible.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a></a>Inline: <span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}$</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
-<p>Display mode allows labeling:</p>
-<p><code>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag{1a}$$</code></p>
-<p><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag{1a}\]</span></p>
-<!--
-## Pandoc converts between file types
-
-![](https://pandoc.org/pandoc-cartoon.svgz "pandoc cartoon")
--->
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a></a>Display mode allows equation labels (see @eq-1a):</span>
+<span id="cb2-2"><a></a><span class="ss">$$</span></span>
+<span id="cb2-3"><a></a><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}</span></span>
+<span id="cb2-4"><a></a><span class="ss">$$</span> {#eq-1a}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Display mode allows equation labels (see <a href="#/eq-1a" class="quarto-xref">Equation&nbsp;1</a>): <span id="eq-1a"><span class="math display">\[
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+\tag{1}\]</span></span></p>
 </section>
+<section id="pandoc-converts-between-file-types" class="slide level2">
+<h2>Pandoc converts between file types</h2>
+
+<img data-src="https://pandoc.org/pandoc-cartoon.svgz" title="pandoc cartoon" class="r-stretch"></section>
 <section id="docx-syllabus-to-markdown" class="slide level2">
 <h2>Docx syllabus to markdown</h2>
 <ol type="1">
@@ -228,10 +231,10 @@
 <li>Change “.md” to “.qmd”</li>
 <li>Add a YAML header at the top:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
-<span id="cb1-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb1-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb1-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
+<span id="cb3-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb3-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
 </section>
 <section id="latex-syllabus-to-markdown" class="slide level2">
@@ -241,11 +244,11 @@
 <li>Change “.md” to “.qmd”</li>
 <li>Add a YAML header at the top:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
-<span id="cb2-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb2-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb2-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span>
-<span id="cb2-5"><a></a><span class="co"># docx: default # Do you really want a docx version, too? </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
+<span id="cb4-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb4-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb4-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span>
+<span id="cb4-5"><a></a><span class="co"># docx: default # Do you really want a docx version, too? </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
 </section>
 <section id="beamer-to-markdown" class="slide level2">
@@ -255,10 +258,10 @@
 <li>Change “.md” to “.qmd”</li>
 <li>Add a YAML header at the top:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Slides"</span></span>
-<span id="cb3-2"><a></a><span class="at">  </span><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb3-3"><a></a><span class="at">    </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb3-4"><a></a><span class="at">      </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Slides"</span></span>
+<span id="cb5-2"><a></a><span class="at">  </span><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-3"><a></a><span class="at">    </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-4"><a></a><span class="at">      </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(Just copy from the file that made these slides, <a href="https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd">pandoc.qmd</a>)</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -269,13 +272,13 @@
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Pandoc can also do the reverse, of course, but .qmd can also render beamer</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb4-2"><a></a><span class="at">  </span><span class="fu">beamer</span><span class="kw">:</span></span>
-<span id="cb4-3"><a></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-4"><a></a><span class="at">    </span><span class="fu">fontsize</span><span class="kw">:</span><span class="at"> 11pt</span><span class="co">         # optional</span></span>
-<span id="cb4-5"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">             # optional</span></span>
-<span id="cb4-6"><a></a><span class="at">    </span><span class="fu">slide-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span><span class="co">         # optional</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb6-2"><a></a><span class="at">  </span><span class="fu">beamer</span><span class="kw">:</span></span>
+<span id="cb6-3"><a></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-4"><a></a><span class="at">    </span><span class="fu">fontsize</span><span class="kw">:</span><span class="at"> 11pt</span><span class="co">         # optional</span></span>
+<span id="cb6-5"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">             # optional</span></span>
+<span id="cb6-6"><a></a><span class="at">    </span><span class="fu">slide-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span><span class="co">         # optional</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -285,7 +288,7 @@
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>👈 Click on Block M for menu - <a href="../slides/index.html">Return to the website</a></p>
+<p>👈 Click on Block M for a menu | <a href="../slides/index.html">Click here to return to the website</a></p>
 </div>
 </div></div>
 
