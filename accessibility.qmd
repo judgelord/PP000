@@ -65,7 +65,7 @@ See @thm-line.
 - More on how to make MathJax content universally interpretable, aligning with 
 WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
 
-You don't need `\tag{}` or `\tag{}` if you have proper equation labels like `{#eq-1a}` above.
+You don't need `\tag{}` or `\label{}` if you have proper equation labels like `{#eq-1a}` above.
 
 
 # Word and PDF documents

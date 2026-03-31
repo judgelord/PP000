@@ -1,4 +1,4 @@
-This is a [Quarto](https://quarto.org/docs/websites/) Template for University of Michigan Ford School Course Websites
+This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websites
 
 - Contents: <https://github.com/judgelord/PP000>
 
@@ -29,6 +29,8 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for University of
 - `accessibility.qmd` is a page of accessibility tips 
    
 - `michigan.scss` styles all web pages, documents, and slides based on Ford School and [University of Michigan](https://brand.umich.edu/design-resources/colors/) font and color guidance (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html))
+
+- `code/copy syllabus template insert to other courses.R` is R code to copy files to others course folders
 
 - `assets/accessiblity-fixes.js` is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)
 
