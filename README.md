@@ -59,7 +59,7 @@ In RStudio:  "New Project"--> "Version Control"
 
 ## 5. [Build/render your new website!](https://quarto.org/docs/websites/#website-preview)
 
-In RStudio:  "Build"--> "Render Project" (the button may say "Render Website" instead)
+In RStudio:  "Build" --> "Render Project" (the button may say "Render Website" instead)
 
 ![](https://quarto-tdg.org/images/projects-rstudio-build.png "A screenshot of the Render Project button in Rsudio")
 
@@ -77,6 +77,6 @@ In RStudio: select changes/files to commit on the "Git" tab. Then push the chang
 
 (If you don't already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via [a personal access token](https://happygitwithr.com/https-pat))
 
-## 7. In Settings, configure your GitHub repository to publish from the `/docs` directory of your main branch
+## 7. In GitHub Settings --> Pages, publish from the `/docs/` folder 
 
 ![](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png "A picture of the option to publish GitHub pages from the docs folder")

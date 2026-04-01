@@ -97,6 +97,8 @@ format:
 
 (Just copy from the file that made these slides, [pandoc.qmd](https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd))
 
+. . . 
+
 ::: callout-tip
 Pandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.
 

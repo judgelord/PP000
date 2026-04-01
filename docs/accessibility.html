@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-94bec42f26c950a74f88e992ce58751d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-828533119ad1083dc0b6f1e197c90774.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-634cba8d0a90c9a896679b33b1fb076e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -185,12 +185,14 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tips" id="toc-tips" class="nav-link active" data-scroll-target="#tips"><i class="bi bi-universal-access"></i> Tips</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link active" data-scroll-target="#tips"><i class="bi bi-universal-access"></i> Tips</a>
+  <ul class="collapse">
   <li><a href="#html-accessibility-checks" id="toc-html-accessibility-checks" class="nav-link" data-scroll-target="#html-accessibility-checks">HTML accessibility checks</a></li>
   <li><a href="#math-is-more-accessible-in-html-than-pdf" id="toc-math-is-more-accessible-in-html-than-pdf" class="nav-link" data-scroll-target="#math-is-more-accessible-in-html-than-pdf">Math is more accessible in HTML than PDF</a></li>
-  <li><a href="#word-and-pdf-documents" id="toc-word-and-pdf-documents" class="nav-link" data-scroll-target="#word-and-pdf-documents">Word and PDF documents</a>
+  </ul></li>
+  <li><a href="#pdf-and-docx" id="toc-pdf-and-docx" class="nav-link" data-scroll-target="#pdf-and-docx">PDF and Docx</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex"><span class="math inline">\(\LaTeX\)</span></a></li>
   <li><a href="#general-tips-for-latex-generated-pdfs" id="toc-general-tips-for-latex-generated-pdfs" class="nav-link" data-scroll-target="#general-tips-for-latex-generated-pdfs">General tips for LaTeX-generated PDFs</a></li>
   <li><a href="#general-tips-for-quarto-generated-pdfs" id="toc-general-tips-for-quarto-generated-pdfs" class="nav-link" data-scroll-target="#general-tips-for-quarto-generated-pdfs">General tips for Quarto-generated PDFs</a></li>
   </ul></li>
@@ -222,14 +224,13 @@ window.Quarto = {
 <section id="tips" class="level1">
 <h1><i class="bi bi-universal-access"></i> Tips</h1>
 <p>Remember to add alt text for all images! <code>![Caption](image.jpg "alt text")</code></p>
-</section>
-<section id="html-accessibility-checks" class="level1">
-<h1>HTML accessibility checks</h1>
+<section id="html-accessibility-checks" class="level2">
+<h2 class="anchored" data-anchor-id="html-accessibility-checks">HTML accessibility checks</h2>
 <p>The <a href="https://quarto.org/docs/output-formats/html-accessibility.html">automated check</a> returned some issues with Quarto defaults, which I fixed with JavaScript <a href="#patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</p>
 <p>You can also use the <a href="chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html">site improve Chrome extension</a>.</p>
 </section>
-<section id="math-is-more-accessible-in-html-than-pdf" class="level1">
-<h1>Math is more accessible in HTML than PDF</h1>
+<section id="math-is-more-accessible-in-html-than-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="math-is-more-accessible-in-html-than-pdf">Math is more accessible in HTML than PDF</h2>
 <p>Otherwise, writing equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to <span class="math inline">\(\LaTeX\)</span></a>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode tex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Inline: <span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}$</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
@@ -275,15 +276,16 @@ See @thm-line.
 </ul>
 <p>You don’t need <code>\tag{}</code> or <code>\label{}</code> if you have proper equation labels like <code>{#eq-1a}</code> above.</p>
 </section>
-<section id="word-and-pdf-documents" class="level1">
-<h1>Word and PDF documents</h1>
+</section>
+<section id="pdf-and-docx" class="level1 smaller">
+<h1 class="smaller">PDF and Docx</h1>
 <p>Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value.</p>
 <p>My students report that they really appreciate materials in HTML because they are accessibility on mobile devices (especially with links for easy navigation).</p>
 <p>However, we may need PDF- or DOCX-formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding <code>docx: default</code> below <code>format:</code> in the document header, unless your document includes math or complex tables, which may not render as well in Word.</p>
+<section id="latex" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="latex"><span class="math inline">\(\LaTeX\)</span></h2>
 <p>If you want an accessible PDF, you need to turn on tagging.</p>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<p>Add <code>\DocumentMetadata{tagging=on}</code> to your template before <code>\documentclass</code>.</p>
+<p>Add <code>\DocumentMetadata{tagging=on}</code> to your LaTeX template before <code>\documentclass</code>.</p>
 <p>This requires installing some packages. In R:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">tlmgr_install</span>(<span class="fu">c</span>(<span class="st">'latex-lab'</span>, <span class="st">'pdfmanagement-testphase'</span>, <span class="st">'tagpdf'</span>, <span class="st">'luamml'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Normally, you can add lines in the LaTeX preamble using <code>include-in-header:</code> in the YAML header of Quarto documents. However, this may not work for lines that need to go before <code>\documentclass</code>, so it may require a LaTeX template. For example, this causes an error:</p>

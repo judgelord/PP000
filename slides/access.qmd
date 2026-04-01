@@ -1,0 +1,16 @@
+---
+title: "Accessibility"
+subtitle: "(this is just the accessibility page rendered as slides instead)"
+author: ""
+date: ""
+image: "https://accessibility.umich.edu/sites/default/files/ChatGPT%20Image%20Oct%207%2C%202025%2C%2007_50_46%20AM.png" # <-- image to be used in links to slides
+image-alt: Digital Accessibility graphic # <- alt text for accessibility
+format:
+ revealjs: # see https://quarto.org/docs/presentations/revealjs/
+   incremental: false # <-- "true" = bullets and numbers to appear incrementally by default
+   scrollable: true
+   theme: [../michigan.scss]
+footer: "👈 Click on Block M for menu | [Return to the website](index.qmd)"
+---
+
+{{< include ../accessibility.qmd >}}

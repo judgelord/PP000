@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="">
-  <title>PubPol 000 – Converting .tex or .docx Files to Markdown</title>
+  <title>PubPol 000 – Accessibility</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -111,6 +111,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -192,105 +193,222 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://pandoc.org/diagram.svgz" data-background-opacity="0.5" class="quarto-title-block center">
-  <h1 class="title">Converting .tex or .docx Files to Markdown</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Accessibility</h1>
+  <p class="subtitle">(this is just the accessibility page rendered as slides instead)</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="markdown-is-a-lightweight-syntax" class="slide level2">
-<h2>Markdown is a <em>lightweight</em> syntax</h2>
-<ul>
-<li>In contrast to LaTeX, you type <a href="https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements">less funny business</a></li>
-<li>In contrast to Microsoft Office, everything is plain text — no buttons or formatting issues on different machines</li>
-</ul>
-
-<img data-src="https://i.imgflip.com/253k2f.jpg" title="Join me in the light side meme" class="r-stretch"></section>
-<section id="markdown-math-is-approxeq-latex" class="slide level2">
-<h2>Markdown math is <span class="math inline">\(\approxeq \LaTeX\)</span></h2>
-<p>Equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> are <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to LaTeX</a> but more accessible.</p>
+<section>
+<section id="tips" class="title-slide slide level1 center">
+<h1><i class="bi bi-universal-access"></i> Tips</h1>
+<p>Remember to add alt text for all images! <code>![Caption](image.jpg "alt text")</code></p>
+</section>
+<section id="html-accessibility-checks" class="slide level2">
+<h2>HTML accessibility checks</h2>
+<p>The <a href="https://quarto.org/docs/output-formats/html-accessibility.html">automated check</a> returned some issues with Quarto defaults, which I fixed with JavaScript <a href="#/patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</p>
+<p>You can also use the <a href="chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html">site improve Chrome extension</a>.</p>
+</section>
+<section id="math-is-more-accessible-in-html-than-pdf" class="slide level2">
+<h2>Math is more accessible in HTML than PDF</h2>
+<p>Otherwise, writing equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to <span class="math inline">\(\LaTeX\)</span></a>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a></a>Inline: <span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}$</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a></a>Display mode allows equation labels (see @eq-1a):</span>
 <span id="cb2-2"><a></a><span class="ss">$$</span></span>
 <span id="cb2-3"><a></a><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}</span></span>
 <span id="cb2-4"><a></a><span class="ss">$$</span> {#eq-1a}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Display mode allows equation labels (see <a href="#/eq-1a" class="quarto-xref">Equation&nbsp;1</a>): <span id="eq-1a"><span class="math display">\[
-\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
-\tag{1}\]</span></span></p>
-</section>
-<section id="pandoc-converts-between-file-types" class="slide level2">
-<h2>Pandoc converts between file types</h2>
+<p>Display mode allows equation labels (see <a href="#/eq-1a" class="quarto-xref">Equation&nbsp;1</a>): <span id="eq-1a"><span class="math display">\[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag{1}\]</span></span></p>
+<!--
+Alternatively, the theorem environment also allows cross-referencing: 
 
-<img data-src="https://pandoc.org/pandoc-cartoon.svgz" title="pandoc cartoon" class="r-stretch"></section>
-<section id="docx-syllabus-to-markdown" class="slide level2">
-<h2>Docx syllabus to markdown</h2>
-<ol type="1">
-<li>In terminal: <code>pandoc -t markdown -o syllabus.md syllabus.docx</code></li>
-<li>Change “.md” to “.qmd”</li>
-<li>Add a YAML header at the top:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
-<span id="cb3-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb3-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb3-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
+```
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+See @thm-line.
+```
+
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+See @thm-line.
+-->
+<ul>
+<li><a href="https://docs.mathjax.org/en/latest/basic/accessibility.html" class="uri">https://docs.mathjax.org/en/latest/basic/accessibility.html</a></li>
+<li>More on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: <a href="https://app.studyraid.com/en/read/15521/539779/accessibility-considerations" class="uri">https://app.studyraid.com/en/read/15521/539779/accessibility-considerations</a></li>
+</ul>
+<p>You don’t need <code>\tag{}</code> or <code>\label{}</code> if you have proper equation labels like <code>{#eq-1a}</code> above.</p>
+</section></section>
+<section>
+<section id="pdf-and-docx" class="title-slide slide level1 smaller center">
+<h1>PDF and Docx</h1>
+<p>Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value.</p>
+<p>My students report that they really appreciate materials in HTML because they are accessibility on mobile devices (especially with links for easy navigation).</p>
+<p>However, we may need PDF- or DOCX-formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding <code>docx: default</code> below <code>format:</code> in the document header, unless your document includes math or complex tables, which may not render as well in Word.</p>
 </section>
-<section id="latex-syllabus-to-markdown" class="slide level2">
-<h2>LaTeX syllabus to markdown</h2>
-<ol type="1">
-<li>In terminal: <code>pandoc -t markdown -o syllabus.md syllabus.tex</code></li>
-<li>Change “.md” to “.qmd”</li>
-<li>Add a YAML header at the top:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
-<span id="cb4-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb4-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb4-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span>
-<span id="cb4-5"><a></a><span class="co"># docx: default # Do you really want a docx version, too? </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
+<section id="latex" class="slide level2 smaller">
+<h2><span class="math inline">\(\LaTeX\)</span></h2>
+<p>If you want an accessible PDF, you need to turn on tagging.</p>
+<p>Add <code>\DocumentMetadata{tagging=on}</code> to your LaTeX template before <code>\documentclass</code>.</p>
+<p>This requires installing some packages. In R:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>tinytex<span class="sc">::</span><span class="fu">tlmgr_install</span>(<span class="fu">c</span>(<span class="st">'latex-lab'</span>, <span class="st">'pdfmanagement-testphase'</span>, <span class="st">'tagpdf'</span>, <span class="st">'luamml'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Normally, you can add lines in the LaTeX preamble using <code>include-in-header:</code> in the YAML header of Quarto documents. However, this may not work for lines that need to go before <code>\documentclass</code>, so it may require a LaTeX template. For example, this causes an error:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-2"><a></a><span class="at">   </span><span class="fu">include-in-header</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-3"><a></a><span class="kw">     - </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="ch">|</span></span>
+<span id="cb4-4"><a></a>        \DocumentMetadata{tagging=on}</span>
+<span id="cb4-5"><a></a>        \documentclass{article}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Thus, I believe that a LaTeX template is required (I could be wrong).</p>
 </section>
-<section id="beamer-to-markdown" class="slide level2">
-<h2>Beamer to markdown</h2>
-<ol type="1">
-<li>In terminal: <code>pandoc -t markdown -o slides.md slides.tex</code></li>
-<li>Change “.md” to “.qmd”</li>
-<li>Add a YAML header at the top:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Slides"</span></span>
-<span id="cb5-2"><a></a><span class="at">  </span><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb5-3"><a></a><span class="at">    </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb5-4"><a></a><span class="at">      </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(Just copy from the file that made these slides, <a href="https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd">pandoc.qmd</a>)</p>
-<div class="fragment">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>Pandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb6-2"><a></a><span class="at">  </span><span class="fu">beamer</span><span class="kw">:</span></span>
-<span id="cb6-3"><a></a><span class="at">    </span><span class="fu">keep-tex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb6-4"><a></a><span class="at">    </span><span class="fu">fontsize</span><span class="kw">:</span><span class="at"> 11pt</span><span class="co">         # optional</span></span>
-<span id="cb6-5"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">             # optional</span></span>
-<span id="cb6-6"><a></a><span class="at">    </span><span class="fu">slide-level</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span><span class="co">         # optional</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
+<section id="general-tips-for-latex-generated-pdfs" class="slide level2">
+<h2>General tips for LaTeX-generated PDFs</h2>
+<ul>
+<li><a href="https://docs.google.com/document/d/1K1phwLYhJ0stnBDMbfrwwVOq6b0Fo9ehnUZ3a0jQGgo/edit?tab=t.0">Alton Worthington’s LaTeX accessibility resources</a></li>
+</ul>
+</section>
+<section id="general-tips-for-quarto-generated-pdfs" class="slide level2">
+<h2>General tips for Quarto-generated PDFs</h2>
+<ul>
+<li><a href="https://remlapmot.github.io/post/2025/quarto-accessibility/" class="uri">https://remlapmot.github.io/post/2025/quarto-accessibility/</a></li>
+</ul>
+</section></section>
+<section>
+<section id="more-accessibility-discussions" class="title-slide slide level1 center">
+<h1>More accessibility discussions</h1>
+
+</section>
+<section id="revealjs-html-slides" class="slide level2">
+<h2>revealjs HTML slides</h2>
+<ul>
+<li><a href="https://github.com/orgs/quarto-dev/discussions/8621" class="uri">https://github.com/orgs/quarto-dev/discussions/8621</a></li>
+</ul>
+</section></section>
+<section>
+<section id="fixes" class="title-slide slide level1 center">
+<h1>Fixes</h1>
+<p><code>assets/accessiblity-fixes.js</code> is JavaScript that fixes the following issues with web pages and HTML slides:</p>
+</section>
+<section id="scrollboxes" class="slide level2">
+<h2>Scrollboxes</h2>
+<p>Issue:</p>
+<blockquote>
+<p>Serious: Ensure elements that have scrollable content are accessible by keyboard. A scrollable region must have keyboard access.</p>
+</blockquote>
+<p>To make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a></a><span class="co">// Add tabindex=0 to scrollable &lt;pre&gt; elements</span></span>
+<span id="cb5-2"><a></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'pre'</span>)<span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(pre) {</span>
+<span id="cb5-3"><a></a>    <span class="cf">if</span> (pre<span class="op">.</span><span class="at">scrollWidth</span> <span class="op">&gt;</span> pre<span class="op">.</span><span class="at">clientWidth</span>) {</span>
+<span id="cb5-4"><a></a>      pre<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'tabindex'</span><span class="op">,</span> <span class="st">'0'</span>)<span class="op">;</span></span>
+<span id="cb5-5"><a></a>      pre<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="st">'Code sample'</span>)<span class="op">;</span></span>
+<span id="cb5-6"><a></a>    }</span>
+<span id="cb5-7"><a></a>  })<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="collapsable-callout-chunks" class="slide level2">
+<h2>Collapsable callout chunks</h2>
+<p>Issue:</p>
+<blockquote>
+<p>Critical: Ensure an element’s role supports its ARIA attributes</p>
+</blockquote>
+<blockquote>
+<p>.collapsed</p>
+</blockquote>
+<p>To make callout chunks accessible, I added a JavaScript patch to label them as buttons:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'.callout-header.collapsed'</span>)<span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span>(header) {</span>
+<span id="cb6-2"><a></a>  <span class="cf">if</span> (<span class="op">!</span>header<span class="op">.</span><span class="fu">hasAttribute</span>(<span class="st">'role'</span>)) {</span>
+<span id="cb6-3"><a></a>    header<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'role'</span><span class="op">,</span> <span class="st">'button'</span>)<span class="op">;</span></span>
+<span id="cb6-4"><a></a>    header<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'tabindex'</span><span class="op">,</span> <span class="st">'0'</span>)<span class="op">;</span></span>
+<span id="cb6-5"><a></a>  }})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="website-navigation-buttons" class="slide level2">
+<h2>Website navigation buttons</h2>
+<p>Issue:</p>
+<blockquote>
+<p>Critical: Ensure an element’s role supports its ARIA attributes</p>
+</blockquote>
+<blockquote>
+<p>.navbar</p>
+</blockquote>
+<p>This seems to be related to how the navigation bar is constructed (by Quarto defaults, I did not modify this):</p>
+<p>The HTML originally included:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a></a>aria<span class="op">-</span>controls<span class="op">=</span><span class="st">"navbarCollapse"</span> role<span class="op">=</span><span class="st">"menu"</span> aria<span class="op">-</span>expanded<span class="op">=</span><span class="st">"false"</span> aria<span class="op">-</span>label<span class="op">=</span><span class="st">"Toggle navigation"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>GPT’s response:</p>
+<blockquote>
+<p>The role=“menu” is usually reserved for a list of menu items (think dropdown menus for accessibility, not a toggle button). You’re probably applying role=“menu” to the navbar toggle button, which is incorrect per ARIA standards. ARIA attribute permissions:</p>
+</blockquote>
+<blockquote>
+<p>aria-expanded makes sense for interactive elements like a button, a link, or something toggling visibility. aria-label=“Toggle navigation” is fine for such a toggle. role=“menu” is not appropriate for a toggle button—it is used for containers of menu items, not the toggle itself. Common toggle buttons should have role=“button”, not role=“menu”.</p>
+</blockquote>
+<blockquote>
+<p>Accessibility checkers will flag this combo because: aria-expanded, aria-label, and aria-controls are meant for elements like buttons. role=“menu” does not support these attributes (see W3C ARIA roles reference).</p>
+</blockquote>
+<p>This issue seems to have been fixed by the same fix as the next.</p>
+</section>
+<section id="navbar-labels" class="slide level2">
+<h2>Navbar labels</h2>
+<p>Issue:</p>
+<blockquote>
+<p>Moderate: Landmarks should have a unique role or role/label/title (i.e., accessible name) combination</p>
+</blockquote>
+<blockquote>
+<p>.navbar</p>
+</blockquote>
+<p>This also seems to be related to how the navigation bar is constructed (by quarto defaults, I did not modify this):</p>
+<p>Patch:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a></a>  <span class="co">// If you have multiple navbars (e.g., main + sidebar), label uniquely:</span></span>
+<span id="cb8-2"><a></a>  <span class="kw">const</span> navbars <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'nav.navbar'</span>)<span class="op">;</span></span>
+<span id="cb8-3"><a></a>  navbars<span class="op">.</span><span class="fu">forEach</span>((nav<span class="op">,</span> idx) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-4"><a></a>    nav<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> idx <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">'Main site navigation'</span> <span class="op">:</span> <span class="vs">`Secondary navigation`</span>)<span class="op">;</span></span>
+<span id="cb8-5"><a></a>  })<span class="op">;</span></span>
+<span id="cb8-6"><a></a>  <span class="kw">const</span> sidebar <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'quarto-sidebar'</span>)<span class="op">;</span></span>
+<span id="cb8-7"><a></a>  <span class="cf">if</span> (sidebar <span class="op">&amp;&amp;</span> sidebar<span class="op">.</span><span class="at">tagName</span> <span class="op">===</span> <span class="st">'NAV'</span>) {</span>
+<span id="cb8-8"><a></a>    sidebar<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="st">'Sidebar navigation'</span>)<span class="op">;</span></span>
+<span id="cb8-9"><a></a>  }</span>
+<span id="cb8-10"><a></a>  <span class="co">// If your sidebar is a div with role="navigation"</span></span>
+<span id="cb8-11"><a></a>  <span class="cf">else</span> <span class="cf">if</span> (sidebar <span class="op">&amp;&amp;</span> sidebar<span class="op">.</span><span class="fu">getAttribute</span>(<span class="st">'role'</span>) <span class="op">===</span> <span class="st">'navigation'</span>) {</span>
+<span id="cb8-12"><a></a>    sidebar<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="st">'Sidebar navigation'</span>)<span class="op">;</span></span>
+<span id="cb8-13"><a></a>  }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="div-vs.-main" class="slide level2">
+<h2>“div” vs.&nbsp;“main”</h2>
+<p>Issue:</p>
+<blockquote>
+<p>Moderate: Ensure all page content is contained by landmarks</p>
+</blockquote>
+<p>From GPT:</p>
+<blockquote>
+<p>Quarto’s default template uses <code>&lt;div id="quarto-content"&gt;</code> instead of <code>&lt;main id="quarto-content"&gt;</code>. Your accessibility checker wants your main content inside a <code>&lt;main&gt;</code> — the most robust, semantically correct landmark.</p>
+</blockquote>
+<blockquote>
+<p>How to Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site. You can replace the <code>&lt;div&gt;</code> with <code>&lt;main&gt;</code>.</p>
+</blockquote>
+<p>Fix:</p>
+<p>This issue seems to have been fixed by adding <code>&lt;script&gt;</code> to <code>assets/accessibility-fixes.js</code>.</p>
 
 
-</div>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>👈 Click on Block M for a menu | <a href="../slides/index.html">Click here to return to the website</a></p>
+<p>👈 Click on Block M for menu | <a href="../slides/index.html">Return to the website</a></p>
 </div>
 </div></div>
 

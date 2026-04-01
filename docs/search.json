@@ -4,14 +4,28 @@
     "href": "accessibility.html",
     "title": " Tips",
     "section": "",
-    "text": "Remember to add alt text for all images! ![Caption](image.jpg \"alt text\")"
+    "text": "Remember to add alt text for all images! ![Caption](image.jpg \"alt text\")\n\n\nThe automated check returned some issues with Quarto defaults, which I fixed with JavaScript patches in assets/accessibility-fixes.js.\nYou can also use the site improve Chrome extension.\n\n\n\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html\nMore on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations\n\nYou don’t need \\tag{} or \\label{} if you have proper equation labels like {#eq-1a} above."
   },
   {
-    "objectID": "accessibility.html#section",
-    "href": "accessibility.html#section",
+    "objectID": "accessibility.html#html-accessibility-checks",
+    "href": "accessibility.html#html-accessibility-checks",
     "title": " Tips",
     "section": "",
-    "text": "Add \\DocumentMetadata{tagging=on} to your template before \\documentclass.\nThis requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
+    "text": "The automated check returned some issues with Quarto defaults, which I fixed with JavaScript patches in assets/accessibility-fixes.js.\nYou can also use the site improve Chrome extension."
+  },
+  {
+    "objectID": "accessibility.html#math-is-more-accessible-in-html-than-pdf",
+    "href": "accessibility.html#math-is-more-accessible-in-html-than-pdf",
+    "title": " Tips",
+    "section": "",
+    "text": "Otherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html\nMore on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations\n\nYou don’t need \\tag{} or \\label{} if you have proper equation labels like {#eq-1a} above."
+  },
+  {
+    "objectID": "accessibility.html#latex",
+    "href": "accessibility.html#latex",
+    "title": " Tips",
+    "section": "\\(\\LaTeX\\)",
+    "text": "\\(\\LaTeX\\)\nIf you want an accessible PDF, you need to turn on tagging.\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
   },
   {
     "objectID": "accessibility.html#general-tips-for-latex-generated-pdfs",
@@ -84,109 +98,130 @@
     "text": "Thursday\n\nWhat are you hoping to get out of this semester?\nWhat aspects of the discussion environment will help achieve these goals?"
   },
   {
-    "objectID": "slides/backgrounds.html#to-set-a-background-for-one-slide",
-    "href": "slides/backgrounds.html#to-set-a-background-for-one-slide",
-    "title": "Slide Backgrounds  ",
-    "section": "To set a background for one slide",
-    "text": "To set a background for one slide\nFor this background on one slide, add {background-image=\"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"} after the title"
+    "objectID": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
+    "href": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "Markdown is a lightweight syntax",
+    "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type less funny business\nIn contrast to Microsoft Office, everything is plain text — no buttons or formatting issues on different machines"
   },
   {
-    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
-    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
-    "title": "Slide Backgrounds  ",
-    "section": "To set a theme for all slides",
-    "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford.scss]"
+    "objectID": "slides/pandoc.html#markdown-math-is-approxeq-latex",
+    "href": "slides/pandoc.html#markdown-math-is-approxeq-latex",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "Markdown math is \\(\\approxeq \\LaTeX\\)",
+    "text": "Markdown math is \\(\\approxeq \\LaTeX\\)\nEquations in MathJax are similar to LaTeX but more accessible.\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n\\tag{1}\\]"
   },
   {
-    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
-    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
-    "title": "Slide Backgrounds  ",
-    "section": "To set a theme for all slides",
-    "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford2.scss]"
+    "objectID": "slides/pandoc.html#pandoc-converts-between-file-types",
+    "href": "slides/pandoc.html#pandoc-converts-between-file-types",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "Pandoc converts between file types",
+    "text": "Pandoc converts between file types"
   },
   {
-    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
-    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
-    "title": "Slide Backgrounds  ",
-    "section": "To set a theme for all slides",
-    "text": "To set a theme for all slides\ntheme: [../michigan.scss, weill.scss]"
+    "objectID": "slides/pandoc.html#docx-syllabus-to-markdown",
+    "href": "slides/pandoc.html#docx-syllabus-to-markdown",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "Docx syllabus to markdown",
+    "text": "Docx syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.docx\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n(Just copy the header from syllabus.qmd)"
   },
   {
-    "objectID": "slides/backgrounds.html#to-make-new-themes",
-    "href": "slides/backgrounds.html#to-make-new-themes",
-    "title": "Slide Backgrounds  ",
-    "section": "To make new themes",
-    "text": "To make new themes\n\nFind an image url or save an image in the slides folder\nMake a .scss styling file. This is what “ford.scss” looks like:\n\n/*-- scss:rules --*/\n.slide-background-content{\n  background-image: url(\"https://fordschool.umich.edu/themes/custom/ford/images/og-image.png\");\n  background-size: 100% 100%;\n  opacity: .1\n}\n\nAdd your new scss style to the theme: line of the slide header\n\nformat:\n revealjs: \n   theme: [../michigan.scss, ford.scss] \n(these slides also use the .michigan.scss style)"
+    "objectID": "slides/pandoc.html#latex-syllabus-to-markdown",
+    "href": "slides/pandoc.html#latex-syllabus-to-markdown",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "LaTeX syllabus to markdown",
+    "text": "LaTeX syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n# docx: default # Do you really want a docx version, too? \n(Just copy the header from syllabus.qmd)"
   },
   {
-    "objectID": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
-    "href": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
-    "title": "Slide Backgrounds  ",
-    "section": "R code to make new slide theme files",
-    "text": "R code to make new slide theme files\n(overkill, but it shows how you can execute code in .qmd documents)\n\nurl &lt;- \"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"\nfile &lt;- \"ford2.scss\"\n\npaste('/*-- scss:rules --*/\n  .slide-background-content{\n      background-image: url(\"',\n      url,\n      '\");\n  background-size: 100% 100%;\n  opacity: .1\n}') |&gt;\n  write(file)"
+    "objectID": "slides/pandoc.html#beamer-to-markdown",
+    "href": "slides/pandoc.html#beamer-to-markdown",
+    "title": "Converting .tex or .docx Files to Markdown",
+    "section": "Beamer to markdown",
+    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(Just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.\nformat:\n  beamer:\n    keep-tex: true\n    fontsize: 11pt         # optional\n    toc: false             # optional\n    slide-level: 2         # optional"
   },
   {
-    "objectID": "slides/ghpages.html#contents",
-    "href": "slides/ghpages.html#contents",
-    "title": "Publishing on GitHub",
-    "section": "Contents",
-    "text": "Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on Ford School and University of Michigan font and color guidance (see HTML Theming)\ncode/copy syllabus template insert to other courses.R is R code to copy files to others course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
-  },
-  {
-    "objectID": "slides/ghpages.html#make-a-github-account",
-    "href": "slides/ghpages.html#make-a-github-account",
-    "title": "Publishing on GitHub",
-    "section": "1. Make a GitHub account",
-    "text": "1. Make a GitHub account"
-  },
-  {
-    "objectID": "slides/ghpages.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
-    "href": "slides/ghpages.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
-    "title": "Publishing on GitHub",
-    "section": "2. On https://github.com/judgelord/PP000, click Use this template",
-    "text": "2. On https://github.com/judgelord/PP000, click Use this template\nName this new repository whatever you want the course website address to be (e.g., “PP475”)"
-  },
-  {
-    "objectID": "slides/ghpages.html#download-as-a-version-controlled-project",
-    "href": "slides/ghpages.html#download-as-a-version-controlled-project",
-    "title": "Publishing on GitHub",
-    "section": "3. Download as a version-controlled project",
-    "text": "3. Download as a version-controlled project\nIn RStudio: “New Project”–&gt; “Version Control”"
-  },
-  {
-    "objectID": "slides/ghpages.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
-    "href": "slides/ghpages.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
-    "title": "Publishing on GitHub",
-    "section": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder",
-    "text": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder"
-  },
-  {
-    "objectID": "slides/ghpages.html#buildrender-your-new-website",
-    "href": "slides/ghpages.html#buildrender-your-new-website",
-    "title": "Publishing on GitHub",
-    "section": "5. Build/render your new website!",
-    "text": "5. Build/render your new website!\nIn RStudio: “Build”–&gt; “Render Project” (the button may say “Render Website” instead)"
-  },
-  {
-    "objectID": "slides/ghpages.html#commit-any-changes-and-push-them-to-github",
-    "href": "slides/ghpages.html#commit-any-changes-and-push-them-to-github",
-    "title": "Publishing on GitHub",
-    "section": "6. Commit any changes and push them to GitHub",
-    "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push large files to GitHub."
-  },
-  {
-    "objectID": "slides/ghpages.html#section",
-    "href": "slides/ghpages.html#section",
-    "title": "Publishing on GitHub",
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
     "section": "",
-    "text": "In RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
+    "text": "Accessibility\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSlide Backgrounds  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files to Markdown\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColors and Style\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "slides/ghpages.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
-    "href": "slides/ghpages.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
-    "title": "Publishing on GitHub",
-    "section": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch",
-    "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch"
+    "objectID": "slides/access.html#html-accessibility-checks",
+    "href": "slides/access.html#html-accessibility-checks",
+    "title": "Accessibility",
+    "section": "HTML accessibility checks",
+    "text": "HTML accessibility checks\nThe automated check returned some issues with Quarto defaults, which I fixed with JavaScript patches in assets/accessibility-fixes.js.\nYou can also use the site improve Chrome extension."
+  },
+  {
+    "objectID": "slides/access.html#math-is-more-accessible-in-html-than-pdf",
+    "href": "slides/access.html#math-is-more-accessible-in-html-than-pdf",
+    "title": "Accessibility",
+    "section": "Math is more accessible in HTML than PDF",
+    "text": "Math is more accessible in HTML than PDF\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html\nMore on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations\n\nYou don’t need \\tag{} or \\label{} if you have proper equation labels like {#eq-1a} above."
+  },
+  {
+    "objectID": "slides/access.html#latex",
+    "href": "slides/access.html#latex",
+    "title": "Accessibility",
+    "section": "\\(\\LaTeX\\)",
+    "text": "\\(\\LaTeX\\)\nIf you want an accessible PDF, you need to turn on tagging.\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
+  },
+  {
+    "objectID": "slides/access.html#general-tips-for-latex-generated-pdfs",
+    "href": "slides/access.html#general-tips-for-latex-generated-pdfs",
+    "title": "Accessibility",
+    "section": "General tips for LaTeX-generated PDFs",
+    "text": "General tips for LaTeX-generated PDFs\n\nAlton Worthington’s LaTeX accessibility resources"
+  },
+  {
+    "objectID": "slides/access.html#general-tips-for-quarto-generated-pdfs",
+    "href": "slides/access.html#general-tips-for-quarto-generated-pdfs",
+    "title": "Accessibility",
+    "section": "General tips for Quarto-generated PDFs",
+    "text": "General tips for Quarto-generated PDFs\n\nhttps://remlapmot.github.io/post/2025/quarto-accessibility/"
+  },
+  {
+    "objectID": "slides/access.html#revealjs-html-slides",
+    "href": "slides/access.html#revealjs-html-slides",
+    "title": "Accessibility",
+    "section": "revealjs HTML slides",
+    "text": "revealjs HTML slides\n\nhttps://github.com/orgs/quarto-dev/discussions/8621"
+  },
+  {
+    "objectID": "slides/access.html#scrollboxes",
+    "href": "slides/access.html#scrollboxes",
+    "title": "Accessibility",
+    "section": "Scrollboxes",
+    "text": "Scrollboxes\nIssue:\n\nSerious: Ensure elements that have scrollable content are accessible by keyboard. A scrollable region must have keyboard access.\n\nTo make scrollboxes accessible, I added a JavaScript patch that makes the scrollable region focusable via keyboard (Tab), allowing keyboard users to read and scroll using arrows:\n// Add tabindex=0 to scrollable &lt;pre&gt; elements\n  document.querySelectorAll('pre').forEach(function(pre) {\n    if (pre.scrollWidth &gt; pre.clientWidth) {\n      pre.setAttribute('tabindex', '0');\n      pre.setAttribute('aria-label', 'Code sample');\n    }\n  });"
+  },
+  {
+    "objectID": "slides/access.html#collapsable-callout-chunks",
+    "href": "slides/access.html#collapsable-callout-chunks",
+    "title": "Accessibility",
+    "section": "Collapsable callout chunks",
+    "text": "Collapsable callout chunks\nIssue:\n\nCritical: Ensure an element’s role supports its ARIA attributes\n\n\n.collapsed\n\nTo make callout chunks accessible, I added a JavaScript patch to label them as buttons:\n  document.querySelectorAll('.callout-header.collapsed').forEach(function(header) {\n  if (!header.hasAttribute('role')) {\n    header.setAttribute('role', 'button');\n    header.setAttribute('tabindex', '0');\n  }});"
+  },
+  {
+    "objectID": "slides/access.html#website-navigation-buttons",
+    "href": "slides/access.html#website-navigation-buttons",
+    "title": "Accessibility",
+    "section": "Website navigation buttons",
+    "text": "Website navigation buttons\nIssue:\n\nCritical: Ensure an element’s role supports its ARIA attributes\n\n\n.navbar\n\nThis seems to be related to how the navigation bar is constructed (by Quarto defaults, I did not modify this):\nThe HTML originally included:\naria-controls=\"navbarCollapse\" role=\"menu\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\nGPT’s response:\n\nThe role=“menu” is usually reserved for a list of menu items (think dropdown menus for accessibility, not a toggle button). You’re probably applying role=“menu” to the navbar toggle button, which is incorrect per ARIA standards. ARIA attribute permissions:\n\n\naria-expanded makes sense for interactive elements like a button, a link, or something toggling visibility. aria-label=“Toggle navigation” is fine for such a toggle. role=“menu” is not appropriate for a toggle button—it is used for containers of menu items, not the toggle itself. Common toggle buttons should have role=“button”, not role=“menu”.\n\n\nAccessibility checkers will flag this combo because: aria-expanded, aria-label, and aria-controls are meant for elements like buttons. role=“menu” does not support these attributes (see W3C ARIA roles reference).\n\nThis issue seems to have been fixed by the same fix as the next."
+  },
+  {
+    "objectID": "slides/access.html#navbar-labels",
+    "href": "slides/access.html#navbar-labels",
+    "title": "Accessibility",
+    "section": "Navbar labels",
+    "text": "Navbar labels\nIssue:\n\nModerate: Landmarks should have a unique role or role/label/title (i.e., accessible name) combination\n\n\n.navbar\n\nThis also seems to be related to how the navigation bar is constructed (by quarto defaults, I did not modify this):\nPatch:\n  // If you have multiple navbars (e.g., main + sidebar), label uniquely:\n  const navbars = document.querySelectorAll('nav.navbar');\n  navbars.forEach((nav, idx) =&gt; {\n    nav.setAttribute('aria-label', idx === 0 ? 'Main site navigation' : `Secondary navigation`);\n  });\n  const sidebar = document.getElementById('quarto-sidebar');\n  if (sidebar && sidebar.tagName === 'NAV') {\n    sidebar.setAttribute('aria-label', 'Sidebar navigation');\n  }\n  // If your sidebar is a div with role=\"navigation\"\n  else if (sidebar && sidebar.getAttribute('role') === 'navigation') {\n    sidebar.setAttribute('aria-label', 'Sidebar navigation');\n  }"
+  },
+  {
+    "objectID": "slides/access.html#div-vs.-main",
+    "href": "slides/access.html#div-vs.-main",
+    "title": "Accessibility",
+    "section": "“div” vs. “main”",
+    "text": "“div” vs. “main”\nIssue:\n\nModerate: Ensure all page content is contained by landmarks\n\nFrom GPT:\n\nQuarto’s default template uses &lt;div id=\"quarto-content\"&gt; instead of &lt;main id=\"quarto-content\"&gt;. Your accessibility checker wants your main content inside a &lt;main&gt; — the most robust, semantically correct landmark.\n\n\nHow to Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site. You can replace the &lt;div&gt; with &lt;main&gt;.\n\nFix:\nThis issue seems to have been fixed by adding &lt;script&gt; to assets/accessibility-fixes.js."
   },
   {
     "objectID": "index.html",
@@ -235,7 +270,7 @@
     "href": "index.html#buildrender-your-new-website",
     "title": "To publish for free on GitHub pages",
     "section": "5. Build/render your new website!",
-    "text": "5. Build/render your new website!\nIn RStudio: “Build”–&gt; “Render Project” (the button may say “Render Website” instead)"
+    "text": "5. Build/render your new website!\nIn RStudio: “Build” –&gt; “Render Project” (the button may say “Render Website” instead)"
   },
   {
     "objectID": "index.html#commit-any-changes-and-push-them-to-github",
@@ -252,11 +287,11 @@
     "text": "In RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
   },
   {
-    "objectID": "index.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
-    "href": "index.html#in-settings-configure-your-github-repository-to-publish-from-the-docs-directory-of-your-main-branch",
+    "objectID": "index.html#in-github-settings-pages-publish-from-the-docs-folder",
+    "href": "index.html#in-github-settings-pages-publish-from-the-docs-folder",
     "title": "To publish for free on GitHub pages",
-    "section": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch",
-    "text": "7. In Settings, configure your GitHub repository to publish from the /docs directory of your main branch"
+    "section": "7. In GitHub Settings –> Pages, publish from the /docs/ folder",
+    "text": "7. In GitHub Settings –&gt; Pages, publish from the /docs/ folder"
   },
   {
     "objectID": "archive/syllabus-insert-AY2024-2025.html",
@@ -308,60 +343,130 @@
     "text": "Ford School Inclusivity Statement: Members of the Ford School community represent a rich variety of backgrounds and perspectives. We are committed to providing an atmosphere for learning that respects these differences. While working together to build this community we ask all members to:\n\nshare their unique experiences, values and beliefs\n\nbe open to the views of others\n\nhonor the uniqueness of their colleagues\n\nappreciate the opportunity that we have to learn from each other in this community\n\nvalue one another’s opinions and communicate in a respectful manner\n\nkeep confidential discussions that the community has of a personal (or professional) nature\n\nuse this opportunity together to discuss ways in which we can create an inclusive environment in Ford classes and across the UM community\n\nStudent Mental Health and Wellbeing: The University of Michigan is committed to advancing the mental health and wellbeing of its students. We acknowledge that a variety of issues can directly impact students’ academic performance and overall wellbeing. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available.\nYou may access the Ford School’s embedded counselor Paige Ziegler (pziegler@umich.edu) and/or counselors and urgent services at Counseling and Psychological Services (CAPS) and/or University Health Service (UHS). Students may also use the Crisis Text Line (text ‘4UMICH’ to 741741) to be connected to a trained crisis volunteer.\nAccommodations for Students with Disabilities: The University of Michigan is committed to creating as accessible educational environment for students with disabilities as possible.\nIf you anticipate or are experiencing barriers based on disability or temporary injuries, Services for Students with Disabilities (SSD) (ssd.umich.edu) is the office that students work with to explore reasonable accommodations, tools, and resources.\n\nIf you are already connected with SSD and have approved accommodations, please share your letter through Accommodate as soon as possible so that we can discuss how your accommodations will be implemented in this course. The sooner I know about your disability access-needs, the more equipped I can be to facilitate accommodations. You should reach out to me and/or your Disability Access Coordinator if you have any questions or concerns about your accommodations.\n\nIf you have not connected with SSD and anticipate or are experiencing a disability-related barrier, and would like to discuss accommodations and/or resources, please contact SSD by completing their initial information form (https://ssd.umich.edu/)\n\nIf you have a temporary medical injury/condition, such as a broken arm, I may be able to assist in minimizing classroom barriers. In situations where additional assistance is needed, you should contact the SSD as noted above.\n\nAcademic Integrity: The Ford School academic community, like all communities, functions best when its members treat one another with honesty, fairness, respect, and trust. We hold all members of our community to high standards of scholarship and integrity. To accomplish its mission of providing an optimal educational environment and developing leaders of society, the Ford School promotes the assumption of personal responsibility and integrity and prohibits all forms of academic dishonesty, plagiarism and misconduct. Academic dishonesty may be understood as any action or attempted action that may result in creating an unfair academic advantage for oneself or an unfair academic advantage or disadvantage for any other member or members of the academic community. Plagiarism involves representing the words, ideas, or work of others as one’s own in writing or presentations, and failing to give full and proper credit to the original source. Conduct, without regard to motive, that violates the academic integrity and ethical standards will result in serious consequences and disciplinary action. The Ford School’s policy of academic integrity can be found in the BA, MPP, and PhD Program handbooks. Additional information regarding academic dishonesty, plagiarism and misconduct and their consequences is available on the Rackham website."
   },
   {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slides",
+    "objectID": "slides/ghpages.html#contents",
+    "href": "slides/ghpages.html#contents",
+    "title": "Publishing on GitHub",
+    "section": "Contents",
+    "text": "Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on Ford School and University of Michigan font and color guidance (see HTML Theming)\ncode/copy syllabus template insert to other courses.R is R code to copy files to others course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
+  },
+  {
+    "objectID": "slides/ghpages.html#make-a-github-account",
+    "href": "slides/ghpages.html#make-a-github-account",
+    "title": "Publishing on GitHub",
+    "section": "1. Make a GitHub account",
+    "text": "1. Make a GitHub account"
+  },
+  {
+    "objectID": "slides/ghpages.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
+    "href": "slides/ghpages.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
+    "title": "Publishing on GitHub",
+    "section": "2. On https://github.com/judgelord/PP000, click Use this template",
+    "text": "2. On https://github.com/judgelord/PP000, click Use this template\nName this new repository whatever you want the course website address to be (e.g., “PP475”)"
+  },
+  {
+    "objectID": "slides/ghpages.html#download-as-a-version-controlled-project",
+    "href": "slides/ghpages.html#download-as-a-version-controlled-project",
+    "title": "Publishing on GitHub",
+    "section": "3. Download as a version-controlled project",
+    "text": "3. Download as a version-controlled project\nIn RStudio: “New Project”–&gt; “Version Control”"
+  },
+  {
+    "objectID": "slides/ghpages.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
+    "href": "slides/ghpages.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
+    "title": "Publishing on GitHub",
+    "section": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder",
+    "text": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder"
+  },
+  {
+    "objectID": "slides/ghpages.html#buildrender-your-new-website",
+    "href": "slides/ghpages.html#buildrender-your-new-website",
+    "title": "Publishing on GitHub",
+    "section": "5. Build/render your new website!",
+    "text": "5. Build/render your new website!\nIn RStudio: “Build” –&gt; “Render Project” (the button may say “Render Website” instead)"
+  },
+  {
+    "objectID": "slides/ghpages.html#commit-any-changes-and-push-them-to-github",
+    "href": "slides/ghpages.html#commit-any-changes-and-push-them-to-github",
+    "title": "Publishing on GitHub",
+    "section": "6. Commit any changes and push them to GitHub",
+    "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push large files to GitHub."
+  },
+  {
+    "objectID": "slides/ghpages.html#section",
+    "href": "slides/ghpages.html#section",
+    "title": "Publishing on GitHub",
     "section": "",
-    "text": "Slide Backgrounds  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files to Markdown\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "In RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
   },
   {
-    "objectID": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
-    "href": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
-    "title": "Converting .tex or .docx Files to Markdown",
-    "section": "Markdown is a lightweight syntax",
-    "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type less funny business\nIn contrast to Microsoft Office, everything is plain text — no buttons or formatting issues on different machines"
+    "objectID": "slides/ghpages.html#in-github-settings-pages-publish-from-the-docs-folder",
+    "href": "slides/ghpages.html#in-github-settings-pages-publish-from-the-docs-folder",
+    "title": "Publishing on GitHub",
+    "section": "7. In GitHub Settings –> Pages, publish from the /docs/ folder",
+    "text": "7. In GitHub Settings –&gt; Pages, publish from the /docs/ folder"
   },
   {
-    "objectID": "slides/pandoc.html#markdown-math-is-approxeq-latex",
-    "href": "slides/pandoc.html#markdown-math-is-approxeq-latex",
-    "title": "Converting .tex or .docx Files to Markdown",
-    "section": "Markdown math is \\(\\approxeq \\LaTeX\\)",
-    "text": "Markdown math is \\(\\approxeq \\LaTeX\\)\nEquations in MathJax are similar to LaTeX but more accessible.\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n\\tag{1}\\]"
+    "objectID": "slides/backgrounds.html#to-set-a-background-for-one-slide",
+    "href": "slides/backgrounds.html#to-set-a-background-for-one-slide",
+    "title": "Slide Backgrounds  ",
+    "section": "To set a background for one slide",
+    "text": "To set a background for one slide\nFor this background on one slide, add {background-image=\"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"} after the title"
   },
   {
-    "objectID": "slides/pandoc.html#pandoc-converts-between-file-types",
-    "href": "slides/pandoc.html#pandoc-converts-between-file-types",
-    "title": "Converting .tex or .docx Files to Markdown",
-    "section": "Pandoc converts between file types",
-    "text": "Pandoc converts between file types"
+    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
+    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides",
+    "title": "Slide Backgrounds  ",
+    "section": "To set a theme for all slides",
+    "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford.scss]"
   },
   {
-    "objectID": "slides/pandoc.html#docx-syllabus-to-markdown",
-    "href": "slides/pandoc.html#docx-syllabus-to-markdown",
-    "title": "Converting .tex or .docx Files to Markdown",
-    "section": "Docx syllabus to markdown",
-    "text": "Docx syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.docx\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n(Just copy the header from syllabus.qmd)"
+    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
+    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-1",
+    "title": "Slide Backgrounds  ",
+    "section": "To set a theme for all slides",
+    "text": "To set a theme for all slides\ntheme: [../michigan.scss, ford2.scss]"
   },
   {
-    "objectID": "slides/pandoc.html#latex-syllabus-to-markdown",
-    "href": "slides/pandoc.html#latex-syllabus-to-markdown",
-    "title": "Converting .tex or .docx Files to Markdown",
-    "section": "LaTeX syllabus to markdown",
-    "text": "LaTeX syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n# docx: default # Do you really want a docx version, too? \n(Just copy the header from syllabus.qmd)"
+    "objectID": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
+    "href": "slides/backgrounds.html#to-set-a-theme-for-all-slides-2",
+    "title": "Slide Backgrounds  ",
+    "section": "To set a theme for all slides",
+    "text": "To set a theme for all slides\ntheme: [../michigan.scss, weill.scss]"
   },
   {
-    "objectID": "slides/pandoc.html#beamer-to-markdown",
-    "href": "slides/pandoc.html#beamer-to-markdown",
-    "title": "Converting .tex or .docx Files to Markdown",
-    "section": "Beamer to markdown",
-    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(Just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.\nformat:\n  beamer:\n    keep-tex: true\n    fontsize: 11pt         # optional\n    toc: false             # optional\n    slide-level: 2         # optional"
+    "objectID": "slides/backgrounds.html#to-make-new-themes",
+    "href": "slides/backgrounds.html#to-make-new-themes",
+    "title": "Slide Backgrounds  ",
+    "section": "To make new themes",
+    "text": "To make new themes\n\nFind an image url or save an image in the slides folder\nMake a .scss styling file. This is what “ford.scss” looks like:\n\n/*-- scss:rules --*/\n.slide-background-content{\n  background-image: url(\"https://fordschool.umich.edu/themes/custom/ford/images/og-image.png\");\n  background-size: 100% 100%;\n  opacity: .1\n}\n\nAdd your new scss style to the theme: line of the slide header\n\nformat:\n revealjs: \n   theme: [../michigan.scss, ford.scss] \n(these slides also use the michigan.scss style sheet)"
+  },
+  {
+    "objectID": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
+    "href": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
+    "title": "Slide Backgrounds  ",
+    "section": "R code to make new slide theme files",
+    "text": "R code to make new slide theme files\n(overkill, but it shows how one can execute code in .qmd files)\n\nurl &lt;- \"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"\nfile &lt;- \"ford2.scss\"\n\npaste('/*-- scss:rules --*/\n  .slide-background-content{\n      background-image: url(\"',\n      url,\n      '\");\n  background-size: 100% 100%;\n  opacity: .1\n}') |&gt;\n  write(file)"
+  },
+  {
+    "objectID": "slides/style.html#callouts",
+    "href": "slides/style.html#callouts",
+    "title": "Colors and Style",
+    "section": "Callouts",
+    "text": "Callouts\n\n\n\n#655A52 for basic callout boxes\n\n\n\n\n\n\n\n\n\nNote\n\n\n#75988d for callout-note boxes\n\n\n\n\n\n\n\n\n\nTip\n\n\n#A5A508 for callout-tip boxes\n\n\n\n\n\n\n\n\n\nWarning\n\n\n#9A3324 for callout-warning boxes\n\n\n\n\n\n\n\n\n\nCaution\n\n\n#D86018 for callout-caution boxes\n\n\n\n\n\n\n\n\n\nImportant\n\n\n#FFCB05 for callout-important boxes"
+  },
+  {
+    "objectID": "slides/style.html#slide-menue-logo",
+    "href": "slides/style.html#slide-menue-logo",
+    "title": "Colors and Style",
+    "section": "Slide menue logo",
+    "text": "Slide menue logo\n/*-- make menue logo the block M --*/\n.reveal .slide-menu-button .fa-bars::before {\n  background-image: url('https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png') !important;\n}"
   },
   {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus Template",
     "section": "",
-    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: March 31 2026. This is the current version. 🚧"
+    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: April 01 2026. This is the current version. 🚧"
   },
   {
     "objectID": "syllabus.html#course-philosophy",

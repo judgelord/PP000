@@ -18,7 +18,7 @@ $body-bg: #FFFFFF;
 $body-color: #00274C;
 $navbar-bg: $body-color;
 $link-color: #2F65A7;
-$text-muted: #989C97;// #655A52;
+$text-muted: #655A52;
 $background_color: #CFC096;
 $text_font_size: 1rem;
 $callout-color-note: #75988d;
@@ -26,14 +26,14 @@ $callout-color-tip: #A5A508;
 $callout-color-warning: #9A3324;
 $callout-color-caution: #D86018;
 $callout-color-important: #FFCB05;
-$table_row_even_background_color:#CFC096;
+$table_row_even_background_color: #989C97;
 
 //code
 $code-color: #00274C !default;
 $font-family-monospace: 'Nunito Sans', monospace  !default;
-$code-bg: #FFCB05;
-$code_inline_background_color: $code-bg;
-$code-highlight-color: $code-bg;
+$code-bg: #FFCB05; // #CFC096;
+$code_inline_background_color: #FFCB05;
+$code-highlight-color: $callout-color-important;
 
 
 /*-- scss:rules --*/
@@ -75,7 +75,7 @@ p {
 
 
 .blockquote {
-  border-left: 3px solid #989C97;
+  border-left: 3px solid $text-muted;
   padding-left: 1em;
   font-style: italic;
   color: $text-muted;

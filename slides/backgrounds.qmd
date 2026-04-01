@@ -64,12 +64,12 @@ format:
  revealjs: 
    theme: [../michigan.scss, ford.scss] 
 ```
-(these slides also use the .michigan.scss style)
+(these slides also use the michigan.scss style sheet)
 
 
 ## R code to make new slide theme files 
 
-(overkill, but it shows how you can execute code in .qmd documents)
+(overkill, but it shows how one can execute code in .qmd files)
 
 ```{r}
 url <- "https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png"

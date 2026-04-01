@@ -2,13 +2,13 @@
 
 Remember to add alt text for all images!  `![Caption](image.jpg "alt text")` 
 
-# HTML accessibility checks
+## HTML accessibility checks
 
 The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
 
 You can also use the [site improve Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
 
-# Math is more accessible in HTML than PDF
+## Math is more accessible in HTML than PDF
 
 Otherwise, writing equations in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) is [similar to $\LaTeX$](https://quarto.org/docs/authoring/markdown-basics.html#equations).
 
@@ -68,7 +68,7 @@ WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibilit
 You don't need `\tag{}` or `\label{}` if you have proper equation labels like `{#eq-1a}` above.
 
 
-# Word and PDF documents
+# PDF and Docx {.smaller}
 
 Because all documents on this course website are HTML and the optional PDF and DOCX files are just copies of the HTML automatically rendered with pandoc, the accessibility of PDF and DOCX files is not a big concern (presumably, most people will use the HTML format). Indeed, you may not want to include PDF and DOCX documents at all because they take time to render and add little value. 
 
@@ -76,12 +76,11 @@ My students report that they really appreciate materials in HTML because they ar
 
 However, we may need PDF- or DOCX-formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding `docx: default` below `format:` in the document header, unless your document includes math or complex tables, which may not render as well in Word.  
 
+## $\LaTeX$ {.smaller}
 
-If you want an accessible PDF, you need to turn on tagging.
+ If you want an accessible PDF, you need to turn on tagging. 
 
-## \LaTeX
-
-Add `\DocumentMetadata{tagging=on}` to your \LaTeX template before `\documentclass`. 
+Add `\DocumentMetadata{tagging=on}` to your LaTeX template before `\documentclass`. 
 
 This requires installing some packages. In R:
 
