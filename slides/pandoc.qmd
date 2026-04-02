@@ -1,6 +1,6 @@
 ---
-title: "Converting .tex or .docx Files to Markdown"
-subtitle: ""
+title: "From .tex, .docx, or .pptx to Markdown"
+subtitle: "(and back again)"
 author: ""
 date: ""
 image: "https://pandoc.org/diagram.svgz" # <-- image to be used in links to slides
@@ -34,12 +34,14 @@ Inline: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$
 
 ```tex
 Display mode allows equation labels (see @eq-1a):
+
 $$
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 $$ {#eq-1a}
 ```
 
 Display mode allows equation labels (see @eq-1a):
+
 $$
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 $$ {#eq-1a}
@@ -47,7 +49,13 @@ $$ {#eq-1a}
 
 ## Pandoc converts between file types
 
-![](https://pandoc.org/pandoc-cartoon.svgz "pandoc cartoon")
+![](https://pandoc.org/pandoc-cartoon.svgz "pandoc cartoon machine sucking in one document and extruding another")
+
+## e.g. from .docx or .tex to markdown 
+
+(and back again)
+
+![](https://www.questretreats.com/wp-content/uploads/2019/02/Lord-of-the-Rings-Bilbo-Baggins-There-And-Back-Again.jpg "Bilbo writing There and Back Again...a hobbits tale")
 
 
 ## Docx syllabus to markdown
@@ -60,7 +68,7 @@ $$ {#eq-1a}
 title: Syllabus
 format:
  html: default
- pdf: default # delete this line if you don't want a PDF version rendered via LaTeX
+ pdf: default # Delete this line if you don't want a PDF version rendered via LaTeX
 ```
 
 (Just copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
@@ -76,8 +84,8 @@ format:
 title: Syllabus
 format:
  html: default
- pdf: default # delete this line if you don't want a PDF version rendered via LaTeX
-# docx: default # Do you really want a docx version, too? 
+ pdf: default # Delete this line if you don't want a PDF version rendered via LaTeX
+ docx: default # Do you really want a docx version, too? 🤨
 ```
 
 (Just copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
@@ -89,10 +97,10 @@ format:
 1.  Add a YAML header at the top:
 
 ```yaml
-  title: "My Slides"
-  format:
-    revealjs: 
-      slide-number: true
+title: My Slides
+format:
+  revealjs: 
+    slide-number: true
 ```
 
 (Just copy from the file that made these slides, [pandoc.qmd](https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd))

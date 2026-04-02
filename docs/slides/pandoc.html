@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="">
-  <title>PubPol 000 – Converting .tex or .docx Files to Markdown</title>
+  <title>PubPol 000 – From .tex, .docx, or .pptx to Markdown</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,7 +193,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="https://pandoc.org/diagram.svgz" data-background-opacity="0.5" class="quarto-title-block center">
-  <h1 class="title">Converting .tex or .docx Files to Markdown</h1>
+  <h1 class="title">From .tex, .docx, or .pptx to Markdown</h1>
+  <p class="subtitle">(and back again)</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -213,17 +214,24 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a></a>Inline: <span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}$</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a></a>Display mode allows equation labels (see @eq-1a):</span>
-<span id="cb2-2"><a></a><span class="ss">$$</span></span>
-<span id="cb2-3"><a></a><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}</span></span>
-<span id="cb2-4"><a></a><span class="ss">$$</span> {#eq-1a}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Display mode allows equation labels (see <a href="#/eq-1a" class="quarto-xref">Equation&nbsp;1</a>): <span id="eq-1a"><span class="math display">\[
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a><span class="ss">$$</span></span>
+<span id="cb2-4"><a></a><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}</span></span>
+<span id="cb2-5"><a></a><span class="ss">$$</span> {#eq-1a}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Display mode allows equation labels (see <a href="#/eq-1a" class="quarto-xref">Equation&nbsp;1</a>):</p>
+<p><span id="eq-1a"><span class="math display">\[
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 \tag{1}\]</span></span></p>
 </section>
 <section id="pandoc-converts-between-file-types" class="slide level2">
 <h2>Pandoc converts between file types</h2>
 
-<img data-src="https://pandoc.org/pandoc-cartoon.svgz" title="pandoc cartoon" class="r-stretch"></section>
+<img data-src="https://pandoc.org/pandoc-cartoon.svgz" title="pandoc cartoon machine sucking in one document and extruding another" class="r-stretch"></section>
+<section id="e.g.-from-.docx-or-.tex-to-markdown" class="slide level2">
+<h2>e.g.&nbsp;from .docx or .tex to markdown</h2>
+<p>(and back again)</p>
+
+<img data-src="https://www.questretreats.com/wp-content/uploads/2019/02/Lord-of-the-Rings-Bilbo-Baggins-There-And-Back-Again.jpg" title="Bilbo writing There and Back Again...a hobbits tale" class="r-stretch"></section>
 <section id="docx-syllabus-to-markdown" class="slide level2">
 <h2>Docx syllabus to markdown</h2>
 <ol type="1">
@@ -234,7 +242,7 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
 <span id="cb3-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb3-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb3-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # Delete this line if you don't want a PDF version rendered via LaTeX</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
 </section>
 <section id="latex-syllabus-to-markdown" class="slide level2">
@@ -247,8 +255,8 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Syllabus</span></span>
 <span id="cb4-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb4-3"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb4-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # delete this line if you don't want a PDF version rendered via LaTeX</span></span>
-<span id="cb4-5"><a></a><span class="co"># docx: default # Do you really want a docx version, too? </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-4"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # Delete this line if you don't want a PDF version rendered via LaTeX</span></span>
+<span id="cb4-5"><a></a><span class="at"> </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # Do you really want a docx version, too? 🤨</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
 </section>
 <section id="beamer-to-markdown" class="slide level2">
@@ -258,10 +266,10 @@
 <li>Change “.md” to “.qmd”</li>
 <li>Add a YAML header at the top:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Slides"</span></span>
-<span id="cb5-2"><a></a><span class="at">  </span><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb5-3"><a></a><span class="at">    </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb5-4"><a></a><span class="at">      </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> My Slides</span></span>
+<span id="cb5-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb5-3"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-4"><a></a><span class="at">    </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>(Just copy from the file that made these slides, <a href="https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd">pandoc.qmd</a>)</p>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">

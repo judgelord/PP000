@@ -14,8 +14,8 @@
     "text": "The automated check returned some issues with Quarto defaults, which I fixed with JavaScript patches in assets/accessibility-fixes.js.\nYou can also use the site improve Chrome extension."
   },
   {
-    "objectID": "accessibility.html#math-is-more-accessible-in-html-than-pdf",
-    "href": "accessibility.html#math-is-more-accessible-in-html-than-pdf",
+    "objectID": "accessibility.html#math-is-much-more-accessible-in-html-than-pdf",
+    "href": "accessibility.html#math-is-much-more-accessible-in-html-than-pdf",
     "title": " Tips",
     "section": "",
     "text": "Otherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html\nMore on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations\n\nYou don’t need \\tag{} or \\label{} if you have proper equation labels like {#eq-1a} above."
@@ -25,7 +25,7 @@
     "href": "accessibility.html#latex",
     "title": " Tips",
     "section": "\\(\\LaTeX\\)",
-    "text": "\\(\\LaTeX\\)\nIf you want an accessible PDF, you need to turn on tagging.\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
+    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, when rendering qmd documents to PDF via LaTeX, you can add lines to the LaTeX preamble using include-in-header: in the YAML header. However, this probably does not work for lines that need to go before \\documentclass. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX (please tell me if this is wrong)."
   },
   {
     "objectID": "accessibility.html#general-tips-for-latex-generated-pdfs",
@@ -100,51 +100,58 @@
   {
     "objectID": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
     "href": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
-    "title": "Converting .tex or .docx Files to Markdown",
+    "title": "From .tex, .docx, or .pptx to Markdown",
     "section": "Markdown is a lightweight syntax",
     "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type less funny business\nIn contrast to Microsoft Office, everything is plain text — no buttons or formatting issues on different machines"
   },
   {
     "objectID": "slides/pandoc.html#markdown-math-is-approxeq-latex",
     "href": "slides/pandoc.html#markdown-math-is-approxeq-latex",
-    "title": "Converting .tex or .docx Files to Markdown",
+    "title": "From .tex, .docx, or .pptx to Markdown",
     "section": "Markdown math is \\(\\approxeq \\LaTeX\\)",
-    "text": "Markdown math is \\(\\approxeq \\LaTeX\\)\nEquations in MathJax are similar to LaTeX but more accessible.\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n\\tag{1}\\]"
+    "text": "Markdown math is \\(\\approxeq \\LaTeX\\)\nEquations in MathJax are similar to LaTeX but more accessible.\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1):\n\\[\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n\\tag{1}\\]"
   },
   {
     "objectID": "slides/pandoc.html#pandoc-converts-between-file-types",
     "href": "slides/pandoc.html#pandoc-converts-between-file-types",
-    "title": "Converting .tex or .docx Files to Markdown",
+    "title": "From .tex, .docx, or .pptx to Markdown",
     "section": "Pandoc converts between file types",
     "text": "Pandoc converts between file types"
   },
   {
+    "objectID": "slides/pandoc.html#e.g.-from-.docx-or-.tex-to-markdown",
+    "href": "slides/pandoc.html#e.g.-from-.docx-or-.tex-to-markdown",
+    "title": "From .tex, .docx, or .pptx to Markdown",
+    "section": "e.g. from .docx or .tex to markdown",
+    "text": "e.g. from .docx or .tex to markdown\n(and back again)"
+  },
+  {
     "objectID": "slides/pandoc.html#docx-syllabus-to-markdown",
     "href": "slides/pandoc.html#docx-syllabus-to-markdown",
-    "title": "Converting .tex or .docx Files to Markdown",
+    "title": "From .tex, .docx, or .pptx to Markdown",
     "section": "Docx syllabus to markdown",
-    "text": "Docx syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.docx\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n(Just copy the header from syllabus.qmd)"
+    "text": "Docx syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.docx\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # Delete this line if you don't want a PDF version rendered via LaTeX\n(Just copy the header from syllabus.qmd)"
   },
   {
     "objectID": "slides/pandoc.html#latex-syllabus-to-markdown",
     "href": "slides/pandoc.html#latex-syllabus-to-markdown",
-    "title": "Converting .tex or .docx Files to Markdown",
+    "title": "From .tex, .docx, or .pptx to Markdown",
     "section": "LaTeX syllabus to markdown",
-    "text": "LaTeX syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # delete this line if you don't want a PDF version rendered via LaTeX\n# docx: default # Do you really want a docx version, too? \n(Just copy the header from syllabus.qmd)"
+    "text": "LaTeX syllabus to markdown\n\nIn terminal: pandoc -t markdown -o syllabus.md syllabus.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: Syllabus\nformat:\n html: default\n pdf: default # Delete this line if you don't want a PDF version rendered via LaTeX\n docx: default # Do you really want a docx version, too? 🤨\n(Just copy the header from syllabus.qmd)"
   },
   {
     "objectID": "slides/pandoc.html#beamer-to-markdown",
     "href": "slides/pandoc.html#beamer-to-markdown",
-    "title": "Converting .tex or .docx Files to Markdown",
+    "title": "From .tex, .docx, or .pptx to Markdown",
     "section": "Beamer to markdown",
-    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\n  title: \"My Slides\"\n  format:\n    revealjs: \n      slide-number: true\n(Just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.\nformat:\n  beamer:\n    keep-tex: true\n    fontsize: 11pt         # optional\n    toc: false             # optional\n    slide-level: 2         # optional"
+    "text": "Beamer to markdown\n\nIn terminal: pandoc -t markdown -o slides.md slides.tex\nChange “.md” to “.qmd”\nAdd a YAML header at the top:\n\ntitle: My Slides\nformat:\n  revealjs: \n    slide-number: true\n(Just copy from the file that made these slides, pandoc.qmd)\n\n\n\n\n\n\n\nTip\n\n\nPandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.\nformat:\n  beamer:\n    keep-tex: true\n    fontsize: 11pt         # optional\n    toc: false             # optional\n    slide-level: 2         # optional"
   },
   {
     "objectID": "slides/index.html",
     "href": "slides/index.html",
     "title": "Slides",
     "section": "",
-    "text": "Accessibility\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSlide Backgrounds  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConverting .tex or .docx Files to Markdown\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColors and Style\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Accessibility\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSlide Backgrounds  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPublishing on GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom .tex, .docx, or .pptx to Markdown\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nColors and Style\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/access.html#html-accessibility-checks",
@@ -154,18 +161,18 @@
     "text": "HTML accessibility checks\nThe automated check returned some issues with Quarto defaults, which I fixed with JavaScript patches in assets/accessibility-fixes.js.\nYou can also use the site improve Chrome extension."
   },
   {
-    "objectID": "slides/access.html#math-is-more-accessible-in-html-than-pdf",
-    "href": "slides/access.html#math-is-more-accessible-in-html-than-pdf",
+    "objectID": "slides/access.html#math-is-much-more-accessible-in-html-than-pdf",
+    "href": "slides/access.html#math-is-much-more-accessible-in-html-than-pdf",
     "title": "Accessibility",
-    "section": "Math is more accessible in HTML than PDF",
-    "text": "Math is more accessible in HTML than PDF\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html\nMore on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations\n\nYou don’t need \\tag{} or \\label{} if you have proper equation labels like {#eq-1a} above."
+    "section": "Math is much more accessible in HTML than PDF",
+    "text": "Math is much more accessible in HTML than PDF\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\nhttps://docs.mathjax.org/en/latest/basic/accessibility.html\nMore on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations\n\nYou don’t need \\tag{} or \\label{} if you have proper equation labels like {#eq-1a} above."
   },
   {
     "objectID": "slides/access.html#latex",
     "href": "slides/access.html#latex",
     "title": "Accessibility",
     "section": "\\(\\LaTeX\\)",
-    "text": "\\(\\LaTeX\\)\nIf you want an accessible PDF, you need to turn on tagging.\nAdd \\DocumentMetadata{tagging=on} to your LaTeX template before \\documentclass.\nThis requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, you can add lines in the LaTeX preamble using include-in-header: in the YAML header of Quarto documents. However, this may not work for lines that need to go before \\documentclass, so it may require a LaTeX template. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required (I could be wrong)."
+    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, when rendering qmd documents to PDF via LaTeX, you can add lines to the LaTeX preamble using include-in-header: in the YAML header. However, this probably does not work for lines that need to go before \\documentclass. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX (please tell me if this is wrong)."
   },
   {
     "objectID": "slides/access.html#general-tips-for-latex-generated-pdfs",
@@ -466,7 +473,7 @@
     "href": "syllabus.html",
     "title": "Syllabus Template",
     "section": "",
-    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: April 01 2026. This is the current version. 🚧"
+    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: April 02 2026. This is the current version. 🚧"
   },
   {
     "objectID": "syllabus.html#course-philosophy",

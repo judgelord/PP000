@@ -211,8 +211,8 @@
 <p>The <a href="https://quarto.org/docs/output-formats/html-accessibility.html">automated check</a> returned some issues with Quarto defaults, which I fixed with JavaScript <a href="#/patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</p>
 <p>You can also use the <a href="chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html">site improve Chrome extension</a>.</p>
 </section>
-<section id="math-is-more-accessible-in-html-than-pdf" class="slide level2">
-<h2>Math is more accessible in HTML than PDF</h2>
+<section id="math-is-much-more-accessible-in-html-than-pdf" class="slide level2">
+<h2>Math is much more accessible in HTML than PDF</h2>
 <p>Otherwise, writing equations in <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html">MathJax</a> is <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">similar to <span class="math inline">\(\LaTeX\)</span></a>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource tex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a></a>Inline: <span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{i=0}^n i^2 = </span><span class="sc">\frac</span><span class="ss">{(n^2+n)(2n+1)}{6}$</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Inline: <span class="math inline">\(\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\)</span></p>
@@ -267,17 +267,15 @@ See @thm-line.
 </section>
 <section id="latex" class="slide level2 smaller">
 <h2><span class="math inline">\(\LaTeX\)</span></h2>
-<p>If you want an accessible PDF, you need to turn on tagging.</p>
-<p>Add <code>\DocumentMetadata{tagging=on}</code> to your LaTeX template before <code>\documentclass</code>.</p>
-<p>This requires installing some packages. In R:</p>
+<p>Accessible PDFs require tagging. For LaTeX, this means adding <code>\DocumentMetadata{tagging=on}</code> before <code>\documentclass</code> and requires installing some packages. In R:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>tinytex<span class="sc">::</span><span class="fu">tlmgr_install</span>(<span class="fu">c</span>(<span class="st">'latex-lab'</span>, <span class="st">'pdfmanagement-testphase'</span>, <span class="st">'tagpdf'</span>, <span class="st">'luamml'</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Normally, you can add lines in the LaTeX preamble using <code>include-in-header:</code> in the YAML header of Quarto documents. However, this may not work for lines that need to go before <code>\documentclass</code>, so it may require a LaTeX template. For example, this causes an error:</p>
+<p>Normally, when rendering qmd documents to PDF via LaTeX, you can add lines to the LaTeX preamble using <code>include-in-header:</code> in the YAML header. However, this probably does not work for lines that need to go before <code>\documentclass</code>. For example, this causes an error:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb4-2"><a></a><span class="at">   </span><span class="fu">include-in-header</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb4-3"><a></a><span class="kw">     - </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="ch">|</span></span>
 <span id="cb4-4"><a></a>        \DocumentMetadata{tagging=on}</span>
 <span id="cb4-5"><a></a>        \documentclass{article}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Thus, I believe that a LaTeX template is required (I could be wrong).</p>
+<p>Thus, I believe that a <a href="https://quarto.org/docs/journals/templates.html">LaTeX template</a> is required to allow tagging when rendering qmd documents as PDFs via LaTeX (please tell me if this is wrong).</p>
 </section>
 <section id="general-tips-for-latex-generated-pdfs" class="slide level2">
 <h2>General tips for LaTeX-generated PDFs</h2>

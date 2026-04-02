@@ -8,7 +8,7 @@ The [automated check](https://quarto.org/docs/output-formats/html-accessibility.
 
 You can also use the [site improve Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
 
-## Math is more accessible in HTML than PDF
+## Math is much more accessible in HTML than PDF
 
 Otherwise, writing equations in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) is [similar to $\LaTeX$](https://quarto.org/docs/authoring/markdown-basics.html#equations).
 
@@ -78,17 +78,13 @@ However, we may need PDF- or DOCX-formatted documents in some cases. If those ca
 
 ## $\LaTeX$ {.smaller}
 
- If you want an accessible PDF, you need to turn on tagging. 
-
-Add `\DocumentMetadata{tagging=on}` to your LaTeX template before `\documentclass`. 
-
-This requires installing some packages. In R:
+Accessible PDFs require tagging. For LaTeX, this means adding `\DocumentMetadata{tagging=on}` before `\documentclass` and requires installing some packages. In R:
 
 ```r
 tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))
 ```
 
-Normally, you can add lines in the LaTeX preamble using `include-in-header:` in the YAML header of Quarto documents. However, this may not work for lines that need to go before `\documentclass`, so it may require a LaTeX template. For example, this causes an error: 
+Normally, when rendering qmd documents to PDF via LaTeX, you can add lines to the LaTeX preamble using `include-in-header:` in the YAML header. However, this probably does not work for lines that need to go before `\documentclass`. For example, this causes an error: 
 
 ```yaml
  pdf: 
@@ -98,7 +94,7 @@ Normally, you can add lines in the LaTeX preamble using `include-in-header:` in 
         \documentclass{article}
 ```
 
-Thus, I believe that a LaTeX template is required (I could be wrong).
+Thus, I believe that a [LaTeX template](https://quarto.org/docs/journals/templates.html) is required to allow tagging when rendering qmd documents as PDFs via LaTeX (please tell me if this is wrong). 
 
 ## General tips for LaTeX-generated PDFs
 
