@@ -4,9 +4,8 @@ Remember to add alt text for all images!  `![Caption](image.jpg "alt text")`
 
 ## HTML accessibility checks
 
-The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
-
-You can also use the [site improve Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
+- The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
+- You can also use the [site improve Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
 
 ## Math is much more accessible in HTML than PDF
 
@@ -61,11 +60,16 @@ $$
 See @thm-line.
 --> 
 
-- <https://docs.mathjax.org/en/latest/basic/accessibility.html>
-- More on how to make MathJax content universally interpretable, aligning with 
+::: callout-note
+You don't need `\tag{}` or `\label{}` if you have equation labels like `{#eq-1a}` above.
+:::
+
+More on MathJax accessibility: 
+
+- Accessibility Features: <https://docs.mathjax.org/en/latest/basic/accessibility.html>
+- How to make content universally interpretable, aligning with 
 WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
 
-You don't need `\tag{}` or `\label{}` if you have proper equation labels like `{#eq-1a}` above.
 
 
 # PDF and Docx {.smaller}

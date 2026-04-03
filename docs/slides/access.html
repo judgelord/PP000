@@ -208,8 +208,10 @@
 </section>
 <section id="html-accessibility-checks" class="slide level2">
 <h2>HTML accessibility checks</h2>
-<p>The <a href="https://quarto.org/docs/output-formats/html-accessibility.html">automated check</a> returned some issues with Quarto defaults, which I fixed with JavaScript <a href="#/patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</p>
-<p>You can also use the <a href="chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html">site improve Chrome extension</a>.</p>
+<ul>
+<li>The <a href="https://quarto.org/docs/output-formats/html-accessibility.html">automated check</a> returned some issues with Quarto defaults, which I fixed with JavaScript <a href="#/patches">patches</a> in <code>assets/accessibility-fixes.js</code>.</li>
+<li>You can also use the <a href="chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html">site improve Chrome extension</a>.</li>
+</ul>
 </section>
 <section id="math-is-much-more-accessible-in-html-than-pdf" class="slide level2">
 <h2>Math is much more accessible in HTML than PDF</h2>
@@ -252,11 +254,24 @@ $$
 
 See @thm-line.
 -->
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>You don’t need <code>\tag{}</code> or <code>\label{}</code> if you have equation labels like <code>{#eq-1a}</code> above.</p>
+</div>
+</div>
+</div>
+<p>More on MathJax accessibility:</p>
 <ul>
-<li><a href="https://docs.mathjax.org/en/latest/basic/accessibility.html" class="uri">https://docs.mathjax.org/en/latest/basic/accessibility.html</a></li>
-<li>More on how to make MathJax content universally interpretable, aligning with WAI-ARIA standards: <a href="https://app.studyraid.com/en/read/15521/539779/accessibility-considerations" class="uri">https://app.studyraid.com/en/read/15521/539779/accessibility-considerations</a></li>
+<li>Accessibility Features: <a href="https://docs.mathjax.org/en/latest/basic/accessibility.html" class="uri">https://docs.mathjax.org/en/latest/basic/accessibility.html</a></li>
+<li>How to make content universally interpretable, aligning with WAI-ARIA standards: <a href="https://app.studyraid.com/en/read/15521/539779/accessibility-considerations" class="uri">https://app.studyraid.com/en/read/15521/539779/accessibility-considerations</a></li>
 </ul>
-<p>You don’t need <code>\tag{}</code> or <code>\label{}</code> if you have proper equation labels like <code>{#eq-1a}</code> above.</p>
 </section></section>
 <section>
 <section id="pdf-and-docx" class="title-slide slide level1 smaller center">

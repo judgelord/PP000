@@ -36,3 +36,5 @@ rsconnect/
 PP000.Rproj
 **/*.quarto_ipynb
 archive
+README.html
+README_files

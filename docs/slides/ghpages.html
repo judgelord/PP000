@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-75c539311e6490f2353b2de054933b55.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-dca401542d8d81c5aa9b08bfe3c4663c.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -149,23 +149,25 @@
 <li><p><code>_quarto.yml</code> controls the structure of the website (e.g., <a href="https://quarto.org/docs/reference/projects/websites.html">navigation</a> tabs)</p></li>
 <li><p><code>index.qmd</code> is home page content</p></li>
 <li><p><code>syllabus.qmd</code> is a template syllabus</p></li>
-<li><p><code>syllabus-insert.qmd</code> is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)</p></li>
+<li><p><code>syllabus-insert.qmd</code> is boilerplate* content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)</p></li>
 <li><p><code>assignments.qmd</code> is a template assignment guide</p></li>
 <li><p><code>/slides/</code> is a folder for slide decks</p>
 <ul>
 <li><p><code>day1.qmd</code> is a template <a href="https://quarto.org/docs/presentations/revealjs/">Revealjs</a> slide deck</p></li>
-<li><p><code>ford.scss</code> gives slides a Ford School logo background when added to <code>theme:</code></p></li>
-<li><p><code>weill.scss</code> gives slides a Weill Hall background when added to <code>theme:</code> (see, e.g., day1 slides)</p></li>
-<li><p><code>index.qmd</code> automatically indexes slide decks in the <code>slides</code> folder on the slides tab of the website</p></li>
+<li><p><code>ford.scss</code> gives slides a Ford School logo background</p></li>
+<li><p><code>weill.scss</code> gives slides a Weill Hall background (see, e.g., day1 slides)</p></li>
+<li><p><code>index.qmd</code> automatically indexes slide decks in the slides folder on the slides tab of the website</p></li>
 </ul></li>
 <li><p><code>accessibility.qmd</code> is a page of accessibility tips</p></li>
-<li><p><code>michigan.scss</code> styles all web pages, documents, and slides based on <a href="https://brand.umich.edu/design-resources/colors/">University of Michigan</a> font and color guidance (see <a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Theming</a>)</p></li>
-<li><p><code>code/copy syllabus template insert to other courses.R</code> is R code to copy files to others course folders</p></li>
+<li><p><code>michigan.scss</code> styles all web pages, documents, and slides based on <a href="https://brand.umich.edu/design-resources/colors/">font and color guidance from the University of Michigan</a> (see <a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Theming</a> for other options)</p></li>
+<li><p><code>code/copy syllabus template insert to other courses.R</code> is R code to copy files to other course folders</p></li>
 <li><p><code>assets/accessiblity-fixes.js</code> is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)</p></li>
 <li><p><code>/docs/</code> is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️</p></li>
 <li><p><code>.gitignore</code> is a list of files to ignore (i.e., to not track or publish)</p></li>
 </ul>
-</section>
+<p>*This particular boilerplate language is from the “Ford School Syllabus Template AY 2025-26.docx” Google Drive file downloaded as Markdown.</p>
+
+<img data-src="figs/download_google_doc_as_markdown.png" title="Screenshot of downloading a Google doc as Markdown" class="r-stretch"></section>
 <section>
 <section id="how-to-publish-for-free-on-github" class="title-slide slide level1 center">
 <h1>How to publish for free on GitHub</h1>

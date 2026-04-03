@@ -12,7 +12,7 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
 
 - `syllabus.qmd` is a template syllabus 
 
-- `syllabus-insert.qmd` is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)
+- `syllabus-insert.qmd` is boilerplate* content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)
 
 - `assignments.qmd` is a template assignment guide 
 
@@ -20,17 +20,17 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
 
    - `day1.qmd` is a template [Revealjs](https://quarto.org/docs/presentations/revealjs/) slide deck
    
-   - `ford.scss` gives slides a Ford School logo background when added to `theme:`
+   - `ford.scss` gives slides a Ford School logo background
    
-   - `weill.scss` gives slides a Weill Hall background when added to `theme:` (see, e.g., day1 slides)
+   - `weill.scss` gives slides a Weill Hall background (see, e.g., day1 slides)
    
-   - `index.qmd` automatically indexes slide decks in the `slides` folder on the slides tab of the website
+   - `index.qmd` automatically indexes slide decks in the slides folder on the slides tab of the website
    
 - `accessibility.qmd` is a page of accessibility tips 
    
 - `michigan.scss` styles all web pages, documents, and slides based on [font and color guidance from the University of Michigan](https://brand.umich.edu/design-resources/colors/) (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html) for other options)
 
-- `code/copy syllabus template insert to other courses.R` is R code to copy files to others course folders
+- `code/copy syllabus template insert to other courses.R` is R code to copy files to other course folders
 
 - `assets/accessiblity-fixes.js` is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)
 
@@ -38,6 +38,9 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
 
 - `.gitignore` is a list of files to ignore (i.e., to not track or publish)
 
+*This particular boilerplate language is from the "Ford School Syllabus Template AY 2025-26.docx" Google Drive file downloaded as Markdown. 
+
+![](figs/download_google_doc_as_markdown.png "Screenshot of downloading a Google doc as Markdown")
 
 # How to publish for free on GitHub
 
@@ -72,8 +75,6 @@ Note: For the website, you only need to push changes to the `/docs/` folder. Add
 In RStudio: select changes/files to commit on the "Git" tab. Then push the changes.
 
 ![](https://bookdown.org/csgillespie/efficientR/figures/f9_1_rstudio-git.png "A screenshot of the Git tab in Rstudio")
-
-
 
 (If you don't already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via [a personal access token](https://happygitwithr.com/https-pat))
 
