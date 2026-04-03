@@ -76,7 +76,7 @@ My students report that they really appreciate materials in HTML because they ar
 
 However, we may need PDF- or DOCX-formatted documents in some cases. If those cases require accessibility, then you are probably better off using a DOCX version, created with pandoc by adding `docx: default` below `format:` in the document header, unless your document includes math or complex tables, which may not render as well in Word.  
 
-## $\LaTeX$ {.smaller}
+## $\LaTeX$
 
 Accessible PDFs require tagging. For LaTeX, this means adding `\DocumentMetadata{tagging=on}` before `\documentclass` and requires installing some packages. In R:
 
@@ -84,7 +84,7 @@ Accessible PDFs require tagging. For LaTeX, this means adding `\DocumentMetadata
 tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))
 ```
 
-Normally, when rendering qmd documents to PDF via LaTeX, you can add lines to the LaTeX preamble using `include-in-header:` in the YAML header. However, this probably does not work for lines that need to go before `\documentclass`. For example, this causes an error: 
+Normally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX preamble with `include-in-header:` in the YAML header. But adding lines before `\documentclass` causes an error: 
 
 ```yaml
  pdf: 
@@ -94,7 +94,7 @@ Normally, when rendering qmd documents to PDF via LaTeX, you can add lines to th
         \documentclass{article}
 ```
 
-Thus, I believe that a [LaTeX template](https://quarto.org/docs/journals/templates.html) is required to allow tagging when rendering qmd documents as PDFs via LaTeX (please tell me if this is wrong). 
+Thus, I believe a [LaTeX template](https://quarto.org/docs/journals/templates.html) is required to allow tagging when rendering qmd documents as PDFs via LaTeX.
 
 ## General tips for LaTeX-generated PDFs
 

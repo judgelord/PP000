@@ -172,7 +172,7 @@
     "href": "slides/access.html#latex",
     "title": "Accessibility",
     "section": "\\(\\LaTeX\\)",
-    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, when rendering qmd documents to PDF via LaTeX, you can add lines to the LaTeX preamble using include-in-header: in the YAML header. However, this probably does not work for lines that need to go before \\documentclass. For example, this causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe that a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX (please tell me if this is wrong)."
+    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX preamble with include-in-header: in the YAML header. But adding lines before \\documentclass causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX."
   },
   {
     "objectID": "slides/access.html#general-tips-for-latex-generated-pdfs",
@@ -233,70 +233,70 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "",
-    "text": "Tip👆\n\n\n\nChange the navigation bar by editing _quarto.yml\n👇 Replace text below with anything you want on the home page by editing index.qmd\nThis is a Quarto Template for Course Websites"
+    "text": "Tip👆\n\n\n\nChange the navigation bar by editing _quarto.yml\nThis is a Quarto Template for Course Websites"
   },
   {
-    "objectID": "index.html#contents",
-    "href": "index.html#contents",
-    "title": "To publish for free on GitHub pages",
-    "section": "Contents",
-    "text": "Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on Ford School and University of Michigan font and color guidance (see HTML Theming)\ncode/copy syllabus template insert to other courses.R is R code to copy files to others course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
+    "objectID": "index.html#repository-contents",
+    "href": "index.html#repository-contents",
+    "title": "How to publish for free on GitHub",
+    "section": "Repository Contents",
+    "text": "Repository Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on University of Michigan font and color guidance (see HTML Theming)\ncode/copy syllabus template insert to other courses.R is R code to copy files to others course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
   },
   {
     "objectID": "index.html#make-a-github-account",
     "href": "index.html#make-a-github-account",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "1. Make a GitHub account",
     "text": "1. Make a GitHub account"
   },
   {
     "objectID": "index.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
     "href": "index.html#on-httpsgithub.comjudgelordpp000-click-use-this-template",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "2. On https://github.com/judgelord/PP000, click Use this template",
     "text": "2. On https://github.com/judgelord/PP000, click Use this template\nName this new repository whatever you want the course website address to be (e.g., “PP475”)"
   },
   {
     "objectID": "index.html#download-as-a-version-controlled-project",
     "href": "index.html#download-as-a-version-controlled-project",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "3. Download as a version-controlled project",
     "text": "3. Download as a version-controlled project\nIn RStudio: “New Project”–&gt; “Version Control”"
   },
   {
     "objectID": "index.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
     "href": "index.html#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder",
     "text": "4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder"
   },
   {
     "objectID": "index.html#buildrender-your-new-website",
     "href": "index.html#buildrender-your-new-website",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "5. Build/render your new website!",
     "text": "5. Build/render your new website!\nIn RStudio: “Build” –&gt; “Render Project” (the button may say “Render Website” instead)"
   },
   {
     "objectID": "index.html#commit-any-changes-and-push-them-to-github",
     "href": "index.html#commit-any-changes-and-push-them-to-github",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "6. Commit any changes and push them to GitHub",
     "text": "6. Commit any changes and push them to GitHub\nNote: For the website, you only need to push changes to the /docs/ folder. Add other files only if you want to track changes. Don’t push large files to GitHub."
   },
   {
     "objectID": "index.html#section",
     "href": "index.html#section",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "",
     "text": "In RStudio: select changes/files to commit on the “Git” tab. Then push the changes.\n\n(If you don’t already use GitHub, you will need to authorize/authenticate your computer to push changes to GitHub via a personal access token)"
   },
   {
     "objectID": "index.html#in-github-settings-pages-publish-from-the-docs-folder",
     "href": "index.html#in-github-settings-pages-publish-from-the-docs-folder",
-    "title": "To publish for free on GitHub pages",
+    "title": "How to publish for free on GitHub",
     "section": "7. In GitHub Settings –> Pages, publish from the /docs/ folder",
     "text": "7. In GitHub Settings –&gt; Pages, publish from the /docs/ folder"
   },
@@ -350,11 +350,11 @@
     "text": "Ford School Inclusivity Statement: Members of the Ford School community represent a rich variety of backgrounds and perspectives. We are committed to providing an atmosphere for learning that respects these differences. While working together to build this community we ask all members to:\n\nshare their unique experiences, values and beliefs\n\nbe open to the views of others\n\nhonor the uniqueness of their colleagues\n\nappreciate the opportunity that we have to learn from each other in this community\n\nvalue one another’s opinions and communicate in a respectful manner\n\nkeep confidential discussions that the community has of a personal (or professional) nature\n\nuse this opportunity together to discuss ways in which we can create an inclusive environment in Ford classes and across the UM community\n\nStudent Mental Health and Wellbeing: The University of Michigan is committed to advancing the mental health and wellbeing of its students. We acknowledge that a variety of issues can directly impact students’ academic performance and overall wellbeing. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available.\nYou may access the Ford School’s embedded counselor Paige Ziegler (pziegler@umich.edu) and/or counselors and urgent services at Counseling and Psychological Services (CAPS) and/or University Health Service (UHS). Students may also use the Crisis Text Line (text ‘4UMICH’ to 741741) to be connected to a trained crisis volunteer.\nAccommodations for Students with Disabilities: The University of Michigan is committed to creating as accessible educational environment for students with disabilities as possible.\nIf you anticipate or are experiencing barriers based on disability or temporary injuries, Services for Students with Disabilities (SSD) (ssd.umich.edu) is the office that students work with to explore reasonable accommodations, tools, and resources.\n\nIf you are already connected with SSD and have approved accommodations, please share your letter through Accommodate as soon as possible so that we can discuss how your accommodations will be implemented in this course. The sooner I know about your disability access-needs, the more equipped I can be to facilitate accommodations. You should reach out to me and/or your Disability Access Coordinator if you have any questions or concerns about your accommodations.\n\nIf you have not connected with SSD and anticipate or are experiencing a disability-related barrier, and would like to discuss accommodations and/or resources, please contact SSD by completing their initial information form (https://ssd.umich.edu/)\n\nIf you have a temporary medical injury/condition, such as a broken arm, I may be able to assist in minimizing classroom barriers. In situations where additional assistance is needed, you should contact the SSD as noted above.\n\nAcademic Integrity: The Ford School academic community, like all communities, functions best when its members treat one another with honesty, fairness, respect, and trust. We hold all members of our community to high standards of scholarship and integrity. To accomplish its mission of providing an optimal educational environment and developing leaders of society, the Ford School promotes the assumption of personal responsibility and integrity and prohibits all forms of academic dishonesty, plagiarism and misconduct. Academic dishonesty may be understood as any action or attempted action that may result in creating an unfair academic advantage for oneself or an unfair academic advantage or disadvantage for any other member or members of the academic community. Plagiarism involves representing the words, ideas, or work of others as one’s own in writing or presentations, and failing to give full and proper credit to the original source. Conduct, without regard to motive, that violates the academic integrity and ethical standards will result in serious consequences and disciplinary action. The Ford School’s policy of academic integrity can be found in the BA, MPP, and PhD Program handbooks. Additional information regarding academic dishonesty, plagiarism and misconduct and their consequences is available on the Rackham website."
   },
   {
-    "objectID": "slides/ghpages.html#contents",
-    "href": "slides/ghpages.html#contents",
+    "objectID": "slides/ghpages.html#repository-contents",
+    "href": "slides/ghpages.html#repository-contents",
     "title": "Publishing on GitHub",
-    "section": "Contents",
-    "text": "Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on Ford School and University of Michigan font and color guidance (see HTML Theming)\ncode/copy syllabus template insert to other courses.R is R code to copy files to others course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
+    "section": "Repository Contents",
+    "text": "Repository Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background when added to theme:\nweill.scss gives slides a Weill Hall background when added to theme: (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on University of Michigan font and color guidance (see HTML Theming)\ncode/copy syllabus template insert to other courses.R is R code to copy files to others course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)"
   },
   {
     "objectID": "slides/ghpages.html#make-a-github-account",
@@ -473,7 +473,7 @@
     "href": "syllabus.html",
     "title": "Syllabus Template",
     "section": "",
-    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: April 02 2026. This is the current version. 🚧"
+    "text": "Time:\nInstructor:\nSkip to reading by week\n🚧 Syllabus updated: April 03 2026. This is the current version. 🚧"
   },
   {
     "objectID": "syllabus.html#course-philosophy",
@@ -537,5 +537,12 @@
     "title": "Syllabus Template",
     "section": "Week 1: Orientation",
     "text": "Week 1: Orientation\n\nTuesday: Introductions and Syllabus Review\n\nPlease read  the entire syllabus before class — this is your chance to ask questions about the assignments and readings.\n\n\n\n\n\n\n\nNoteFurther reading\n\n\n\n\n\n\nAssignment Guide\n\n\n\n\n\n\nThursday\n\nWhat are you hoping to get out of this semester?\nWhat aspects of the class environment will help achieve these goals?"
+  },
+  {
+    "objectID": "slides/style.html#michigan.scss",
+    "href": "slides/style.html#michigan.scss",
+    "title": "Colors and Style",
+    "section": "michigan.scss",
+    "text": "michigan.scss\nstyles all documents based on University of Michigan font and color guidance (see HTML Theming)\n#00274C Nunito Sans for body text\n#2F65A7 for links\n\n#655A52 for blockquotes\n\n#FFCB05 to highlight inline code"
   }
 ]

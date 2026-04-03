@@ -1,16 +1,9 @@
----
-format:
-  html:
-    toc: false
-    theme: michigan.scss
----
-
-
 ::: {.callout-tip title="👆"}
 Change the navigation bar by editing `_quarto.yml` 
-
-👇 Replace text below with anything you want on the home page by editing `index.qmd` 
 :::
 
+::: {.callout}
+👇 Replace this with your home page content by editing `index.qmd` 
+:::
 
 {{< include README.md >}}

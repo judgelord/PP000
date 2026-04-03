@@ -4,7 +4,7 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
 
 - Published website: <http://judgelord.github.io/PP000>
 
-## Contents 
+## Repository Contents 
 
 - `_quarto.yml` controls the structure of the website (e.g., [navigation](https://quarto.org/docs/reference/projects/websites.html) tabs)
 
@@ -28,18 +28,18 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
    
 - `accessibility.qmd` is a page of accessibility tips 
    
-- `michigan.scss` styles all web pages, documents, and slides based on Ford School and [University of Michigan](https://brand.umich.edu/design-resources/colors/) font and color guidance (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html))
+- `michigan.scss` styles all web pages, documents, and slides based on [font and color guidance from the University of Michigan](https://brand.umich.edu/design-resources/colors/) (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html) for other options)
 
 - `code/copy syllabus template insert to other courses.R` is R code to copy files to others course folders
 
 - `assets/accessiblity-fixes.js` is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)
 
-- `/docs/` is where the HTML files for the website are rendered when you build the website --- ⚠️ DON'T EDIT IT MANUALLY ⚠️
+- `/docs/` is where files are rendered when Quarto builds the website --- ⚠️ DON'T EDIT IT MANUALLY ⚠️
 
 - `.gitignore` is a list of files to ignore (i.e., to not track or publish)
 
 
-# To publish for free on GitHub pages
+# How to publish for free on GitHub
 
 ## 1. Make a GitHub account
 

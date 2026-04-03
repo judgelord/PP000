@@ -4,20 +4,20 @@ subtitle: ""
 author: ""
 date: ""
 image: "https://brand.umich.edu/wp-content/uploads/2019/09/Design-Resources-Pg_COLORS_sized-400x250-1.jpg" # <-- image to be used in links to slides
-image-alt: Color swatches for University of Michigan colors # <- alt text for accessibility
+image-alt: Color swatches from University of Michigan Brand Office # <- alt text for accessibility
 format:
  revealjs: # see https://quarto.org/docs/presentations/revealjs/
    theme: [../michigan.scss] 
 footer: "👈 Click on Block M for menu | [Return to the website](index.qmd)"
 ---
 
-# michigan.scss
+# michigan.[scss](https://quarto.org/docs/output-formats/html-themes.html)
 
-styles all documents based on [University of Michigan](https://brand.umich.edu/design-resources/colors/) font and color guidance (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html))
+styles all documents based on [font and color guidance from the University of Michigan](https://brand.umich.edu/design-resources/colors/): 
 
 #00274C Nunito Sans for body text
 
-[#2F65A7 for links]()
+[#2F65A7 for links](#michigan.scss)
 
 > #655A52 for blockquotes
 

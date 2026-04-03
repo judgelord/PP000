@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="floating nav-fixed fullcontent quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,11 +117,29 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#repository-contents" id="toc-repository-contents" class="nav-link active" data-scroll-target="#repository-contents">Repository Contents</a></li>
+  <li><a href="#how-to-publish-for-free-on-github" id="toc-how-to-publish-for-free-on-github" class="nav-link" data-scroll-target="#how-to-publish-for-free-on-github">How to publish for free on GitHub</a>
+  <ul class="collapse">
+  <li><a href="#make-a-github-account" id="toc-make-a-github-account" class="nav-link" data-scroll-target="#make-a-github-account">1. Make a GitHub account</a></li>
+  <li><a href="#on-httpsgithub.comjudgelordpp000-click-use-this-template" id="toc-on-httpsgithub.comjudgelordpp000-click-use-this-template" class="nav-link" data-scroll-target="#on-httpsgithub.comjudgelordpp000-click-use-this-template">2. On https://github.com/judgelord/PP000, click Use this template</a></li>
+  <li><a href="#download-as-a-version-controlled-project" id="toc-download-as-a-version-controlled-project" class="nav-link" data-scroll-target="#download-as-a-version-controlled-project">3. Download as a version-controlled project</a></li>
+  <li><a href="#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder" id="toc-add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder" class="nav-link" data-scroll-target="#add-your-content-to-syllabus.qmd-assignments.qmd-and-optionally-the-slides-folder">4. Add your content to syllabus.qmd, assignments.qmd, and (optionally) the slides folder</a></li>
+  <li><a href="#buildrender-your-new-website" id="toc-buildrender-your-new-website" class="nav-link" data-scroll-target="#buildrender-your-new-website">5. Build/render your new website!</a></li>
+  <li><a href="#commit-any-changes-and-push-them-to-github" id="toc-commit-any-changes-and-push-them-to-github" class="nav-link" data-scroll-target="#commit-any-changes-and-push-them-to-github">6. Commit any changes and push them to GitHub</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#in-github-settings-pages-publish-from-the-docs-folder" id="toc-in-github-settings-pages-publish-from-the-docs-folder" class="nav-link" data-scroll-target="#in-github-settings-pages-publish-from-the-docs-folder">7. In GitHub Settings –&gt; Pages, publish from the <code>/docs/</code> folder</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -139,7 +157,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>Change the navigation bar by editing <code>_quarto.yml</code></p>
-<p>👇 Replace text below with anything you want on the home page by editing <code>index.qmd</code></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>👇 Replace this with your home page content by editing <code>index.qmd</code></p>
+</div>
 </div>
 </div>
 <p>This is a <a href="https://quarto.org/docs/websites/">Quarto</a> Template for Course Websites</p>
@@ -147,8 +174,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Contents: <a href="https://github.com/judgelord/PP000" class="uri">https://github.com/judgelord/PP000</a></p></li>
 <li><p>Published website: <a href="http://judgelord.github.io/PP000" class="uri">http://judgelord.github.io/PP000</a></p></li>
 </ul>
-<section id="contents" class="level2">
-<h2 class="anchored" data-anchor-id="contents">Contents</h2>
+<section id="repository-contents" class="level2">
+<h2 class="anchored" data-anchor-id="repository-contents">Repository Contents</h2>
 <ul>
 <li><p><code>_quarto.yml</code> controls the structure of the website (e.g., <a href="https://quarto.org/docs/reference/projects/websites.html">navigation</a> tabs)</p></li>
 <li><p><code>index.qmd</code> is home page content</p></li>
@@ -163,15 +190,15 @@ ul.task-list li input[type="checkbox"] {
 <li><p><code>index.qmd</code> automatically indexes slide decks in the <code>slides</code> folder on the slides tab of the website</p></li>
 </ul></li>
 <li><p><code>accessibility.qmd</code> is a page of accessibility tips</p></li>
-<li><p><code>michigan.scss</code> styles all web pages, documents, and slides based on Ford School and <a href="https://brand.umich.edu/design-resources/colors/">University of Michigan</a> font and color guidance (see <a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Theming</a>)</p></li>
+<li><p><code>michigan.scss</code> styles all web pages, documents, and slides based on <a href="https://brand.umich.edu/design-resources/colors/">University of Michigan</a> font and color guidance (see <a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Theming</a>)</p></li>
 <li><p><code>code/copy syllabus template insert to other courses.R</code> is R code to copy files to others course folders</p></li>
 <li><p><code>assets/accessiblity-fixes.js</code> is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)</p></li>
-<li><p><code>/docs/</code> is where the HTML files for the website are rendered when you build the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️</p></li>
+<li><p><code>/docs/</code> is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️</p></li>
 <li><p><code>.gitignore</code> is a list of files to ignore (i.e., to not track or publish)</p></li>
 </ul>
 </section>
-<section id="to-publish-for-free-on-github-pages" class="level1">
-<h1>To publish for free on GitHub pages</h1>
+<section id="how-to-publish-for-free-on-github" class="level1">
+<h1>How to publish for free on GitHub</h1>
 <section id="make-a-github-account" class="level2">
 <h2 class="anchored" data-anchor-id="make-a-github-account">1. Make a GitHub account</h2>
 </section>

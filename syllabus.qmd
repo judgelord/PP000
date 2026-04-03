@@ -3,7 +3,7 @@ title: Syllabus Template # add course title here
 format:
  html: default
  pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
-# docx: default
+# docx: default # adds a DOCX version
 execute:
   engine: knitr # enables inline R code
 ---
