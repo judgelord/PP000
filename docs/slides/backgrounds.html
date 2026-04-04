@@ -211,14 +211,14 @@
 <h2>To set a theme for all slides</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">../michigan.scss</span><span class="kw">,</span><span class="at"> ford2.scss</span><span class="kw">]</span><span class="at"> </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="to-set-a-theme-for-all-slides-2" class="slide level2" data-background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" data-background-opacity="0.3">
+<section id="to-set-a-theme-for-all-slides-2" class="slide level2" data-background-opacity="0.3" data-background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg">
 <h2>To set a theme for all slides</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">../michigan.scss</span><span class="kw">,</span><span class="at"> weill.scss</span><span class="kw">]</span><span class="at"> </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="to-make-new-themes" class="slide level2">
 <h2>To make new themes</h2>
 <ol type="1">
-<li><p>Find an image url or save an image in the slides folder</p></li>
+<li><p>Find an image URL or save an image in the slides folder</p></li>
 <li><p>Make a .scss styling file. This is what “ford.scss” looks like:</p></li>
 </ol>
 <pre><code>/*-- scss:rules --*/
@@ -228,7 +228,7 @@
   opacity: .1
 }</code></pre>
 <ol start="3" type="1">
-<li>Add your new scss style to the <code>theme:</code> line of the slide header</li>
+<li>Add your new scss style to the <code>theme:</code> line</li>
 </ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="fu">format</span><span class="kw">:</span></span>
 <span id="cb5-2"><a></a><span class="at"> </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
@@ -250,7 +250,12 @@
 <span id="cb6-9"><a></a><span class="st">  background-size: 100% 100%;</span></span>
 <span id="cb6-10"><a></a><span class="st">  opacity: .1</span></span>
 <span id="cb6-11"><a></a><span class="st">}'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-12"><a></a>  <span class="fu">write</span>(file)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-12"><a></a>  <span class="fu">write</span>(file)</span>
+<span id="cb6-13"><a></a></span>
+<span id="cb6-14"><a></a><span class="fu">list.files</span>(<span class="at">pattern =</span> <span class="st">"scss"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "ford.scss"  "ford2.scss" "weill.scss"</code></pre>
+</div>
 </div>
 
 

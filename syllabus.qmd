@@ -3,9 +3,10 @@ title: Syllabus Template # add course title here
 format:
  html: default
  pdf: default # delete this line if you don't want a pdf version rendered via LaTeX
-# docx: default # adds a DOCX version
+# docx: default # a DOCX version
 execute:
   engine: knitr # enables inline R code
+  freeze: auto  # re-execute code only when this document changes
 ---
 
 Time: 
@@ -86,40 +87,54 @@ Below is the schedule of due dates.
 
 ## <i class="bi bi-clock"></i> Late Submissions
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
 ## 🗣 Participation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-### <i class="bi bi-reply"></i> Make-up policy 
+### ⎌ Make-up policy 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-#	 📚 Required Books
+#	 📚 Required Reading
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+- @quarto
 
+## <i class="bi bi-bookshelf"></i> Additional Reading 
 
-## <i class="bi bi-bookshelf"></i> Additional Books 
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+- @pandoc
+- @mathjax
 
 # ℹ Resources 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Accessibility
+
+- @mathjax_accessibility
+- @quarto_html_accessibility
+
+Formatting 
+
+- @quarto_html_themes
+
+Publishing
+
+- @quarto_github_pages
+- @posit_ide_version_control
+
+Slides 
+
+- @quarto_revealjs
+
 
 # 📖 Reading by Week
 
-
 > Each week's required readings are indented and marked with a grey sidebar. I also often note "resources" or "further readings" with bullets---these are not required readings.
-
 
 
 ## Week 1: Orientation
 
 ### Tuesday: Introductions and Syllabus Review 
-
 
 > Please read <mark> the entire syllabus</mark> before class --- this is your chance to ask questions about the assignments and readings.
 
@@ -134,3 +149,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 - What are you hoping to get out of this semester?
 - What aspects of the class environment will help achieve these goals? 
+
+
+
+# ※ References
+
+::: {#refs}
+:::

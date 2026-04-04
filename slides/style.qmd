@@ -50,7 +50,7 @@ styles all documents based on [font and color guidance from the University of Mi
 :::
 
 
-## Slide menue logo
+## Custom slide menue button
 
 ```scss
 /*-- make menue logo the block M --*/
@@ -59,4 +59,4 @@ styles all documents based on [font and color guidance from the University of Mi
 }
 ```
 
-![](https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png "Block M slide menu logo")
+![](https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png "University of Michigan logo")

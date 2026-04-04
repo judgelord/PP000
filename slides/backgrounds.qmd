@@ -34,16 +34,15 @@ theme: [../michigan.scss, ford2.scss]
 ```
 
 
-## To set a theme for all slides {background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" background-opacity="0.3"}
+## To set a theme for all slides {background-opacity="0.3" background-image="https://umaec.umich.edu/wp-content/uploads/2013/10/030630_fordpreferred.jpg" }
 
 ```yaml
 theme: [../michigan.scss, weill.scss] 
 ```
 
-
 ## To make new themes
 
-1. Find an image url or save an image in the slides folder
+1. Find an image URL or save an image in the slides folder
 
 2. Make a .scss styling file. This is what "ford.scss" looks like: 
 
@@ -57,7 +56,7 @@ theme: [../michigan.scss, weill.scss]
 ```
 
 
-3. Add your new scss style to the `theme:` line of the slide header 
+3. Add your new scss style to the `theme:` line 
 
 ```yaml
 format:
@@ -84,4 +83,6 @@ paste('/*-- scss:rules --*/
   opacity: .1
 }') |>
   write(file)
+
+list.files(pattern = "scss")
 ```

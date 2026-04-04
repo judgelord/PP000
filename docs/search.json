@@ -445,14 +445,14 @@
     "href": "slides/backgrounds.html#to-make-new-themes",
     "title": "Slide Backgrounds  ",
     "section": "To make new themes",
-    "text": "To make new themes\n\nFind an image url or save an image in the slides folder\nMake a .scss styling file. This is what “ford.scss” looks like:\n\n/*-- scss:rules --*/\n.slide-background-content{\n  background-image: url(\"https://fordschool.umich.edu/themes/custom/ford/images/og-image.png\");\n  background-size: 100% 100%;\n  opacity: .1\n}\n\nAdd your new scss style to the theme: line of the slide header\n\nformat:\n revealjs: \n   theme: [../michigan.scss, ford.scss] \n(these slides also use the michigan.scss style sheet)"
+    "text": "To make new themes\n\nFind an image URL or save an image in the slides folder\nMake a .scss styling file. This is what “ford.scss” looks like:\n\n/*-- scss:rules --*/\n.slide-background-content{\n  background-image: url(\"https://fordschool.umich.edu/themes/custom/ford/images/og-image.png\");\n  background-size: 100% 100%;\n  opacity: .1\n}\n\nAdd your new scss style to the theme: line\n\nformat:\n revealjs: \n   theme: [../michigan.scss, ford.scss] \n(these slides also use the michigan.scss style sheet)"
   },
   {
     "objectID": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
     "href": "slides/backgrounds.html#r-code-to-make-new-slide-theme-files",
     "title": "Slide Backgrounds  ",
     "section": "R code to make new slide theme files",
-    "text": "R code to make new slide theme files\n(overkill, but it shows how one can execute code in .qmd files)\n\nurl &lt;- \"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"\nfile &lt;- \"ford2.scss\"\n\npaste('/*-- scss:rules --*/\n  .slide-background-content{\n      background-image: url(\"',\n      url,\n      '\");\n  background-size: 100% 100%;\n  opacity: .1\n}') |&gt;\n  write(file)"
+    "text": "R code to make new slide theme files\n(overkill, but it shows how one can execute code in .qmd files)\n\nurl &lt;- \"https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png\"\nfile &lt;- \"ford2.scss\"\n\npaste('/*-- scss:rules --*/\n  .slide-background-content{\n      background-image: url(\"',\n      url,\n      '\");\n  background-size: 100% 100%;\n  opacity: .1\n}') |&gt;\n  write(file)\n\nlist.files(pattern = \"scss\")\n\n[1] \"ford.scss\"  \"ford2.scss\" \"weill.scss\""
   },
   {
     "objectID": "slides/style.html#callouts",
@@ -462,11 +462,11 @@
     "text": "Callouts\n\n\n\n#655A52 for basic callout boxes\n\n\n\n\n\n\n\n\n\nNote\n\n\n#75988d for callout-note boxes\n\n\n\n\n\n\n\n\n\nTip\n\n\n#A5A508 for callout-tip boxes\n\n\n\n\n\n\n\n\n\nWarning\n\n\n#9A3324 for callout-warning boxes\n\n\n\n\n\n\n\n\n\nCaution\n\n\n#D86018 for callout-caution boxes\n\n\n\n\n\n\n\n\n\nImportant\n\n\n#FFCB05 for callout-important boxes"
   },
   {
-    "objectID": "slides/style.html#slide-menue-logo",
-    "href": "slides/style.html#slide-menue-logo",
+    "objectID": "slides/style.html#custom-slide-menue-button",
+    "href": "slides/style.html#custom-slide-menue-button",
     "title": "Colors and Style",
-    "section": "Slide menue logo",
-    "text": "Slide menue logo\n/*-- make menue logo the block M --*/\n.reveal .slide-menu-button .fa-bars::before {\n  background-image: url('https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png') !important;\n}"
+    "section": "Custom slide menue button",
+    "text": "Custom slide menue button\n/*-- make menue logo the block M --*/\n.reveal .slide-menu-button .fa-bars::before {\n  background-image: url('https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png') !important;\n}"
   },
   {
     "objectID": "syllabus.html",
@@ -515,21 +515,21 @@
     "href": "syllabus.html#late-submissions",
     "title": "Syllabus Template",
     "section": " Late Submissions",
-    "text": "Late Submissions\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "text": "Late Submissions\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "objectID": "syllabus.html#participation",
     "href": "syllabus.html#participation",
     "title": "Syllabus Template",
     "section": "🗣 Participation",
-    "text": "🗣 Participation\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n Make-up policy\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "text": "🗣 Participation\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\n⎌ Make-up policy\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
-    "objectID": "syllabus.html#additional-books",
-    "href": "syllabus.html#additional-books",
+    "objectID": "syllabus.html#additional-reading",
+    "href": "syllabus.html#additional-reading",
     "title": "Syllabus Template",
-    "section": " Additional Books",
-    "text": "Additional Books\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "section": " Additional Reading",
+    "text": "Additional Reading\n\nPandoc (2026)\nMathJax (2026b)"
   },
   {
     "objectID": "syllabus.html#week-1-orientation",
