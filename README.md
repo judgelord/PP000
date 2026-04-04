@@ -39,6 +39,7 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
 - `.gitignore` is a list of files to ignore (i.e., to not track or publish)
 
 *This particular boilerplate language is from the "Ford School Syllabus Template AY 2025-26.docx" Google Drive file downloaded as Markdown. 
+<!--from  Kathryn's 12-08-2025 email---> 
 
 ![](figs/download_google_doc_as_markdown.png "Screenshot of downloading a Google doc as Markdown")
 

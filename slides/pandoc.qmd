@@ -20,7 +20,7 @@ footer: "👈 Click on Block M for a menu | [Click here to return to the website
 - In contrast to LaTeX, you type [less funny business](https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements)
 - In contrast to Microsoft Office, everything is plain text --- no buttons or formatting issues on different machines
 
-![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme")
+![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme with Kermit the frog")
 
 ## Markdown math is $\approxeq \LaTeX$
 
@@ -65,10 +65,12 @@ $$ {#eq-1a}
 1.  Add a YAML header at the top:
 
 ```yaml
+---
 title: Syllabus
 format:
  html: default
  pdf: default # Delete this line if you don't want a PDF version rendered via LaTeX
+ ---
 ```
 
 (Just copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
@@ -81,11 +83,13 @@ format:
 1.  Add a YAML header at the top:
 
 ```yaml
+---
 title: Syllabus
 format:
  html: default
  pdf: default # Delete this line if you don't want a PDF version rendered via LaTeX
  docx: default # Do you really want a docx version, too? 🤨
+---
 ```
 
 (Just copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
@@ -97,10 +101,12 @@ format:
 1.  Add a YAML header at the top:
 
 ```yaml
+---
 title: My Slides
 format:
   revealjs: 
     slide-number: true
+---
 ```
 
 (Just copy from the file that made these slides, [pandoc.qmd](https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd))
@@ -108,14 +114,11 @@ format:
 . . . 
 
 ::: callout-tip
-Pandoc can also do the reverse, of course. And thus, Quarto can render to beamer, too.
+Pandoc can also do the reverse, of course. And thus, [Quarto can render to beamer](https://quarto.org/docs/presentations/beamer.html), too.
 
 ```yaml
 format:
   beamer:
     keep-tex: true
-    fontsize: 11pt         # optional
-    toc: false             # optional
-    slide-level: 2         # optional
 ```
 :::

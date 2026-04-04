@@ -5,7 +5,7 @@ Remember to add alt text for all images!  `![Caption](image.jpg "alt text")`
 ## HTML accessibility checks
 
 - The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
-- You can also use the [site improve Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
+- You can also use the [Siteimprove Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
 
 ## Math is much more accessible in HTML than PDF
 
@@ -114,7 +114,7 @@ Thus, I believe a [LaTeX template](https://quarto.org/docs/journals/templates.ht
 
 ## revealjs HTML slides
 
-- <https://github.com/orgs/quarto-dev/discussions/8621>
+- <https://github.com/orgs/quarto-dev/discussions/8621> (these issues seem to have been fixed, but it is a good example of how the open source community is addressing WCAG issues flagged by tools like Siteimprove)
 
 # Fixes
 
