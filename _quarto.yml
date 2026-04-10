@@ -7,6 +7,7 @@ project:
 # see https://quarto.org/docs/websites/website-navigation.html
 website:
   title: "PubPol 000"
+  image: "figs/preview.png"
   navbar:
     left:
       - href: syllabus.qmd
