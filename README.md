@@ -28,11 +28,17 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
    
 - `accessibility.qmd` is a page of accessibility tips 
    
-- `michigan.scss` styles all web pages, documents, and slides based on [font and color guidance from the University of Michigan](https://brand.umich.edu/design-resources/colors/) (see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html) for other options)
+- `michigan.scss` styles all web pages, documents, and slides based on [font and color guidance from the University of Michigan](https://brand.umich.edu/design-resources/colors/) (optional; see [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html) for other options)
 
-- `code/copy syllabus template insert to other courses.R` is R code to copy files to other course folders
+- `/code/` is a folder for code (optional)
 
-- `assets/accessiblity-fixes.js` is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)
+  - `copy syllabus template insert to other courses.R` is R code to copy files to other course folders
+
+- `/assets/` is a folder for other useful things
+
+  - `course.bib` is an example bib file (optional)
+
+  - `accessiblity-fixes.js` is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)
 
 - `/docs/` is where files are rendered when Quarto builds the website --- ⚠️ DON'T EDIT IT MANUALLY ⚠️
 

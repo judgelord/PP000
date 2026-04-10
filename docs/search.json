@@ -4,7 +4,7 @@
     "href": "accessibility.html",
     "title": " Tips",
     "section": "",
-    "text": "Remember to add alt text for all images! ![Caption](image.jpg \"alt text\")\n\n\n\nThe automated check returned some issues with Quarto defaults, which I fixed with JavaScript patches in assets/accessibility-fixes.js.\nYou can also use the Siteimprove Chrome extension.\n\n\n\n\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\n\n\n\n\n\nNote\n\n\n\nYou don’t need \\tag{} or \\label{} if you have equation labels like {#eq-1a} above.\n\n\nMore on MathJax accessibility:\n\nAccessibility Features: https://docs.mathjax.org/en/latest/basic/accessibility.html\nHow to make content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations"
+    "text": "Remember to add alt text for all images!\n\n![Caption](image.jpg \"alt text\")\n\n\n\n\nThe automated check returned some issues with Quarto defaults, which I fixed with JavaScript patches in assets/accessibility-fixes.js.\nYou can also use the Siteimprove Chrome extension.\n\n\n\n\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\n\n\n\n\n\nNote\n\n\n\nYou don’t need \\tag{} or \\label{} if you have equation labels like {#eq-1a} above.\n\n\n\nMath Best Practices\n\n\n\n\nMathML (Mathematical Markup Language) is the markup language for presenting math in an accessible manner inside digital content.\n\nMathML is the preferred format for publishing accessible math in webpages, ebooks, PDFs, and online applications\nIt is recommended by W3C and codified as an ISO standard\nMathML makes content readable by assistive technologies such as screen readers, and convertible into speech, Braille, and other formats\n\nMathJax is set of open-source JavaScript libraries that enable MathML content in browsers and additional accessibility features from the American Mathematical Society (AMS) and the Society for Industrial and Applied Mathematics (SIAM).\n\nAccessibility Features\nHow to make content universally interpretable, aligning with WAI-ARIA standards"
   },
   {
     "objectID": "accessibility.html#html-accessibility-checks",
@@ -18,35 +18,42 @@
     "href": "accessibility.html#math-is-much-more-accessible-in-html-than-pdf",
     "title": " Tips",
     "section": "",
-    "text": "Otherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\n\n\n\n\n\nNote\n\n\n\nYou don’t need \\tag{} or \\label{} if you have equation labels like {#eq-1a} above.\n\n\nMore on MathJax accessibility:\n\nAccessibility Features: https://docs.mathjax.org/en/latest/basic/accessibility.html\nHow to make content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations"
+    "text": "Otherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\n\n\n\n\n\nNote\n\n\n\nYou don’t need \\tag{} or \\label{} if you have equation labels like {#eq-1a} above.\n\n\n\nMath Best Practices"
+  },
+  {
+    "objectID": "accessibility.html#mathmlmathjax-accessibility",
+    "href": "accessibility.html#mathmlmathjax-accessibility",
+    "title": " Tips",
+    "section": "",
+    "text": "MathML (Mathematical Markup Language) is the markup language for presenting math in an accessible manner inside digital content.\n\nMathML is the preferred format for publishing accessible math in webpages, ebooks, PDFs, and online applications\nIt is recommended by W3C and codified as an ISO standard\nMathML makes content readable by assistive technologies such as screen readers, and convertible into speech, Braille, and other formats\n\nMathJax is set of open-source JavaScript libraries that enable MathML content in browsers and additional accessibility features from the American Mathematical Society (AMS) and the Society for Industrial and Applied Mathematics (SIAM).\n\nAccessibility Features\nHow to make content universally interpretable, aligning with WAI-ARIA standards"
   },
   {
     "objectID": "accessibility.html#latex",
     "href": "accessibility.html#latex",
     "title": " Tips",
     "section": "\\(\\LaTeX\\)",
-    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX preamble with include-in-header: in the YAML header. But adding lines before \\documentclass causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX."
+    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages.1\n\nNormally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX preamble with include-in-header: in the YAML header. But adding lines before \\documentclass causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on} # DOES NOT WORK!  \n        \\documentclass{article}\nThus, I believe a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX."
   },
   {
     "objectID": "accessibility.html#general-tips-for-latex-generated-pdfs",
     "href": "accessibility.html#general-tips-for-latex-generated-pdfs",
     "title": " Tips",
     "section": "General tips for LaTeX-generated PDFs",
-    "text": "General tips for LaTeX-generated PDFs\n\nAlton Worthington’s LaTeX accessibility resources"
+    "text": "General tips for LaTeX-generated PDFs\n\nLaTeX Tagging Project\nMath Best Practices\n\nAlton Worthington’s LaTeX accessibility resources"
   },
   {
     "objectID": "accessibility.html#general-tips-for-quarto-generated-pdfs",
     "href": "accessibility.html#general-tips-for-quarto-generated-pdfs",
     "title": " Tips",
     "section": "General tips for Quarto-generated PDFs",
-    "text": "General tips for Quarto-generated PDFs\n\nhttps://remlapmot.github.io/post/2025/quarto-accessibility/"
+    "text": "General tips for Quarto-generated PDFs\n\nQuarto Accessiblity"
   },
   {
     "objectID": "accessibility.html#revealjs-html-slides",
     "href": "accessibility.html#revealjs-html-slides",
     "title": " Tips",
     "section": "revealjs HTML slides",
-    "text": "revealjs HTML slides\n\nhttps://github.com/orgs/quarto-dev/discussions/8621 (these issues seem to have been fixed, but it is a good example of how the open source community is addressing WCAG issues flagged by tools like Siteimprove)"
+    "text": "revealjs HTML slides\n\nQuarto developer discussion on Web Content Accessibility Guidelines (WCAG) in revealjs (these issues seem to have been fixed, but it is a good example of how the open source community is addressing WCAG issues flagged by tools like Siteimprove)"
   },
   {
     "objectID": "accessibility.html#scrollboxes",
@@ -82,6 +89,13 @@
     "title": " Tips",
     "section": "“div” vs. “main”",
     "text": "“div” vs. “main”\nIssue:\n\nModerate: Ensure all page content is contained by landmarks\n\nFrom GPT:\n\nQuarto’s default template uses &lt;div id=\"quarto-content\"&gt; instead of &lt;main id=\"quarto-content\"&gt;. Your accessibility checker wants your main content inside a &lt;main&gt; — the most robust, semantically correct landmark.\n\n\nHow to Fix It: Override the HTML Template by creating a custom HTML template for your Quarto site. You can replace the &lt;div&gt; with &lt;main&gt;.\n\nFix:\nThis issue seems to have been fixed by adding &lt;script&gt; to assets/accessibility-fixes.js."
+  },
+  {
+    "objectID": "accessibility.html#footnotes",
+    "href": "accessibility.html#footnotes",
+    "title": " Tips",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nsee LaTeX Tagging Project ↩︎"
   },
   {
     "objectID": "slides/day1.html#tuesday-introductions-and-syllabus-review",
@@ -165,35 +179,42 @@
     "href": "slides/access.html#math-is-much-more-accessible-in-html-than-pdf",
     "title": "Accessibility",
     "section": "Math is much more accessible in HTML than PDF",
-    "text": "Math is much more accessible in HTML than PDF\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\n\n\n\n\n\nNote\n\n\nYou don’t need \\tag{} or \\label{} if you have equation labels like {#eq-1a} above.\n\n\n\nMore on MathJax accessibility:\n\nAccessibility Features: https://docs.mathjax.org/en/latest/basic/accessibility.html\nHow to make content universally interpretable, aligning with WAI-ARIA standards: https://app.studyraid.com/en/read/15521/539779/accessibility-considerations"
+    "text": "Math is much more accessible in HTML than PDF\nOtherwise, writing equations in MathJax is similar to \\(\\LaTeX\\).\nInline: $\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$\nInline: \\(\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\\)\nDisplay mode allows equation labels (see @eq-1a):\n$$\n\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}\n$$ {#eq-1a}\nDisplay mode allows equation labels (see Equation 1): \\[\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6} \\tag{1}\\]\n\n\n\n\n\n\n\nNote\n\n\nYou don’t need \\tag{} or \\label{} if you have equation labels like {#eq-1a} above.\n\n\n\n\nMath Best Practices"
+  },
+  {
+    "objectID": "slides/access.html#mathmlmathjax-accessibility",
+    "href": "slides/access.html#mathmlmathjax-accessibility",
+    "title": "Accessibility",
+    "section": "MathML+MathJax accessibility",
+    "text": "MathML+MathJax accessibility\nMathML (Mathematical Markup Language) is the markup language for presenting math in an accessible manner inside digital content.\n\nMathML is the preferred format for publishing accessible math in webpages, ebooks, PDFs, and online applications\nIt is recommended by W3C and codified as an ISO standard\nMathML makes content readable by assistive technologies such as screen readers, and convertible into speech, Braille, and other formats\n\nMathJax is set of open-source JavaScript libraries that enable MathML content in browsers and additional accessibility features from the American Mathematical Society (AMS) and the Society for Industrial and Applied Mathematics (SIAM).\n\nAccessibility Features\nHow to make content universally interpretable, aligning with WAI-ARIA standards"
   },
   {
     "objectID": "slides/access.html#latex",
     "href": "slides/access.html#latex",
     "title": "Accessibility",
     "section": "\\(\\LaTeX\\)",
-    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages. In R:\ntinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))\nNormally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX preamble with include-in-header: in the YAML header. But adding lines before \\documentclass causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on}\n        \\documentclass{article}\nThus, I believe a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX."
+    "text": "\\(\\LaTeX\\)\nAccessible PDFs require tagging. For LaTeX, this means adding \\DocumentMetadata{tagging=on} before \\documentclass and requires installing some packages.1\n\nNormally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX preamble with include-in-header: in the YAML header. But adding lines before \\documentclass causes an error:\n pdf: \n   include-in-header: \n     - text: |\n        \\DocumentMetadata{tagging=on} # DOES NOT WORK!  \n        \\documentclass{article}\nThus, I believe a LaTeX template is required to allow tagging when rendering qmd documents as PDFs via LaTeX.\nsee LaTeX Tagging Project"
   },
   {
     "objectID": "slides/access.html#general-tips-for-latex-generated-pdfs",
     "href": "slides/access.html#general-tips-for-latex-generated-pdfs",
     "title": "Accessibility",
     "section": "General tips for LaTeX-generated PDFs",
-    "text": "General tips for LaTeX-generated PDFs\n\nAlton Worthington’s LaTeX accessibility resources"
+    "text": "General tips for LaTeX-generated PDFs\n\nLaTeX Tagging Project\nMath Best Practices\n\nAlton Worthington’s LaTeX accessibility resources"
   },
   {
     "objectID": "slides/access.html#general-tips-for-quarto-generated-pdfs",
     "href": "slides/access.html#general-tips-for-quarto-generated-pdfs",
     "title": "Accessibility",
     "section": "General tips for Quarto-generated PDFs",
-    "text": "General tips for Quarto-generated PDFs\n\nhttps://remlapmot.github.io/post/2025/quarto-accessibility/"
+    "text": "General tips for Quarto-generated PDFs\n\nQuarto Accessiblity"
   },
   {
     "objectID": "slides/access.html#revealjs-html-slides",
     "href": "slides/access.html#revealjs-html-slides",
     "title": "Accessibility",
     "section": "revealjs HTML slides",
-    "text": "revealjs HTML slides\n\nhttps://github.com/orgs/quarto-dev/discussions/8621 (these issues seem to have been fixed, but it is a good example of how the open source community is addressing WCAG issues flagged by tools like Siteimprove)"
+    "text": "revealjs HTML slides\n\nQuarto developer discussion on Web Content Accessibility Guidelines (WCAG) in revealjs (these issues seem to have been fixed, but it is a good example of how the open source community is addressing WCAG issues flagged by tools like Siteimprove)"
   },
   {
     "objectID": "slides/access.html#scrollboxes",
@@ -242,7 +263,7 @@
     "href": "index.html#repository-contents",
     "title": "How to publish for free on GitHub",
     "section": "Repository Contents",
-    "text": "Repository Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate* content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background\nweill.scss gives slides a Weill Hall background (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on font and color guidance from the University of Michigan (see HTML Theming for other options)\ncode/copy syllabus template insert to other courses.R is R code to copy files to other course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)\n\n*This particular boilerplate language is from the “Ford School Syllabus Template AY 2025-26.docx” Google Drive file downloaded as Markdown."
+    "text": "Repository Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate* content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background\nweill.scss gives slides a Weill Hall background (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on font and color guidance from the University of Michigan (optional; see HTML Theming for other options)\n/code/ is a folder for code (optional)\n\ncopy syllabus template insert to other courses.R is R code to copy files to other course folders\n\n/assets/ is a folder for other useful things\n\ncourse.bib is an example bib file (optional)\naccessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n\n/docs/ is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)\n\n*This particular boilerplate language is from the “Ford School Syllabus Template AY 2025-26.docx” Google Drive file downloaded as Markdown."
   },
   {
     "objectID": "index.html#make-a-github-account",
@@ -333,7 +354,7 @@
     "href": "slides/ghpages.html#repository-contents",
     "title": "Publishing on GitHub",
     "section": "Repository Contents",
-    "text": "Repository Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate* content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background\nweill.scss gives slides a Weill Hall background (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on font and color guidance from the University of Michigan (see HTML Theming for other options)\ncode/copy syllabus template insert to other courses.R is R code to copy files to other course folders\nassets/accessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n/docs/ is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)\n\n*This particular boilerplate language is from the “Ford School Syllabus Template AY 2025-26.docx” Google Drive file downloaded as Markdown."
+    "text": "Repository Contents\n\n_quarto.yml controls the structure of the website (e.g., navigation tabs)\nindex.qmd is home page content\nsyllabus.qmd is a template syllabus\nsyllabus-insert.qmd is boilerplate* content to include in all syllabi (keeping it a separate file makes it easier to update when new guidance comes out)\nassignments.qmd is a template assignment guide\n/slides/ is a folder for slide decks\n\nday1.qmd is a template Revealjs slide deck\nford.scss gives slides a Ford School logo background\nweill.scss gives slides a Weill Hall background (see, e.g., day1 slides)\nindex.qmd automatically indexes slide decks in the slides folder on the slides tab of the website\n\naccessibility.qmd is a page of accessibility tips\nmichigan.scss styles all web pages, documents, and slides based on font and color guidance from the University of Michigan (optional; see HTML Theming for other options)\n/code/ is a folder for code (optional)\n\ncopy syllabus template insert to other courses.R is R code to copy files to other course folders\n\n/assets/ is a folder for other useful things\n\ncourse.bib is an example bib file (optional)\naccessiblity-fixes.js is JavaScript that fixes accessibly issues with web pages and HTML slides (see accessibly page)\n\n/docs/ is where files are rendered when Quarto builds the website — ⚠️ DON’T EDIT IT MANUALLY ⚠️\n.gitignore is a list of files to ignore (i.e., to not track or publish)\n\n*This particular boilerplate language is from the “Ford School Syllabus Template AY 2025-26.docx” Google Drive file downloaded as Markdown."
   },
   {
     "objectID": "slides/ghpages.html#make-a-github-account",

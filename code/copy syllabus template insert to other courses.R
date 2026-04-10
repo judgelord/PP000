@@ -1,5 +1,5 @@
-# copy syllabus template insert to other courses with folders in the same directory
-# For example, if PP495 is saved in the same directory as PP000, this script will copy the syllabus template language file from this folder to that one
+# Copy syllabus template insert, style file, and accessiblity fixes to other course folders in the same directory
+# For example, if PP495 is saved in the same directory as PP000, this script will copy the syllabus template file from this folder to that one
 
 courses = c(
   "PP495",

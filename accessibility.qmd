@@ -1,10 +1,12 @@
 # <i class="bi bi-universal-access"></i>  Tips
 
-Remember to add alt text for all images!  `![Caption](image.jpg "alt text")` 
+Remember to add alt text for all images! 
+
+> `![Caption](image.png "alt text")` 
 
 ## HTML accessibility checks
 
-- The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with JavaScript [patches](#patches) in `assets/accessibility-fixes.js`.
+- The [automated check](https://quarto.org/docs/output-formats/html-accessibility.html) returned some issues with Quarto defaults, which I fixed with [JavaScript patches](#patches) in `assets/accessibility-fixes.js`.
 - You can also use the [Siteimprove Chrome extension](chrome-extension://djcglbmbegflehmbfleechkjhmedcopn/signup.html). 
 
 ## Math is much more accessible in HTML than PDF
@@ -64,11 +66,20 @@ See @thm-line.
 You don't need `\tag{}` or `\label{}` if you have equation labels like `{#eq-1a}` above.
 :::
 
-More on MathJax accessibility: 
+- [Math Best Practices](https://accessibility.umich.edu/how-to/math/math-best-practices)  
 
-- Accessibility Features: <https://docs.mathjax.org/en/latest/basic/accessibility.html>
-- How to make content universally interpretable, aligning with 
-WAI-ARIA standards: <https://app.studyraid.com/en/read/15521/539779/accessibility-considerations>
+## MathML+MathJax accessibility
+
+MathML (Mathematical Markup Language) is the markup language for presenting math in an accessible manner inside digital content.
+
+- MathML is the preferred format for publishing accessible math in webpages, ebooks, PDFs, and online applications
+- It is recommended by W3C and codified as an ISO standard
+- MathML makes content readable by assistive technologies such as screen readers, and convertible into speech, Braille, and other formats
+
+[MathJax](https://www.mathjax.org) is set of open-source JavaScript libraries that enable MathML content in browsers and additional accessibility features from the American Mathematical Society (AMS) and the Society for Industrial and Applied Mathematics (SIAM).
+
+- [Accessibility Features](https://docs.mathjax.org/en/latest/basic/accessibility.html)
+- [How to make content universally interpretable, aligning with  WAI-ARIA standards](https://app.studyraid.com/en/read/15521/539779/accessibility-considerations)
 
 
 
@@ -82,11 +93,13 @@ However, we may need PDF- or DOCX-formatted documents in some cases. If those ca
 
 ## $\LaTeX$
 
-Accessible PDFs require tagging. For LaTeX, this means adding `\DocumentMetadata{tagging=on}` before `\documentclass` and requires installing some packages. In R:
+Accessible PDFs require tagging. For LaTeX, this means adding `\DocumentMetadata{tagging=on}` before `\documentclass` and requires installing some packages.^[see [LaTeX Tagging Project](https://latex3.github.io/tagging-project/documentation/usage-instructions) ]
 
+<!--In R:
 ```r
 tinytex::tlmgr_install(c('latex-lab', 'pdfmanagement-testphase', 'tagpdf', 'luamml'))
 ```
+--> 
 
 Normally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX preamble with `include-in-header:` in the YAML header. But adding lines before `\documentclass` causes an error: 
 
@@ -94,7 +107,7 @@ Normally, when rendering qmd to PDF via LaTeX, we can add lines to the LaTeX pre
  pdf: 
    include-in-header: 
      - text: |
-        \DocumentMetadata{tagging=on}
+        \DocumentMetadata{tagging=on} # DOES NOT WORK!  
         \documentclass{article}
 ```
 
@@ -102,19 +115,23 @@ Thus, I believe a [LaTeX template](https://quarto.org/docs/journals/templates.ht
 
 ## General tips for LaTeX-generated PDFs
 
+- [LaTeX Tagging Project](https://latex3.github.io/tagging-project/documentation/usage-instructions)
+- [Math Best Practices](https://accessibility.umich.edu/how-to/math/math-best-practices)  
 - [Alton Worthington's LaTeX accessibility resources](https://docs.google.com/document/d/1K1phwLYhJ0stnBDMbfrwwVOq6b0Fo9ehnUZ3a0jQGgo/edit?tab=t.0)
 
 
 ## General tips for Quarto-generated PDFs
 
-- <https://remlapmot.github.io/post/2025/quarto-accessibility/>
+- [Quarto Accessiblity](https://remlapmot.github.io/post/2025/quarto-accessibility/)
 
 
 # More accessibility discussions 
 
+- [These blind students say their college blocked their education. A new rule could help - NPR](https://www.npr.org/2026/04/06/nx-s1-5720191/digital-accessibility-college-education-disability)
+
 ## revealjs HTML slides
 
-- <https://github.com/orgs/quarto-dev/discussions/8621> (these issues seem to have been fixed, but it is a good example of how the open source community is addressing WCAG issues flagged by tools like Siteimprove)
+- [Quarto developer discussion on Web Content Accessibility Guidelines (WCAG) in revealjs](https://github.com/orgs/quarto-dev/discussions/8621) (these issues seem to have been fixed, but it is a good example of how the open source community is addressing WCAG issues flagged by tools like Siteimprove)
 
 # Fixes
 
