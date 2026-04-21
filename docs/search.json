@@ -116,7 +116,7 @@
     "href": "slides/pandoc.html#markdown-is-a-lightweight-syntax",
     "title": "From .tex, .docx, or .pptx to Markdown",
     "section": "Markdown is a lightweight syntax",
-    "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type less funny business\nIn contrast to Microsoft Office, everything is plain text — no buttons or formatting issues on different machines"
+    "text": "Markdown is a lightweight syntax\n\nIn contrast to LaTeX, you type less funny business.\nIn contrast to Microsoft Office, everything is plain text1 — no buttons or formatting issues on different machines.\n\n\nThis slide is 4 lines of plain text"
   },
   {
     "objectID": "slides/pandoc.html#markdown-math-is-approxeq-latex",

@@ -1,26 +1,26 @@
 ---
-title: "From .tex, .docx, or .pptx to Markdown"
-subtitle: "(and back again)"
+title: From .tex, .docx, or .pptx to Markdown
+subtitle: (and back again)
 author: ""
 date: ""
-image: "https://pandoc.org/diagram.svgz" # <-- image to be used in links to slides
+image: https://pandoc.org/diagram.svgz # <-- image to be used in links to slides
 image-alt: Pandoc diogram # <- alt text for accessibility
 format:
  revealjs: # see https://quarto.org/docs/presentations/revealjs/
    title-slide-attributes:
-    data-background-image: "https://pandoc.org/diagram.svgz" # <-- background of title slide
+    data-background-image: https://pandoc.org/diagram.svgz # <-- background of title slide
     data-background-opacity: "0.5" # <-- background opacity of title slide
    theme: [../michigan.scss]
    scrollable: false
-footer: "👈 Click on Block M for a menu | [Click here to return to the website](index.qmd)"
+footer: 👈 Click on Block M for a menu | [Click here to return to the website](index.qmd)
 ---
 
 ## Markdown is a *lightweight* syntax
 
-- In contrast to LaTeX, you type [less funny business](https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements)
-- In contrast to Microsoft Office, everything is plain text --- no buttons or formatting issues on different machines
+- In contrast to LaTeX, you type [less funny business](https://www.guillaumedehaene.com/posts/2024/03/quarto_is_better.html#quarto-improvements).
+- In contrast to Microsoft Office, everything is plain text^[This slide is [4 lines of plain text](https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd) ] --- no buttons or formatting issues on different machines.
 
-![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme with Kermit the frog")
+![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme with Kermit the Frog")
 
 ## Markdown math is $\approxeq \LaTeX$
 
