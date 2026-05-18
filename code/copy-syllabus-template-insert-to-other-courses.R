@@ -5,7 +5,8 @@ courses = c(
   "PP495",
   "PP510",
   "PP475-750",
-  "PP475"
+  "PP475",
+  "pressure-book"
 )
 
 for (i in courses){

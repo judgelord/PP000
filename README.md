@@ -32,7 +32,7 @@ This is a [Quarto](https://quarto.org/docs/websites/) Template for Course Websit
 
 - `/code/` is a folder for code (optional)
 
-  - `copy syllabus template insert to other courses.R` is R code to copy files to other course folders
+  - `copy-syllabus-template-insert-to-other-courses.R` is R code to copy files to other course folders
 
 - `/assets/` is a folder for other useful things
 
