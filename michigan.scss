@@ -21,26 +21,38 @@ $link-color: #2F65A7;
 $text-muted: #655A52;
 $background_color: #CFC096;
 $text_font_size: 1rem;
+
+// callouts
 $callout-color-note: #75988d;
 $callout-color-tip: #A5A508;
 $callout-color-warning: #9A3324;
 $callout-color-caution: #D86018;
 $callout-color-important: #FFCB05;
+
+// tables
 $table_row_even_background_color: #989C97;
 
 //code
 $code-color: #00274C !default;
 $font-family-monospace: 'Nunito Sans', monospace  !default;
-$code-bg: #FFCB05; // #CFC096;
+$code-bg: #FFCB05;
 $code_inline_background_color: #FFCB05;
 $code-highlight-color: $callout-color-important;
+$code-font-size: 1em;
 
-
-/*-- scss:rules --*/
-ul li:first-child,
-ol li:first-child {
-  margin-top: 0; // No extra space at the end
+// code rounded edges
+code {
+  border-radius: 10px;
+  padding: 1px;
 }
+
+// make higlights the same as inline code
+mark {
+  background-color: $code_highlight_color;
+  color: $body-color;
+}
+
+
 
 // tiny transparent text
 .transparent {
@@ -48,39 +60,64 @@ ol li:first-child {
    font-size: 0.01em;
 }
 
-.subtitleqwerty {
-  color: $body-color;
-  font-size: $h2-font-size;
-  font-family: $presentation-heading-font;
-}
-
-.author {
-  color: $body-bg;
-  font-size: $h2-font-size;
-  font-family: $presentation-heading-font;
-}
 
 .center-x{
     text-align: center;
 }
 
-mark {
-  background-color: $code_highlight_color;
-  color: $body-color;
-}
-
+// paragraph spacing
 p {
     margin-top:-5px;
 }
 
-
+// quotes
 .blockquote {
   border-left: 3px solid $text-muted;
   padding-left: 1em;
   font-style: italic;
-  color: $text-muted;
+  color: $text-muted !important;
 }
 
+/*-- PRESENTATIONS --*/
+
+/*-- presentation block quotes (is this needed?) --*/
+.reveal blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 1em;
+  font-style: italic;
+  color: $text-muted !important;
+}
+
+.reveal {
+  font-size: 35px;
+}
+
+
+
+/*-- make menue logo the block M --*/
+.reveal .slide-menu-button .fa-bars::before {
+  background-image: url('https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png') !important;
+}
+
+
+
+/*-- more slide fonts and colors--*/
+.reveal .slide-number {
+  font-family: $presentation-heading-font;
+}
+
+.reveal .footer {
+    color: $text-muted;
+    font-family: $presentation-heading-font;
+}
+
+
+/*-- lists --*/
+ul li:first-child,
+ol li:first-child {
+  margin-top: 0; // No extra space at the end
+  margin-bottom: 0;
+}
 
 
 // Default list styling
@@ -91,12 +128,6 @@ ul, ol {
     line-height: 1.5; // Default for normal pages
     gap: 0.0em;
   }
-}
-
-
-/*-- PRESENTATIONS --*/
-.reveal {
-  font-size: 35px;
 }
 
 // Override for Reveal.js slides
@@ -111,32 +142,18 @@ ul, ol {
 }
 
 
-/*-- make menue logo the block M --*/
-.reveal .slide-menu-button .fa-bars::before {
-  background-image: url('https://brand.umich.edu/assets/brand/downloads/um-logos/primary_logo_kit/black-logo/u-m_logo-black.png') !important;
-}
-
-.reveal blockquote {
-  border-left: 3px solid $text-muted;
-  padding-left: 1em;
-  font-style: italic;
-  color: $text-muted;
-}
-
-.reveal ol li:first-child:nth-last-child(n + 10),
-.reveal ol li:first-child:nth-last-child(n + 10) ~ li {
-  margin-left: 1em;
-}
-
-.reveal .slide-number {
-  font-family: $presentation-heading-font;
-}
-
+// did I do this for accessiblity?
 .reveal .panel-tabset [role=tab] {
-    font-size: 0.8em;
+    font-size: .8em;
 }
 
-.reveal .footer {
-    color: $text-muted;
-    font-family: $presentation-heading-font;
+/* FIX TO  https://github.com/quarto-dev/quarto-cli/issues/14411#issuecomment-4298849605 */
+.reveal .scrollable ol {
+  padding-inline-start: 2em;
+}
+
+/* override current rule in Quarto */
+.reveal .scrollable ol li:first-child:nth-last-child(n+10),
+.reveal .scrollable ol li:first-child:nth-last-child(n+10) ~ li {
+  margin-left: 0;
 }
