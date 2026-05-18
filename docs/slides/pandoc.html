@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="">
   <title>PubPol 000 – From .tex, .docx, or .pptx to Markdown</title>
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -95,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-dca401542d8d81c5aa9b08bfe3c4663c.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-7aff96e803bdfa38f57c25804debf620.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -222,13 +225,26 @@
 <p><span id="eq-1a"><span class="math display">\[
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 \tag{1}\]</span></span></p>
+<aside class="notes">
+<p>MathML released in 1998, became ISO in 2015. The nonprofit MathJax, started in 2004, a joint venture of the American Mathematical Society (AMS) and the Society for Industrial and Applied Mathematics (SIAM) to advance mathematical and scientific content on the web.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="pandoc-converts-between-file-types" class="slide level2">
-<h2>Pandoc converts between file types</h2>
+<section id="pandoc-converts-file-types" class="slide level2">
+<h2>Pandoc converts file types 🪄🎩🐇</h2>
 
 <img data-src="https://pandoc.org/pandoc-cartoon.svgz" title="pandoc cartoon machine sucking in one document and extruding another" class="r-stretch"></section>
 <section id="e.g.-from-.docx-or-.tex-to-markdown" class="slide level2">
-<h2>e.g.&nbsp;from .docx or .tex to markdown</h2>
+<h2>e.g., from .docx or .tex to markdown</h2>
 <p>(and back again)</p>
 
 <img data-src="https://www.questretreats.com/wp-content/uploads/2019/02/Lord-of-the-Rings-Bilbo-Baggins-There-And-Back-Again.jpg" title="Bilbo writing There and Back Again...a hobbits tale" class="r-stretch"></section>
@@ -245,7 +261,7 @@
 <span id="cb3-4"><a></a><span class="at"> </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
 <span id="cb3-5"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # Delete this line if you don't want a PDF version rendered via LaTeX</span></span>
 <span id="cb3-6"><a></a><span class="at"> ---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
+<p>(Or copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
 </section>
 <section id="latex-syllabus-to-markdown" class="slide level2">
 <h2>LaTeX syllabus to markdown</h2>
@@ -261,9 +277,9 @@
 <span id="cb4-5"><a></a><span class="at"> </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # Delete this line if you don't want a PDF version rendered via LaTeX</span></span>
 <span id="cb4-6"><a></a><span class="at"> </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # Do you really want a docx version, too? 🤨</span></span>
 <span id="cb4-7"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(Just copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
+<p>(Or copy the header from <a href="https://github.com/judgelord/PP000/blob/main/syllabus.qmd">syllabus.qmd</a>)</p>
 </section>
-<section id="beamer-to-markdown" class="slide level2">
+<section id="beamer-to-markdown" class="slide level2 scrollable">
 <h2>Beamer to markdown</h2>
 <ol type="1">
 <li>In terminal: <code>pandoc -t markdown -o slides.md slides.tex</code></li>
@@ -276,7 +292,7 @@
 <span id="cb5-4"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb5-5"><a></a><span class="at">    </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb5-6"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(Just copy from the file that made these slides, <a href="https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd">pandoc.qmd</a>)</p>
+<p>(Or copy the file that made these slides, <a href="https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd">pandoc.qmd</a>)</p>
 <div class="fragment">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">

@@ -22,6 +22,7 @@ footer: 👈 Click on Block M for a menu | [Click here to return to the website]
 
 ![](https://i.imgflip.com/253k2f.jpg "Join me in the light side meme with Kermit the Frog")
 
+
 ## Markdown math is $\approxeq \LaTeX$
 
 Equations in [MathJax](https://docs.mathjax.org/en/latest/basic/accessibility.html) are [similar to LaTeX](https://quarto.org/docs/authoring/markdown-basics.html#equations) but more accessible.
@@ -46,12 +47,17 @@ $$
 \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
 $$ {#eq-1a}
 
+::: {.notes}
 
-## Pandoc converts between file types
+MathML released in 1998, became ISO in 2015. The nonprofit MathJax, started in 2004, a joint venture of the American Mathematical Society (AMS) and the Society for Industrial and Applied Mathematics (SIAM) to advance mathematical and scientific content on the web. 
+:::
+
+## Pandoc converts file types 🪄🎩🐇
 
 ![](https://pandoc.org/pandoc-cartoon.svgz "pandoc cartoon machine sucking in one document and extruding another")
 
-## e.g. from .docx or .tex to markdown 
+
+## e.g., from .docx or .tex to markdown 
 
 (and back again)
 
@@ -73,7 +79,7 @@ format:
  ---
 ```
 
-(Just copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
+(Or copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
 
 
 ## LaTeX syllabus to markdown
@@ -92,9 +98,10 @@ format:
 ---
 ```
 
-(Just copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
+(Or copy the header from [syllabus.qmd](https://github.com/judgelord/PP000/blob/main/syllabus.qmd))
 
-## Beamer to markdown
+
+## Beamer to markdown {.scrollable}
 
 1.  In terminal: `pandoc -t markdown -o slides.md slides.tex`
 1.  Change ".md" to ".qmd" 
@@ -109,7 +116,7 @@ format:
 ---
 ```
 
-(Just copy from the file that made these slides, [pandoc.qmd](https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd))
+(Or copy the file that made these slides, [pandoc.qmd](https://github.com/judgelord/PP000/blob/main/slides/pandoc.qmd))
 
 . . . 
 
