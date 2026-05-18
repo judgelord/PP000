@@ -11,7 +11,6 @@ format:
    title-slide-attributes:
      data-background-image: "https://fordschool.umich.edu/themes/custom/ford/images/og-image.png" # <-- background of title slide is different
      data-background-opacity: "0.5" # <-- background opacity of title slide
-scrollable: false
 echo: true
 footer: "👈 Click on Block M for menu | [Return to the website](index.qmd)"
 ---
@@ -44,7 +43,7 @@ theme: [../michigan.scss, weill.scss]
 
 1. Find an image URL or save an image in the slides folder
 
-2. Make a .scss styling file. This is what "ford.scss" looks like: 
+2. Make a .scss styling file. This is "ford.scss": 
 
 ```
 /*-- scss:rules --*/
@@ -66,9 +65,9 @@ format:
 (these slides also use the michigan.scss style sheet)
 
 
-## R code to make new slide theme files 
+## R code to make new theme files 
 
-(overkill, but it shows how one can execute code in .qmd files)
+(overkill, but shows how one can execute code in .qmd files)
 
 ```{r}
 url <- "https://fordschool.umich.edu/themes/custom/ford/images/fallback-placeholder.png"
