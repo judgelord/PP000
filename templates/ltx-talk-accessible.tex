@@ -1,0 +1,257 @@
+\DocumentMetadata{
+  lang=${if(lang)}${lang}${else}en-US${endif},
+  tagging=on,
+  pdfversion=${if(pdfversion)}${pdfversion}${else}2.0${endif},
+  pdfstandard=${if(pdfstandard)}${pdfstandard}${else}ua-2${endif},
+  tagging-setup={math/setup=mathml-SE,math/alt/use}
+}
+
+\documentclass[${if(fontsize)}${fontsize}${else}12pt${endif}${for(classoption)},${classoption}${endfor}]{ltx-talk}
+
+% ------------------------------------------------------------
+% Compatibility shim for Quarto/Pandoc subcaption loading
+% ------------------------------------------------------------
+% Quarto may load subcaption when it detects subfigures/layouts.
+% ltx-talk does not always provide the float-list extension macros
+% expected by caption/subcaption.
+\makeatletter
+\def\ext@figure{lof}
+\def\ext@table{lot}
+\makeatother
+% ------------------------------------------------------------
+% Core packages
+% ------------------------------------------------------------
+\usepackage{unicode-math}
+\usepackage{etoolbox}
+
+% href-ul normally loads/configures hyperref. If unavailable, fall back.
+\IfFileExists{href-ul.sty}{
+  \usepackage{href-ul}
+}{
+  \usepackage{hyperref}
+}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{multicol}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{calc}
+
+${if(geometry)}
+\usepackage[${for(geometry)}${geometry}${sep},${endfor}]{geometry}
+${endif}
+
+% Optional bookmark support
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{}
+
+% ------------------------------------------------------------
+% Pandoc/Quarto support
+% ------------------------------------------------------------
+
+% Tight lists from Pandoc
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+}
+
+% Graphics sizing from Pandoc's default LaTeX template
+\makeatletter
+\def\maxwidth{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\def\maxheight{%
+  \ifdim\Gin@nat@height>\textheight
+    \textheight
+  \else
+    \Gin@nat@height
+  \fi
+}
+\makeatother
+
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% Code highlighting macros, if Quarto/Pandoc needs them
+${if(highlighting-macros)}
+${highlighting-macros}
+${endif}
+
+% CSL references, if citeproc is used
+${if(csl-refs)}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+
+\newenvironment{CSLReferences}[2]
+  {${if(csl-hanging-indent)}\setlength{\parindent}{0pt}
+   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces${endif}}
+  {\par}
+
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+${endif}
+
+% ------------------------------------------------------------
+% PDF metadata and links
+% ------------------------------------------------------------
+\hypersetup{
+  pdftitle={${if(title-meta)}${title-meta}${else}${title}${endif}},
+  pdfauthor={${if(author-meta)}${author-meta}${else}${for(author)}${author}${sep}; ${endfor}${endif}},
+  pdfkeywords={${if(keywords)}${for(keywords)}${keywords}${sep}, ${endfor}${else}handout${endif}},
+  pdfdisplaydoctitle=true,
+  colorlinks=true,
+  linkcolor=${if(linkcolor)}${linkcolor}${else}structure${endif},
+  filecolor=${if(filecolor)}${filecolor}${else}blue${endif},
+  urlcolor=${if(urlcolor)}${urlcolor}${else}blue${endif}
+}
+
+% ------------------------------------------------------------
+% Optional theme/package hooks
+% ------------------------------------------------------------
+${if(talktheme)}
+\usepackage{${talktheme}}
+${endif}
+
+${if(tcolorbox)}
+\usepackage{tcolorbox}
+${endif}
+
+% This serif math font matches your source.
+% Set `use-lum-newcomputermodern: false` in YAML to skip it.
+${if(use-lum-newcomputermodern)}
+\usepackage{lum-newcomputermodern}
+${else}
+${if(use-lum-newcomputermodern-false)}
+${else}
+\usepackage{lum-newcomputermodern}
+${endif}
+${endif}
+
+% ------------------------------------------------------------
+% ltx-talk formatting
+% ------------------------------------------------------------
+
+% Adjust frame title font
+\EditInstance{frametitle}{header}{ font = \normalfont \LARGE }
+
+% Make frame titles tag as H2 instead of the default
+\tagpdfsetup{role / new-tag = frametitle / H2}
+
+% Table/list spacing from your source
+\setlength{\tabcolsep}{.35cm}
+\renewcommand{\arraystretch}{1.5}
+
+% Your custom list environments, useful for raw LaTeX blocks
+\newenvironment{myitemize}
+  {\itemize\addtolength{\itemsep}{9pt}}
+  {\enditemize}
+
+\newenvironment{subitemize}
+  {\itemize\normalsize\addtolength{\itemsep}{9pt}}
+  {\enditemize}
+
+\newenvironment{myenumerate}
+  {\enumerate\addtolength{\itemsep}{9pt}}
+  {\endenumerate}
+
+\newenvironment{largeenumerate}
+  {\enumerate\addtolength{\itemsep}{9pt}}
+  {\endenumerate}
+
+% Also apply similar spacing to Pandoc-generated lists
+\AtBeginEnvironment{itemize}{\addtolength{\itemsep}{9pt}}
+\AtBeginEnvironment{enumerate}{\addtolength{\itemsep}{9pt}}
+
+% ------------------------------------------------------------
+% Title metadata
+% ------------------------------------------------------------
+
+${if(title)}
+\title${if(shorttitle)}[${shorttitle}]${endif}{${title}}
+${else}
+\title{}
+${endif}
+
+${if(author)}
+\author${if(shortauthor)}[${shortauthor}]${endif}{${for(author)}${author}${sep} \and ${endfor}}
+${else}
+\author{}
+${endif}
+
+${if(institute)}
+\institute${if(shortinstitute)}[${shortinstitute}]${endif}{${for(institute)}${institute}${sep}\\${endfor}}
+${else}
+\institute{}
+${endif}
+
+${if(date)}
+\date${if(shortdate)}[${shortdate}]${endif}{${date}}
+${else}
+\date{}
+${endif}
+
+% ------------------------------------------------------------
+% User-provided header includes
+% ------------------------------------------------------------
+${for(header-includes)}
+${header-includes}
+${endfor}
+
+\begin{document}
+
+${if(title)}
+\begin{frame}
+\maketitle
+\end{frame}
+${endif}
+
+${if(toc)}
+\normalfont \section[Outline]{}
+
+\begin{frame}
+\frametitle{${if(toc-title)}${toc-title}${else}Outline${endif}}
+\tableofcontents
+\end{frame}
+${endif}
+
+${if(outline-at-section)}
+% If ltx-talk/beamer-style section hooks are available, add outline slides.
+\makeatletter
+\@ifundefined{AtBeginSection}{}{%
+  \AtBeginSection[]{%
+    \begin{frame}
+    \frametitle{${if(toc-title)}${toc-title}${else}Outline${endif}}
+    \tableofcontents[currentsection]
+    \end{frame}
+  }
+}
+\makeatother
+${endif}
+
+${body}
+
+${if(natbib)}
+${if(bibliography)}
+${if(biblio-title)}
+\renewcommand\refname{${biblio-title}}
+${endif}
+\bibliography{${for(bibliography)}${bibliography}${sep},${endfor}}
+${endif}
+${endif}
+
+${if(biblatex)}
+\printbibliography${if(biblio-title)}[title=${biblio-title}]${endif}
+${endif}
+
+\end{document}
